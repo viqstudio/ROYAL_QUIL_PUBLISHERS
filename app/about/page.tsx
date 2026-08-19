@@ -6,8 +6,8 @@ import { BrandLogo } from '@/components/ui/BrandLogo';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'About Royal Quil Publisher | Our Heritage, Philosophy & Standards',
-  description: 'Royal Quil Publisher is a premier self-publishing and book production house. We provide end-to-end publishing support to independent authors across the UK and US while ensuring authors retain 100% ownership and royalties.',
+  title: 'About Royal Quill Publisher | Our Heritage, Philosophy & Standards',
+  description: 'Royal Quill Publisher is a premier self-publishing and book production house. We provide end-to-end publishing support to independent authors across the UK and US while ensuring authors retain 100% ownership and royalties.',
 };
 
 export default function AboutPage() {
@@ -32,12 +32,12 @@ export default function AboutPage() {
           <div className={styles.philosophyGrid}>
             <div className={styles.philosophyCol}>
               <span className={styles.sectionTag}>OUR ORIGIN & PURPOSE</span>
-              <h2 className={styles.sectionHeading}>Why Royal Quil Publisher Was Founded</h2>
+              <h2 className={styles.sectionHeading}>Why Royal Quill Publisher Was Founded</h2>
               <p className={styles.bodyText}>
                 For decades, independent authors faced an impossible trade-off: surrender the majority of their royalties and intellectual rights to a corporate publishing conglomerate, or settle for automated, template-based self-publishing agencies.
               </p>
               <p className={styles.bodyText}>
-                Royal Quil Publisher was established to eliminate that compromise. Over 5+ years of dedicated practice, we have assembled senior developmental editors, award-winning book designers, master typesetters, and publishing strategists.
+                Royal Quill Publisher was established to eliminate that compromise. Over 5+ years of dedicated practice, we have assembled senior developmental editors, award-winning book designers, master typesetters, and publishing strategists.
               </p>
               <p className={styles.bodyText}>
                 Our mission is straightforward: we provide the full production infrastructure of an established publishing house, while you retain 100% legal ownership of your manuscript, rights, and earnings.
@@ -140,7 +140,7 @@ export default function AboutPage() {
             <div className={styles.ctaLogoWrap}>
               <BrandLogo variant="dark" size="md" href="/" />
             </div>
-            <h2 className={styles.ctaTitle}>Ready to Publish with Royal Quil?</h2>
+            <h2 className={styles.ctaTitle}>Ready to Publish with Royal Quill?</h2>
             <p className={styles.ctaText}>
               Share your manuscript details with our senior editorial team for a confidential, no-obligation evaluation.
             </p>

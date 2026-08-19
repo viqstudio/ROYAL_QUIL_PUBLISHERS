@@ -66,7 +66,7 @@ export const footerServices = [
 ];
 
 export const footerCompany = [
-  { label: 'About Royal Quil', href: '/about' },
+  { label: 'About Royal Quill', href: '/about' },
   { label: 'Our 4-Stage Process', href: '/process' },
   { label: 'Featured Portfolio', href: '/portfolio' },
   { label: 'Author FAQs', href: '/faq' },

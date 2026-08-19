@@ -53,7 +53,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
         </div>
         <h3 className={styles.successHeading}>Manuscript Inquiry Received</h3>
         <p className={styles.successMessage}>
-          Thank you, <strong>{formData.fullName}</strong>. A senior Royal Quil publishing strategist will review your book details and reach out to <strong>{formData.email}</strong> within 1 business day.
+          Thank you, <strong>{formData.fullName}</strong>. A senior Royal Quill publishing strategist will review your book details and reach out to <strong>{formData.email}</strong> within 1 business day.
         </p>
         <div className={styles.ownershipPledge}>
           <span>100% Author Copyright & Intellectual Property Protection Guaranteed.</span>
@@ -207,7 +207,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
           <path d="M9 12l2 2 4-4" stroke="#D21625" />
         </svg>
         <span>
-          Royal Quil Publisher is a collaborative publishing partner. <strong>You retain 100% ownership, copyright, and royalties.</strong>
+          Royal Quill Publisher is a collaborative publishing partner. <strong>You retain 100% ownership, copyright, and royalties.</strong>
         </span>
       </div>
 

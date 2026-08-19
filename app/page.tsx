@@ -35,7 +35,7 @@ export default function HomePage() {
           <div className={styles.heroContent}>
             <div className={styles.heroEyebrow}>
               <span className={styles.accentPip} />
-              <span>ROYAL QUIL PUBLISHER • ESTABLISHED 5+ YEARS</span>
+              <span>ROYAL QUILL PUBLISHER • ESTABLISHED 5+ YEARS</span>
             </div>
 
             <h1 className={styles.heroTitle}>
@@ -43,7 +43,7 @@ export default function HomePage() {
             </h1>
 
             <p className={styles.heroDescription}>
-              Royal Quil Publisher helps independent authors transform ideas and manuscripts into professionally written, edited, designed, and published books — while keeping full ownership of their work.
+              Royal Quill Publisher helps independent authors transform ideas and manuscripts into professionally written, edited, designed, and published books — while keeping full ownership of their work.
             </p>
 
             <div className={styles.heroActions}>
@@ -99,7 +99,7 @@ export default function HomePage() {
               YOU KEEP THE BOOK. YOU KEEP THE RIGHTS. YOU KEEP THE ROYALTIES.
             </h2>
             <p className={styles.trustSub}>
-              Royal Quil Publisher provides the literary expertise and production infrastructure required to professionally prepare and publish your book, while you retain 100% legal ownership of your intellectual property.
+              Royal Quill Publisher provides the literary expertise and production infrastructure required to professionally prepare and publish your book, while you retain 100% legal ownership of your intellectual property.
             </p>
           </div>
 
@@ -180,7 +180,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="END-TO-END PUBLISHING FRAMEWORK"
             title="Everything Your Book Needs. Under One Roof."
-            subtitle="From the first outline to global retail distribution, Royal Quil Publisher unites writing, editorial, design, and marketing into one seamless partnership."
+            subtitle="From the first outline to global retail distribution, Royal Quill Publisher unites writing, editorial, design, and marketing into one seamless partnership."
           />
 
           {/* EDITORIAL PILLARS SELECTOR */}
@@ -462,18 +462,18 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================ */}
-      {/* 08 — WHY ROYAL QUIL (4 PRINCIPLES) */}
+      {/* 08 — WHY ROYAL QUILL (4 PRINCIPLES) */}
       {/* ============================================================ */}
       <section className={styles.whySection}>
         <div className={styles.siteContainer}>
           <div className={styles.whyHeroBlock}>
             <div className={styles.whyHeaderCol}>
-              <span className={styles.whyEyebrow}>THE ROYAL QUIL COMMITMENT</span>
+              <span className={styles.whyEyebrow}>THE ROYAL QUILL COMMITMENT</span>
               <h2 className={styles.whyMainTitle}>
                 Publishing Expertise. Without Taking Your Story Away From You.
               </h2>
               <p className={styles.whyMainSub}>
-                Traditional publishers demand all intellectual rights and pay minor royalties. Low-end services deliver generic template designs. Royal Quil Publisher delivers the craftsmanship of a premier imprint while leaving you in full ownership.
+                Traditional publishers demand all intellectual rights and pay minor royalties. Low-end services deliver generic template designs. Royal Quill Publisher delivers the craftsmanship of a premier imprint while leaving you in full ownership.
               </p>
               <div className={styles.experienceBadge}>
                 <span className={styles.expNumber}>5+</span>
@@ -615,8 +615,8 @@ export default function HomePage() {
               <div className={styles.contractEmblem}>
                 <div className={styles.emblemLogoWrap}>
                   <Image
-                    src="/images/royal-quil-logo.png"
-                    alt="Royal Quil Publisher Emblem"
+                    src="/images/royal-quill-logo.png"
+                    alt="Royal Quill Publisher Emblem"
                     width={220}
                     height={68}
                     className={styles.emblemLogoImg}
@@ -639,18 +639,18 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================ */}
-      {/* 12 — ABOUT ROYAL QUIL PARTNERSHIP SECTION */}
+      {/* 12 — ABOUT ROYAL QUILL PARTNERSHIP SECTION */}
       {/* ============================================================ */}
       <section className={styles.aboutSection}>
         <div className={styles.siteContainer}>
           <div className={styles.aboutGrid}>
             <div className={styles.aboutTextCol}>
-              <span className={styles.aboutEyebrow}>ABOUT ROYAL QUIL PUBLISHER</span>
+              <span className={styles.aboutEyebrow}>ABOUT ROYAL QUILL PUBLISHER</span>
               <h2 className={styles.aboutTitle}>
                 Publishing Should Feel Like a Partnership.
               </h2>
               <p className={styles.aboutLead}>
-                Royal Quil Publisher was founded on a singular conviction: that serious authors deserve the craftsmanship and commercial reach of a major publishing house without surrendering their intellectual rights or creative voice.
+                Royal Quill Publisher was founded on a singular conviction: that serious authors deserve the craftsmanship and commercial reach of a major publishing house without surrendering their intellectual rights or creative voice.
               </p>
               <p className={styles.aboutBody}>
                 Over 5+ years of active publishing, our editors, book designers, typesetters, and marketing strategists have partnered with novelists, executives, memoirists, and researchers across the UK and US to produce award-caliber physical and digital editions.

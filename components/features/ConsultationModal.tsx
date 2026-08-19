@@ -65,7 +65,7 @@ export const ConsultationModal: React.FC = () => {
       subtitle={
         submitted
           ? undefined
-          : 'Complimentary manuscript evaluation and publishing consultation with a senior Royal Quil editor.'
+          : 'Complimentary manuscript evaluation and publishing consultation with a senior Royal Quill editor.'
       }
     >
       {submitted ? (

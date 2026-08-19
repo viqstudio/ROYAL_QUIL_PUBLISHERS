@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/Button';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'Publishing Services Architecture | Royal Quil Publisher',
+  title: 'Publishing Services Architecture | Royal Quill Publisher',
   description: 'Explore the complete 6-pillar publishing framework: Ghostwriting, Editing, Book Cover Design, Formatting, Global Distribution, ISBN Support, Marketing, Audiobooks, and Custom Printing.',
 };
 
@@ -98,7 +98,7 @@ export default function ServicesPage() {
       <section className={styles.reassuranceSection}>
         <div className={styles.container}>
           <div className={styles.reassuranceBox}>
-            <span className={styles.reassuranceEyebrow}>THE ROYAL QUIL STANDARD</span>
+            <span className={styles.reassuranceEyebrow}>THE ROYAL QUILL STANDARD</span>
             <h2 className={styles.reassuranceTitle}>Why Independent Authors Choose Our Architecture</h2>
             <div className={styles.matrixGrid}>
               <div className={styles.matrixCard}>
@@ -122,7 +122,7 @@ export default function ServicesPage() {
               </div>
 
               <div className={`${styles.matrixCard} ${styles.matrixCardFeatured}`}>
-                <div className={styles.featuredBadge}>ROYAL QUIL PUBLISHER</div>
+                <div className={styles.featuredBadge}>ROYAL QUILL PUBLISHER</div>
                 <h4 className={styles.matrixHeadFeatured}>Elite Imprint Partnership</h4>
                 <ul className={styles.matrixList}>
                   <li className={styles.positive}><strong>100% Royalties</strong> paid directly to author</li>

@@ -6,8 +6,8 @@ import { Button } from '@/components/ui/Button';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'Our 4-Stage Publishing Process | Royal Quil Publisher',
-  description: 'Learn how Royal Quil Publisher takes your manuscript from initial discovery to global publication through our structured 4-stage process: Discover, Create, Refine, and Publish.',
+  title: 'Our 4-Stage Publishing Process | Royal Quill Publisher',
+  description: 'Learn how Royal Quill Publisher takes your manuscript from initial discovery to global publication through our structured 4-stage process: Discover, Create, Refine, and Publish.',
 };
 
 export default function ProcessPage() {
@@ -87,7 +87,7 @@ export default function ProcessPage() {
         <div className={styles.container}>
           <SectionHeading
             eyebrow="OUR CADENCE"
-            title="The Royal Quil Quality Pledge"
+            title="The Royal Quill Quality Pledge"
             subtitle="How we ensure seamless collaboration throughout your publishing journey."
           />
 

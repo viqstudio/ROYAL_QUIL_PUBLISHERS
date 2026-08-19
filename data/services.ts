@@ -47,7 +47,7 @@ export const serviceCategories: ServiceCategory[] = [
         faqs: [
           {
             question: 'Will anyone know I used a ghostwriter?',
-            answer: 'Never, unless you choose to credit them. All Royal Quil ghostwriting engagements are protected by strict Non-Disclosure Agreements. You are the sole named author and legal rights holder.'
+            answer: 'Never, unless you choose to credit them. All Royal Quill ghostwriting engagements are protected by strict Non-Disclosure Agreements. You are the sole named author and legal rights holder.'
           },
           {
             question: 'How do you capture my personal voice?',
@@ -209,7 +209,7 @@ export const serviceCategories: ServiceCategory[] = [
         faqs: [
           {
             question: 'Who receives the royalties from book sales?',
-            answer: 'You do — 100% of them. Royal Quil Publisher never takes a percentage of your ongoing royalties. All platform sales deposit directly into your personal author accounts.'
+            answer: 'You do — 100% of them. Royal Quill Publisher never takes a percentage of your ongoing royalties. All platform sales deposit directly into your personal author accounts.'
           },
           {
             question: 'Who owns the ISBN and copyright?',

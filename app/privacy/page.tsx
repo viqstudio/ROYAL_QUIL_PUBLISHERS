@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import styles from '../legal.module.css';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | Royal Quil Publisher',
-  description: 'Privacy Policy and data protection standards for Royal Quil Publisher.',
+  title: 'Privacy Policy | Royal Quill Publisher',
+  description: 'Privacy Policy and data protection standards for Royal Quill Publisher.',
 };
 
 export default function PrivacyPage() {
@@ -19,7 +19,7 @@ export default function PrivacyPage() {
 
           <div className={styles.content}>
             <p>
-              Royal Quil Publisher (&ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;us&rdquo;) is committed to protecting the privacy, confidentiality, and intellectual property rights of independent authors and website visitors.
+              Royal Quill Publisher (&ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;us&rdquo;) is committed to protecting the privacy, confidentiality, and intellectual property rights of independent authors and website visitors.
             </p>
 
             <div className={styles.highlightPledge}>
@@ -48,7 +48,7 @@ export default function PrivacyPage() {
 
             <h2>3. Manuscript Confidentiality & Non-Disclosure</h2>
             <p>
-              All creative works, partial drafts, synopses, and notes submitted to Royal Quil Publisher remain the exclusive intellectual property of the author. We maintain rigorous security standards to safeguard your files from unauthorized access.
+              All creative works, partial drafts, synopses, and notes submitted to Royal Quill Publisher remain the exclusive intellectual property of the author. We maintain rigorous security standards to safeguard your files from unauthorized access.
             </p>
 
             <h2>4. Third-Party Platforms</h2>

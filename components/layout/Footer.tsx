@@ -105,7 +105,7 @@ export const Footer: React.FC = () => {
         {/* BOTTOM COPYRIGHT & LEGAL BAR */}
         <div className={styles.bottomBar}>
           <div className={styles.copyright}>
-            © {currentYear} Royal Quil Publisher. All rights reserved. Registered publishing services imprint.
+            © {currentYear} Royal Quill Publisher. All rights reserved. Registered publishing services imprint.
           </div>
           <div className={styles.legalLinks}>
             <Link href="/privacy" className={styles.legalLink}>Privacy Policy</Link>

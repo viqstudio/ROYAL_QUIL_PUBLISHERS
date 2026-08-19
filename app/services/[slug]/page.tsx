@@ -38,11 +38,11 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const service = allSubServices.find((s) => s.slug === params.slug);
   if (!service) {
-    return { title: 'Service Not Found | Royal Quil Publisher' };
+    return { title: 'Service Not Found | Royal Quill Publisher' };
   }
 
   return {
-    title: `${service.title} | Royal Quil Publisher`,
+    title: `${service.title} | Royal Quill Publisher`,
     description: service.shortDescription,
   };
 }
@@ -69,7 +69,7 @@ export default function SubServiceDetailPage({ params }: Props) {
         title={service.title}
         subtitle={service.shortDescription}
         imageSrc={headerImage}
-        imageAlt={`${service.title} - Royal Quil Publisher`}
+        imageAlt={`${service.title} - Royal Quill Publisher`}
         breadcrumbs={[
           { label: 'Home', href: '/' },
           { label: 'Services', href: '/services' },
@@ -100,7 +100,7 @@ export default function SubServiceDetailPage({ params }: Props) {
                 <ServiceIcon name={service.slug} size="lg" variant="navy" />
                 <div>
                   <span className={styles.sectionEyebrow}>SERVICE OVERVIEW</span>
-                  <h2 className={styles.sectionHeading}>The Royal Quil Approach</h2>
+                  <h2 className={styles.sectionHeading}>The Royal Quill Approach</h2>
                 </div>
               </div>
               <p className={styles.fullDesc}>{service.fullDescription}</p>

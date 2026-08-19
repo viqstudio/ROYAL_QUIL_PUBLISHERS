@@ -20,8 +20,8 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
 
   const logoImage = isDarkBg ? (
     <Image
-      src="/images/royal-quil-logo-dark.png"
-      alt="Royal Quil Publisher"
+      src="/images/royal-quill-logo-dark.png"
+      alt="Royal Quill Publisher"
       width={220}
       height={68}
       priority
@@ -30,15 +30,15 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
   ) : (
     <div className={styles.lightLogoGroup}>
       <Image
-        src="/images/royal-quil-logo-light.png"
-        alt="Royal Quil Publisher Emblem"
+        src="/images/royal-quill-logo-light.png"
+        alt="Royal Quill Publisher Emblem"
         width={56}
         height={56}
         priority
         className={styles.lightEmblemImg}
       />
       <div className={styles.lightTextGroup}>
-        <span className={styles.lightTitle}>ROYAL QUIL</span>
+        <span className={styles.lightTitle}>ROYAL QUILL</span>
         <span className={styles.lightSubtitle}>PUBLISHER</span>
       </div>
     </div>
@@ -46,7 +46,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
 
   if (href) {
     return (
-      <Link href={href} className={`${styles.logoLink} ${className}`} aria-label="Royal Quil Publisher Home">
+      <Link href={href} className={`${styles.logoLink} ${className}`} aria-label="Royal Quill Publisher Home">
         {logoImage}
       </Link>
     );

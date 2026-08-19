@@ -19,8 +19,8 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Royal Quil Publisher | Premium Book Publishing & Author Services',
-  description: 'Royal Quil Publisher helps independent authors transform ideas and manuscripts into professionally written, edited, designed, and published books — while retaining 100% ownership, rights, and royalties.',
+  title: 'Royal Quill Publisher | Premium Book Publishing & Author Services',
+  description: 'Royal Quill Publisher helps independent authors transform ideas and manuscripts into professionally written, edited, designed, and published books — while retaining 100% ownership, rights, and royalties.',
   keywords: [
     'book publishing',
     'self publishing UK',
@@ -33,12 +33,12 @@ export const metadata: Metadata = {
     'audiobook production',
     'custom book printing'
   ],
-  authors: [{ name: 'Royal Quil Publisher' }],
-  metadataBase: new URL('https://royalquilpublisher.com'),
+  authors: [{ name: 'Royal Quill Publisher' }],
+  metadataBase: new URL('https://royalquillpublisher.com'),
   openGraph: {
-    title: 'Royal Quil Publisher | Your Story Deserves to Be a Published Book',
+    title: 'Royal Quill Publisher | Your Story Deserves to Be a Published Book',
     description: 'Transform your manuscript into a professionally published book. You keep 100% ownership, rights, and royalties.',
-    siteName: 'Royal Quil Publisher',
+    siteName: 'Royal Quill Publisher',
     locale: 'en_GB',
     type: 'website',
   },

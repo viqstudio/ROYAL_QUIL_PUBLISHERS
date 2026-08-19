@@ -37,7 +37,7 @@ export const BookInspectorModal: React.FC<BookInspectorModalProps> = ({
             <div className={styles.spineGlow} />
           </div>
           <span className={styles.rightsPledge}>
-            Published by Royal Quil • Author Retains 100% Rights
+            Published by Royal Quill • Author Retains 100% Rights
           </span>
         </div>
 

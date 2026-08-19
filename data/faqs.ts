@@ -10,7 +10,7 @@ export const faqs: FAQItem[] = [
     id: 'faq-1',
     category: 'Rights & Royalties',
     question: 'Do I retain 100% of my intellectual property, copyright, and royalties?',
-    answer: 'Yes, unequivocally. You retain 100% ownership, 100% copyright, and 100% of all ongoing royalties generated from your book across all sales channels. Royal Quil Publisher operates as your professional production and publishing partner. We charge transparent project fees and never claim any share of your earnings, rights, or intellectual property.'
+    answer: 'Yes, unequivocally. You retain 100% ownership, 100% copyright, and 100% of all ongoing royalties generated from your book across all sales channels. Royal Quill Publisher operates as your professional production and publishing partner. We charge transparent project fees and never claim any share of your earnings, rights, or intellectual property.'
   },
   {
     id: 'faq-2',
@@ -51,14 +51,14 @@ export const faqs: FAQItem[] = [
   {
     id: 'faq-8',
     category: 'Process & Timelines',
-    question: 'Can I start working with Royal Quil if my manuscript is not yet finished?',
+    question: 'Can I start working with Royal Quill if my manuscript is not yet finished?',
     answer: 'Absolutely. Many of our authors engage us during the drafting phase. Our developmental editors and writing coaches can review chapter drafts, provide structural guidance, or help you outline your project before you write the final chapters.'
   },
   {
     id: 'faq-9',
     category: 'Rights & Royalties',
     question: 'How do royalty payouts work from platforms like Amazon and Apple?',
-    answer: 'During the publishing phase, we assist you in linking your official author platform accounts directly to your own bank account. Retailers deposit sales royalties directly to you monthly. Royal Quil Publisher never acts as a financial middleman.'
+    answer: 'During the publishing phase, we assist you in linking your official author platform accounts directly to your own bank account. Retailers deposit sales royalties directly to you monthly. Royal Quill Publisher never acts as a financial middleman.'
   },
   {
     id: 'faq-10',
