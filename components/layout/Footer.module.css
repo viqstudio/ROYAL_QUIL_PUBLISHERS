@@ -1,0 +1,245 @@
+.footer {
+  background-color: var(--color-navy-deep);
+  color: #F8FAFC;
+  padding-top: clamp(4rem, 7vw, 6rem);
+  padding-bottom: 2.5rem;
+  border-top: 1px solid var(--color-navy-border);
+}
+
+.container {
+  max-width: var(--max-width-site);
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 4vw, 3rem);
+}
+
+/* TOP STRIP */
+.topStrip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--color-navy-border);
+  flex-wrap: wrap;
+}
+
+.brandBlock {
+  max-width: 480px;
+}
+
+.logoWrap {
+  margin-bottom: 1rem;
+}
+
+.footerLogoImg {
+  height: 62px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
+}
+
+.tagline {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--color-royal-blue);
+  opacity: 0.85;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.ownershipSeal {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--color-navy-dark);
+  border: 1px solid var(--color-navy-border);
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius-sm);
+}
+
+.sealIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(192, 223, 253, 0.1);
+  flex-shrink: 0;
+}
+
+.sealText {
+  display: flex;
+  flex-direction: column;
+}
+
+.sealHeading {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+}
+
+.sealSub {
+  font-size: 0.82rem;
+  color: var(--color-royal-blue);
+  opacity: 0.85;
+}
+
+/* LINKS GRID */
+.linksGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+  padding: 3.5rem 0;
+  border-bottom: 1px solid var(--color-navy-border);
+}
+
+.linkColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.columnTitle {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: #FFFFFF;
+  margin-bottom: 1.25rem;
+  position: relative;
+}
+
+.columnTitle::after {
+  content: '';
+  display: block;
+  width: 18px;
+  height: 2px;
+  background-color: var(--color-crimson);
+  margin-top: 0.4rem;
+}
+
+.linkList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.footerLink {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--color-royal-blue);
+  opacity: 0.75;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  display: inline-block;
+}
+
+.footerLink:hover {
+  opacity: 1;
+  color: #FFFFFF;
+  transform: translateX(3px);
+}
+
+.contactIntro {
+  font-size: 0.88rem;
+  color: var(--color-royal-blue);
+  opacity: 0.8;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.contactCard {
+  background-color: var(--color-navy-dark);
+  border: 1px solid var(--color-navy-border);
+  padding: 1rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.contactItem {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.82rem;
+}
+
+.contactLabel {
+  color: var(--color-royal-blue);
+  opacity: 0.65;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.contactValue {
+  color: #FFFFFF;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* BOTTOM BAR */
+.bottomBar {
+  padding-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  font-size: 0.82rem;
+  color: var(--color-royal-blue);
+  opacity: 0.7;
+}
+
+.legalLinks {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.legalLink {
+  color: var(--color-royal-blue);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.legalLink:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+.divider {
+  opacity: 0.4;
+}
+
+.disclaimer {
+  color: #FFFFFF;
+  font-weight: 500;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .linksGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .linksGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .topStrip {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .bottomBar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+}

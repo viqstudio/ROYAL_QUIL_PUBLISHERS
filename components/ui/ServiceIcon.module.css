@@ -1,0 +1,59 @@
+.iconContainer {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-xs);
+  transition: all var(--transition-normal);
+  flex-shrink: 0;
+}
+
+.iconContainer svg {
+  width: 100%;
+  height: 100%;
+  transition: transform var(--transition-fast);
+}
+
+/* SIZES */
+.size_sm {
+  width: 32px;
+  height: 32px;
+  padding: 6px;
+}
+
+.size_md {
+  width: 44px;
+  height: 44px;
+  padding: 9px;
+}
+
+.size_lg {
+  width: 56px;
+  height: 56px;
+  padding: 12px;
+}
+
+/* VARIANTS */
+.variant_navy {
+  background-color: var(--color-primary-navy);
+  color: #FFFFFF;
+  border: 1px solid var(--color-primary-navy);
+}
+
+.variant_crimson {
+  background-color: rgba(210, 22, 37, 0.08);
+  color: var(--color-crimson);
+  border: 1px solid rgba(210, 22, 37, 0.2);
+}
+
+.variant_light {
+  background-color: #FFFFFF;
+  color: var(--color-primary-navy);
+  border: 1px solid var(--color-light-border);
+  box-shadow: var(--shadow-subtle);
+}
+
+.variant_outline {
+  background-color: transparent;
+  color: var(--color-primary-navy);
+  border: 1.5px solid var(--color-light-border);
+}

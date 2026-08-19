@@ -1,0 +1,202 @@
+.contactPage {
+  width: 100%;
+}
+
+.container {
+  max-width: var(--max-width-site);
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 4vw, 3rem);
+}
+
+.hero {
+  background: linear-gradient(175deg, #001538 0%, #012258 100%);
+  color: #FFFFFF;
+  padding: clamp(4rem, 7vw, 6.5rem) 0;
+  border-bottom: 1px solid var(--color-navy-border);
+}
+
+.heroContent {
+  max-width: 860px;
+}
+
+.eyebrow {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--color-royal-blue);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+  color: #FFFFFF;
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+}
+
+.lead {
+  font-size: 1.15rem;
+  color: var(--color-royal-blue);
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+/* FORM SECTION */
+.formSection {
+  background-color: var(--color-light-bg);
+  padding: clamp(4rem, 7vw, 6.5rem) 0;
+  border-bottom: 1px solid var(--color-light-border);
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+.formCard {
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-light-border);
+  padding: clamp(2rem, 4vw, 3rem);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-card);
+}
+
+.formHeader {
+  margin-bottom: 2rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--color-light-border);
+}
+
+.formTitle {
+  font-family: var(--font-serif);
+  font-size: 1.85rem;
+  color: var(--color-primary-navy);
+  margin-bottom: 0.35rem;
+}
+
+.formSub {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary-dark);
+  margin: 0;
+}
+
+.infoCol {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.deskCard {
+  background-color: #072A66;
+  color: #FFFFFF;
+  border: 1px solid var(--color-navy-border);
+  padding: 2.25rem 2rem;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 10px 30px rgba(0, 21, 56, 0.25);
+}
+
+.deskLogoWrap {
+  margin-bottom: 1.25rem;
+}
+
+.deskLogoImg {
+  height: 56px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
+}
+
+.deskDesc {
+  font-size: 0.9rem;
+  color: var(--color-royal-blue);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.contactDetailsList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-navy-border);
+}
+
+.contactItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.itemLabel {
+  font-size: 0.75rem;
+  color: var(--color-royal-blue);
+  opacity: 0.75;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.itemValue {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+/* REASSURANCES */
+.reassurancesCard {
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-light-border);
+  padding: 2rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.reassureTitle {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--color-primary-navy);
+  margin-bottom: 0.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--color-light-border);
+}
+
+.reassureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+}
+
+.reassureIcon {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-crimson);
+  margin-top: 2px;
+}
+
+.reassureHeading {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  color: var(--color-primary-navy);
+  margin-bottom: 0.2rem;
+}
+
+.reassureText {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary-dark);
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .contactGrid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}

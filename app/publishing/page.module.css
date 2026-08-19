@@ -1,0 +1,302 @@
+.publishingPage {
+  width: 100%;
+}
+
+.container {
+  max-width: var(--max-width-site);
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 4vw, 3rem);
+}
+
+.hero {
+  background: linear-gradient(175deg, #001538 0%, #012258 100%);
+  color: #FFFFFF;
+  padding: clamp(4rem, 7vw, 6.5rem) 0;
+  border-bottom: 1px solid var(--color-navy-border);
+}
+
+.heroContent {
+  max-width: 860px;
+}
+
+.eyebrow {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--color-royal-blue);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+  color: #FFFFFF;
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+}
+
+.lead {
+  font-size: 1.15rem;
+  color: var(--color-royal-blue);
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+/* PLATFORMS NETWORK */
+.platformNetworkSection {
+  background-color: var(--color-light-bg);
+  padding: clamp(4.5rem, 7vw, 6.5rem) 0;
+  border-bottom: 1px solid var(--color-light-border);
+}
+
+.networkGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.platformCard {
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-light-border);
+  padding: 2.25rem 2rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.platformHeader {
+  margin-bottom: 0.85rem;
+}
+
+.platformTag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-crimson);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.platformTitle {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  color: var(--color-primary-navy);
+  margin: 0;
+}
+
+.platformDesc {
+  font-size: 0.92rem;
+  color: var(--color-text-secondary-dark);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.reachBlock {
+  background-color: var(--color-light-bg);
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-xs);
+  margin-bottom: 1.25rem;
+  border: 1px solid var(--color-light-border-subtle);
+}
+
+.reachLabel {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-primary-navy);
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.reachText {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary-dark);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.formatsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: auto;
+}
+
+.formatBadge {
+  background-color: #F8FAFC;
+  border: 1px solid var(--color-light-border);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-text-secondary-dark);
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-xs);
+}
+
+/* COMPARISON */
+.comparisonSection {
+  background-color: #FFFFFF;
+  padding: clamp(4.5rem, 7vw, 6.5rem) 0;
+  border-bottom: 1px solid var(--color-light-border);
+}
+
+.tableWrapper {
+  overflow-x: auto;
+  border: 1px solid var(--color-light-border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-card);
+}
+
+.comparisonTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-family: var(--font-sans);
+  background-color: #FFFFFF;
+}
+
+.comparisonTable th,
+.comparisonTable td {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--color-light-border);
+  font-size: 0.92rem;
+}
+
+.comparisonTable th {
+  background-color: var(--color-light-bg);
+  font-weight: 700;
+  color: var(--color-primary-navy);
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+}
+
+.highlightHeader {
+  background-color: #072A66 !important;
+  color: #FFFFFF !important;
+}
+
+.highlightCell {
+  background-color: rgba(192, 223, 253, 0.15);
+  color: var(--color-primary-navy);
+  border-left: 2px solid var(--color-crimson);
+}
+
+/* ISBN SECTION */
+.isbnSection {
+  background-color: var(--color-light-bg);
+  padding: clamp(4.5rem, 7vw, 6.5rem) 0;
+  border-bottom: 1px solid var(--color-light-border);
+}
+
+.isbnGrid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.isbnTextCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.isbnEyebrow {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--color-crimson);
+  margin-bottom: 0.5rem;
+}
+
+.isbnTitle {
+  font-family: var(--font-serif);
+  font-size: 2.25rem;
+  color: var(--color-primary-navy);
+  margin-bottom: 1.25rem;
+}
+
+.isbnBody {
+  font-size: 1rem;
+  color: var(--color-text-secondary-dark);
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+.isbnCard {
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-light-border);
+  padding: 2.5rem 2rem;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-card);
+}
+
+.isbnCardHead {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  color: var(--color-primary-navy);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--color-light-border);
+}
+
+.isbnList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.isbnList li {
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: 0.92rem;
+  color: var(--color-text-secondary-dark);
+  line-height: 1.4;
+}
+
+.isbnList li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-crimson);
+  font-weight: 700;
+}
+
+/* CTA */
+.ctaBanner {
+  background: linear-gradient(175deg, #001538 0%, #012258 100%);
+  color: #FFFFFF;
+  padding: clamp(4.5rem, 7vw, 6rem) 0;
+  text-align: center;
+}
+
+.ctaBox {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.ctaHeading {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+}
+
+.ctaText {
+  font-size: 1.05rem;
+  color: var(--color-royal-blue);
+  line-height: 1.7;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .networkGrid {
+    grid-template-columns: 1fr;
+  }
+  .isbnGrid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}

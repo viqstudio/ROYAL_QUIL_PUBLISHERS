@@ -1,0 +1,136 @@
+.logoCard {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  margin-bottom: 0.85rem;
+}
+
+.logoSvg {
+  height: 38px;
+  width: auto;
+  display: block;
+}
+
+/* APPLE BOOKS */
+.appleBooksGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.appleIconWrap {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+}
+
+.appleSvg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.platformTextGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.appleTitle {
+  font-family: var(--font-sans);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.1;
+}
+
+.platformSub {
+  font-size: 0.72rem;
+  color: var(--color-text-muted-dark);
+  font-weight: 500;
+}
+
+/* KOBO */
+.koboGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.koboRakuten {
+  font-size: 0.65rem;
+  color: var(--color-crimson);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.koboBrand {
+  font-family: var(--font-sans);
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: var(--color-crimson);
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+
+/* BARNES & NOBLE */
+.bnGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.bnText {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1e3a24;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+}
+
+.bnSub {
+  font-size: 0.72rem;
+  color: var(--color-text-muted-dark);
+}
+
+/* INGRAM */
+.ingramGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.ingramTitle {
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--color-primary-navy);
+  line-height: 1.1;
+}
+
+.ingramSub {
+  font-size: 0.72rem;
+  color: var(--color-text-muted-dark);
+}
+
+/* ISBN */
+.isbnGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.isbnTag {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--color-crimson);
+  line-height: 1;
+}
+
+.isbnTitle {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-primary-navy);
+  margin-top: 2px;
+}

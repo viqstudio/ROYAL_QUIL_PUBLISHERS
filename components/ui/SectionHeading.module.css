@@ -1,0 +1,82 @@
+.container {
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+  width: 100%;
+}
+
+.align_center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 860px;
+}
+
+.align_left {
+  text-align: left;
+  max-width: 800px;
+}
+
+.align_right {
+  text-align: right;
+  margin-left: auto;
+  max-width: 800px;
+}
+
+.eyebrowWrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.85rem;
+}
+
+.accentLine {
+  display: inline-block;
+  width: 20px;
+  height: 2px;
+  background-color: var(--color-crimson);
+}
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.title {
+  font-family: var(--font-serif);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-family: var(--font-sans);
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  line-height: 1.7;
+}
+
+/* THEMES */
+.theme_light .eyebrow {
+  color: var(--color-primary-navy);
+}
+
+.theme_light .title {
+  color: var(--color-text-primary-dark);
+}
+
+.theme_light .subtitle {
+  color: var(--color-text-secondary-dark);
+}
+
+.theme_dark .eyebrow {
+  color: var(--color-royal-blue);
+}
+
+.theme_dark .title {
+  color: #FFFFFF;
+}
+
+.theme_dark .subtitle {
+  color: var(--color-royal-blue);
+  opacity: 0.9;
+}

@@ -1,0 +1,25 @@
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1.25rem, 4vw, 3rem);
+  padding-right: clamp(1.25rem, 4vw, 3rem);
+}
+
+.size_site {
+  max-width: var(--max-width-site);
+}
+
+.size_narrow {
+  max-width: var(--max-width-narrow);
+}
+
+.size_reading {
+  max-width: var(--max-width-reading);
+}
+
+.size_full {
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}

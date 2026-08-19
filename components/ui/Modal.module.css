@@ -1,0 +1,120 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 21, 56, 0.75);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  z-index: 1000;
+  animation: fadeIn 200ms ease-out;
+}
+
+.modal {
+  position: relative;
+  background-color: #FFFFFF;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-elevated);
+  max-height: 90vh;
+  overflow-y: auto;
+  width: 100%;
+  animation: scaleUp 250ms cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid var(--color-light-border);
+}
+
+.width_sm {
+  max-width: 440px;
+}
+
+.width_md {
+  max-width: 600px;
+}
+
+.width_lg {
+  max-width: 800px;
+}
+
+.width_xl {
+  max-width: 960px;
+}
+
+.closeButton {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--color-light-bg);
+  color: var(--color-primary-navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border: 1px solid var(--color-light-border);
+  z-index: 10;
+}
+
+.closeButton:hover {
+  background-color: var(--color-crimson);
+  color: #FFFFFF;
+  border-color: var(--color-crimson);
+}
+
+.header {
+  padding: 2rem 2.5rem 1rem 2.5rem;
+  border-bottom: 1px solid var(--color-light-border-subtle);
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: 1.65rem;
+  color: var(--color-primary-navy);
+  margin-bottom: 0.35rem;
+}
+
+.subtitle {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--color-text-secondary-dark);
+  margin: 0;
+}
+
+.body {
+  padding: 1.5rem 2.5rem 2.5rem 2.5rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .header {
+    padding: 1.5rem 1.25rem 0.75rem 1.25rem;
+  }
+  .body {
+    padding: 1.25rem;
+  }
+  .closeButton {
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+}

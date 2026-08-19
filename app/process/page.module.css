@@ -1,0 +1,278 @@
+.processPage {
+  width: 100%;
+}
+
+.container {
+  max-width: var(--max-width-site);
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 4vw, 3rem);
+}
+
+.hero {
+  background: linear-gradient(175deg, #001538 0%, #012258 100%);
+  color: #FFFFFF;
+  padding: clamp(4rem, 7vw, 6.5rem) 0;
+  border-bottom: 1px solid var(--color-navy-border);
+}
+
+.heroContent {
+  max-width: 860px;
+}
+
+.eyebrow {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--color-royal-blue);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+  color: #FFFFFF;
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+}
+
+.lead {
+  font-size: 1.15rem;
+  color: var(--color-royal-blue);
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+/* STAGES */
+.stagesSection {
+  background-color: var(--color-light-bg);
+  padding: clamp(4.5rem, 7vw, 6.5rem) 0;
+  border-bottom: 1px solid var(--color-light-border);
+}
+
+.stagesList {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.stageBlock {
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-light-border);
+  border-radius: var(--radius-sm);
+  padding: clamp(2rem, 4vw, 3.5rem);
+  box-shadow: var(--shadow-card);
+}
+
+.stageTopRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--color-light-border);
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.stageNumBadge {
+  background-color: var(--color-primary-navy);
+  color: #FFFFFF;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-xs);
+}
+
+.durationPill {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-text-muted-dark);
+}
+
+.stageMainGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+.stageLeftCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.stageName {
+  font-family: var(--font-serif);
+  font-size: 2.25rem;
+  color: var(--color-primary-navy);
+  margin-bottom: 0.25rem;
+}
+
+.stageSubtitle {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-crimson);
+  margin-bottom: 1.25rem;
+  display: block;
+}
+
+.stageDesc {
+  font-size: 1.02rem;
+  color: var(--color-text-secondary-dark);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.stageRightCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.actionsCard {
+  background-color: var(--color-light-bg);
+  border: 1px solid var(--color-light-border);
+  padding: 2rem;
+  border-radius: var(--radius-sm);
+}
+
+.cardHeader {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-primary-navy);
+  margin-bottom: 0.85rem;
+}
+
+.actionList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-bottom: 1.5rem;
+}
+
+.actionList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  color: var(--color-text-secondary-dark);
+  line-height: 1.45;
+}
+
+.actionList svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.deliverablesSubBox {
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-light-border);
+}
+
+.delivSubHead {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-crimson);
+  margin-bottom: 0.75rem;
+}
+
+.delivSubList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.delivSubList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.88rem;
+  color: var(--color-text-primary-dark);
+  font-weight: 500;
+}
+
+.delivSubList svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+/* COMMITMENTS */
+.commitmentsSection {
+  background-color: #FFFFFF;
+  padding: clamp(4.5rem, 7vw, 6.5rem) 0;
+  border-bottom: 1px solid var(--color-light-border);
+}
+
+.commitmentsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.commitCard {
+  background-color: var(--color-light-bg);
+  border: 1px solid var(--color-light-border);
+  padding: 2.25rem 2rem;
+  border-radius: var(--radius-sm);
+}
+
+.commitTitle {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  color: var(--color-primary-navy);
+  margin-bottom: 0.75rem;
+}
+
+.commitDesc {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary-dark);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* CTA */
+.ctaBanner {
+  background: linear-gradient(175deg, #001538 0%, #012258 100%);
+  color: #FFFFFF;
+  padding: clamp(4.5rem, 7vw, 6rem) 0;
+  text-align: center;
+}
+
+.ctaBox {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.ctaHeading {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+}
+
+.ctaText {
+  font-size: 1.05rem;
+  color: var(--color-royal-blue);
+  line-height: 1.7;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .stageMainGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .commitmentsGrid {
+    grid-template-columns: 1fr;
+  }
+}
