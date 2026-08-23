@@ -209,7 +209,7 @@ export const serviceCategories: ServiceCategory[] = [
         faqs: [
           {
             question: 'Who receives the royalties from book sales?',
-            answer: 'You do — 100% of them. Royal Quill Publisher never takes a percentage of your ongoing royalties. All platform sales deposit directly into your personal author accounts.'
+            answer: 'You do — 100% of them. Royal Quill Publishers never takes a percentage of your ongoing royalties. All platform sales deposit directly into your personal author accounts.'
           },
           {
             question: 'Who owns the ISBN and copyright?',

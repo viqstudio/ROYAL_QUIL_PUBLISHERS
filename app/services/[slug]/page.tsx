@@ -38,11 +38,11 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const service = allSubServices.find((s) => s.slug === params.slug);
   if (!service) {
-    return { title: 'Service Not Found | Royal Quill Publisher' };
+    return { title: 'Service Not Found | Royal Quill Publishers' };
   }
 
   return {
-    title: `${service.title} | Royal Quill Publisher`,
+    title: `${service.title} | Royal Quill Publishers`,
     description: service.shortDescription,
   };
 }
@@ -69,7 +69,7 @@ export default function SubServiceDetailPage({ params }: Props) {
         title={service.title}
         subtitle={service.shortDescription}
         imageSrc={headerImage}
-        imageAlt={`${service.title} - Royal Quill Publisher`}
+        imageAlt={`${service.title} - Royal Quill Publishers`}
         breadcrumbs={[
           { label: 'Home', href: '/' },
           { label: 'Services', href: '/services' },

@@ -10,7 +10,7 @@ export const faqs: FAQItem[] = [
     id: 'faq-1',
     category: 'Rights & Royalties',
     question: 'Do I retain 100% of my intellectual property, copyright, and royalties?',
-    answer: 'Yes, unequivocally. You retain 100% ownership, 100% copyright, and 100% of all ongoing royalties generated from your book across all sales channels. Royal Quill Publisher operates as your professional production and publishing partner. We charge transparent project fees and never claim any share of your earnings, rights, or intellectual property.'
+    answer: 'Yes, unequivocally. You retain 100% ownership, 100% copyright, and 100% of all ongoing royalties generated from your book across all sales channels. Royal Quill Publishers operates as your professional production and publishing partner. We charge transparent project fees and never claim any share of your earnings, rights, or intellectual property.'
   },
   {
     id: 'faq-2',
@@ -58,7 +58,7 @@ export const faqs: FAQItem[] = [
     id: 'faq-9',
     category: 'Rights & Royalties',
     question: 'How do royalty payouts work from platforms like Amazon and Apple?',
-    answer: 'During the publishing phase, we assist you in linking your official author platform accounts directly to your own bank account. Retailers deposit sales royalties directly to you monthly. Royal Quill Publisher never acts as a financial middleman.'
+    answer: 'During the publishing phase, we assist you in linking your official author platform accounts directly to your own bank account. Retailers deposit sales royalties directly to you monthly. Royal Quill Publishers never acts as a financial middleman.'
   },
   {
     id: 'faq-10',

@@ -7,8 +7,8 @@ import { Button } from '@/components/ui/Button';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'Global Publishing & Distribution | Royal Quill Publisher',
-  description: 'Learn how Royal Quill Publisher connects your title to Amazon KDP, Apple Books, Kobo, Barnes & Noble, and Ingram Content Group while you retain 100% rights, ownership, and royalties.',
+  title: 'Global Publishing & Distribution | Royal Quill Publishers',
+  description: 'Learn how Royal Quill Publishers connects your title to Amazon KDP, Apple Books, Kobo, Barnes & Noble, and Ingram Content Group while you retain 100% rights, ownership, and royalties.',
 };
 
 export default function PublishingPage() {
@@ -80,7 +80,7 @@ export default function PublishingPage() {
                   <th>Publishing Feature</th>
                   <th>Traditional Imprints</th>
                   <th>Vanity / Hybrid Presses</th>
-                  <th className={styles.highlightHeader}>Royal Quill Publisher</th>
+                  <th className={styles.highlightHeader}>Royal Quill Publishers</th>
                 </tr>
               </thead>
               <tbody>
@@ -137,7 +137,7 @@ export default function PublishingPage() {
                 An International Standard Book Number (ISBN) is the legal identifier of your published work. Many commercial publishing services register ISBNs under their own corporate name, legally defining themselves as the publisher of record and limiting where your book can be sold.
               </p>
               <p className={styles.isbnBody}>
-                At Royal Quill Publisher, we register all ISBNs directly under your name or your private imprint through official national agencies (Nielsen in the UK, Bowker in the US). You own your book&apos;s legal identity permanently.
+                At Royal Quill Publishers, we register all ISBNs directly under your name or your private imprint through official national agencies (Nielsen in the UK, Bowker in the US). You own your book&apos;s legal identity permanently.
               </p>
             </div>
 

@@ -207,7 +207,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
           <path d="M9 12l2 2 4-4" stroke="#D21625" />
         </svg>
         <span>
-          Royal Quill Publisher is a collaborative publishing partner. <strong>You retain 100% ownership, copyright, and royalties.</strong>
+          Royal Quill Publishers is a collaborative publishing partner. <strong>You retain 100% ownership, copyright, and royalties.</strong>
         </span>
       </div>
 

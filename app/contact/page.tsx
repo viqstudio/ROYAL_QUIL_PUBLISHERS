@@ -5,8 +5,8 @@ import { ContactForm } from '@/components/features/ContactForm';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'Contact & Free Manuscript Consultation | Royal Quill Publisher',
-  description: 'Schedule a complimentary manuscript evaluation and publishing consultation with a senior editor at Royal Quill Publisher. 100% author rights and confidentiality guaranteed.',
+  title: 'Contact & Free Manuscript Consultation | Royal Quill Publishers',
+  description: 'Schedule a complimentary manuscript evaluation and publishing consultation with a senior editor at Royal Quill Publishers. 100% author rights and confidentiality guaranteed.',
 };
 
 export default function ContactPage() {
