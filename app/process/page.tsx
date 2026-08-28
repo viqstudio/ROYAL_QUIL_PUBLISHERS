@@ -18,8 +18,8 @@ export default function ProcessPage() {
         eyebrow="PUBLISHING METHODOLOGY"
         title="A Structured Journey from Manuscript to Shelf"
         subtitle="Our 4-stage process provides complete milestone clarity, predictable schedules, and rigorous editorial control at every phase."
-        imageSrc="/images/Illustration 5.jpg"
-        imageAlt="Manuscript editing, typesetting proofs, and finished hardcover book"
+        imageSrc="/images/header-process.jpg"
+        imageAlt="Editorial evaluation desk with laptop manuscript, red-inked proofing, and submissions review book"
         breadcrumbs={[
           { label: 'Home', href: '/' },
           { label: '4-Stage Publishing Process' },

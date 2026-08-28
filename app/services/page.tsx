@@ -19,8 +19,8 @@ export default function ServicesPage() {
         eyebrow="THE PUBLISHING ARCHITECTURE"
         title="Everything Your Book Needs to Stand on Global Shelves"
         subtitle="Organized into six distinct, interconnected pillars of literary craft, visual design, and worldwide distribution."
-        imageSrc="/images/Illustration 2.jpg"
-        imageAlt="Book production galleys and editorial proofs"
+        imageSrc="/images/header-services.jpg"
+        imageAlt="British literature reference volumes, fountain pen, and editor desk"
         breadcrumbs={[
           { label: 'Home', href: '/' },
           { label: 'Services Architecture' },

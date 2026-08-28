@@ -27,8 +27,8 @@ export default function FAQPage() {
         eyebrow="TRANSPARENT ADVISORY"
         title="Frequently Asked Author Questions"
         subtitle="Direct, transparent answers regarding 100% rights ownership, royalty structures, editorial workflows, and global distribution."
-        imageSrc="/images/Illustration 6.jpg"
-        imageAlt="Open library folios and author study desk"
+        imageSrc="/images/header-about.jpg"
+        imageAlt="Classic warm library study desk and fine literature volumes"
         breadcrumbs={[
           { label: 'Home', href: '/' },
           { label: 'Author FAQs' },

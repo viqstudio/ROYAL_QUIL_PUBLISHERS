@@ -19,8 +19,8 @@ export default function PublishingPage() {
         eyebrow="GLOBAL DISTRIBUTION & METADATA"
         title="Publish Where Your Readers Already Are"
         subtitle="We connect your manuscript directly into Amazon, Apple Books, Barnes & Noble, Kobo, and Ingram — while registering official ISBNs in your name."
-        imageSrc="/images/Illustration 3.jpg"
-        imageAlt="Hardcover books, digital e-readers, and global distribution network"
+        imageSrc="/images/header-contact.jpg"
+        imageAlt="Executive London publishing desk overlooking city skyline"
         breadcrumbs={[
           { label: 'Home', href: '/' },
           { label: 'Global Publishing & Distribution' },

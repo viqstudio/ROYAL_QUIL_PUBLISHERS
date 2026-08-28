@@ -23,8 +23,8 @@ export default function PortfolioPage() {
         eyebrow="THE LITERARY CATALOGUE"
         title="Books We're Proud to Put Our Name Behind"
         subtitle="A curated showcase of recent titles across fiction, non-fiction, memoir, business, and poetry. Every author retains 100% rights."
-        imageSrc="/images/Illustration 4.jpg"
-        imageAlt="Fine book covers and editorial compositions"
+        imageSrc="/images/header-portfolio.jpg"
+        imageAlt="Luxury library bookshelf featuring Royal Quill published titles"
         breadcrumbs={[
           { label: 'Home', href: '/' },
           { label: 'Portfolio Catalogue' },

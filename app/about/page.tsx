@@ -18,8 +18,8 @@ export default function AboutPage() {
         eyebrow="ESTABLISHED PUBLISHING HOUSE"
         title="Publishing Built on Craftsmanship, Transparency & Author Autonomy"
         subtitle="Bridging the gap between traditional publishing prestige and modern author sovereignty. 100% rights, 100% royalties, 100% ownership."
-        imageSrc="/images/Illustration 1.jpg"
-        imageAlt="Editorial manuscript and fine hardcover book"
+        imageSrc="/images/header-about.jpg"
+        imageAlt="Classic warm library study desk and fine literature volumes"
         breadcrumbs={[
           { label: 'Home', href: '/' },
           { label: 'About Imprint' },

@@ -17,8 +17,8 @@ export default function ContactPage() {
         eyebrow="EDITORIAL CONSULTATIONS"
         title="Let's Talk About Your Book"
         subtitle="Share your manuscript details for a complimentary editorial evaluation and a customized publishing blueprint."
-        imageSrc="/images/Illustration 7.jpg"
-        imageAlt="Author writing desk, fine pens, and finished hardcover book"
+        imageSrc="/images/header-contact.jpg"
+        imageAlt="Executive London publishing desk overlooking city skyline"
         breadcrumbs={[
           { label: 'Home', href: '/' },
           { label: 'Manuscript Consultation' },
