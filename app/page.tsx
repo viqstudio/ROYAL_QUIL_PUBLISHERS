@@ -319,7 +319,7 @@ export default function HomePage() {
 
             {/* SUPPORTING ASYMMETRICAL COVERS */}
             <div className={styles.supportingGrid}>
-              {books.slice(1, 7).map((book) => (
+              {books.slice(1).map((book) => (
                 <div
                   key={book.id}
                   className={styles.supportingCard}
