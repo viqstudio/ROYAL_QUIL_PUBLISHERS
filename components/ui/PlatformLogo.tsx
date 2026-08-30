@@ -63,10 +63,10 @@ export const PlatformLogo: React.FC<PlatformLogoProps> = ({ id, className = '' }
       return (
         <div className={`${styles.logoCard} ${className}`} title="Barnes & Noble">
           <Image
-            src="/images/platform-barnes-noble.jpg"
+            src="/images/platform-barnes-noble.png"
             alt="Barnes & Noble"
             width={180}
-            height={48}
+            height={52}
             className={styles.platformImg}
             priority
           />

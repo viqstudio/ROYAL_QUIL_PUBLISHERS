@@ -16,30 +16,19 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
   href = '/',
   className = '',
 }) => {
-  const isDarkBg = variant === 'dark';
-
-  const logoImage = isDarkBg ? (
-    <Image
-      src="/images/royal-quill-logo-dark.png"
-      alt="Royal Quill Publishers"
-      width={220}
-      height={68}
-      priority
-      className={`${styles.logoImg} ${styles[`size_${size}`]}`}
-    />
-  ) : (
-    <div className={styles.lightLogoGroup}>
+  const logoContent = (
+    <div className={`${styles.logoGroup} ${styles[`theme_${variant}`]} ${styles[`size_${size}`]}`}>
       <Image
-        src="/images/royal-quill-logo-light.png"
+        src="/images/royal-quill-logo-emblem.png"
         alt="Royal Quill Publishers Emblem"
         width={56}
         height={56}
         priority
-        className={styles.lightEmblemImg}
+        className={styles.emblemImg}
       />
-      <div className={styles.lightTextGroup}>
-        <span className={styles.lightTitle}>ROYAL QUILL</span>
-        <span className={styles.lightSubtitle}>PUBLISHERS</span>
+      <div className={styles.textGroup}>
+        <span className={styles.titleText}>ROYAL QUILL</span>
+        <span className={styles.subText}>PUBLISHERS</span>
       </div>
     </div>
   );
@@ -47,10 +36,10 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
   if (href) {
     return (
       <Link href={href} className={`${styles.logoLink} ${className}`} aria-label="Royal Quill Publishers Home">
-        {logoImage}
+        {logoContent}
       </Link>
     );
   }
 
-  return <div className={`${styles.logoWrap} ${className}`}>{logoImage}</div>;
+  return <div className={`${styles.logoWrap} ${className}`}>{logoContent}</div>;
 };

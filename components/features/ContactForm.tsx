@@ -1,19 +1,24 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './ContactForm.module.css';
 
 export interface ContactFormProps {
   theme?: 'light' | 'dark';
   className?: string;
   sourceContext?: string;
+  prefilledGenre?: string;
+  onSuccess?: () => void;
 }
 
 export const ContactForm: React.FC<ContactFormProps> = ({
   theme = 'light',
   className = '',
   sourceContext,
+  prefilledGenre,
+  onSuccess,
 }) => {
+  const [mounted, setMounted] = useState(false);
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -24,6 +29,16 @@ export const ContactForm: React.FC<ContactFormProps> = ({
   });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (mounted && prefilledGenre) {
+      setFormData((prev) => ({ ...prev, genre: prefilledGenre }));
+    }
+  }, [mounted, prefilledGenre]);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
@@ -39,8 +54,29 @@ export const ContactForm: React.FC<ContactFormProps> = ({
     setTimeout(() => {
       setLoading(false);
       setSubmitted(true);
+      if (onSuccess) {
+        onSuccess();
+      }
     }, 600);
   };
+
+  if (!mounted) {
+    // Render initial consistent server skeleton
+    return (
+      <div className={`${styles.form} ${styles[`theme_${theme}`]} ${className}`}>
+        <div className={styles.gridRow}>
+          <div className={styles.field}>
+            <label className={styles.label}>Full Name <span className={styles.req}>*</span></label>
+            <input type="text" required placeholder="e.g. Eleanor Vance" className={styles.input} disabled />
+          </div>
+          <div className={styles.field}>
+            <label className={styles.label}>Email Address <span className={styles.req}>*</span></label>
+            <input type="email" required placeholder="e.g. author@example.com" className={styles.input} disabled />
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   if (submitted) {
     return (
@@ -48,7 +84,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
         <div className={styles.successIcon}>
           <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
             <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-            <polyline points="22 4 12 14.01 9 11.01" />
+            <polyline points="22 4 12 14.01 9 11.01" stroke="#D21625" />
           </svg>
         </div>
         <h3 className={styles.successHeading}>Manuscript Inquiry Received</h3>
@@ -56,7 +92,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
           Thank you, <strong>{formData.fullName}</strong>. A senior Royal Quill publishing strategist will review your book details and reach out to <strong>{formData.email}</strong> within 1 business day.
         </p>
         <div className={styles.ownershipPledge}>
-          <span>100% Author Copyright & Intellectual Property Protection Guaranteed.</span>
+          <span>100% Author Copyright & Rights Protection Guaranteed.</span>
         </div>
         <button
           type="button"
@@ -85,7 +121,9 @@ export const ContactForm: React.FC<ContactFormProps> = ({
       className={`${styles.form} ${styles[`theme_${theme}`]} ${className}`}
     >
       {sourceContext && (
-        <input type="hidden" name="sourceContext" value={sourceContext} />
+        <div className={styles.sourceNote}>
+          Inquiring about: <strong>{sourceContext}</strong>
+        </div>
       )}
 
       <div className={styles.gridRow}>
@@ -98,7 +136,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
             name="fullName"
             type="text"
             required
-            placeholder="e.g. Jonathan Vance"
+            placeholder="e.g. Eleanor Vance"
             value={formData.fullName}
             onChange={handleChange}
             className={styles.input}
@@ -114,7 +152,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
             name="email"
             type="email"
             required
-            placeholder="e.g. j.vance@example.co.uk"
+            placeholder="e.g. author@example.com"
             value={formData.email}
             onChange={handleChange}
             className={styles.input}
@@ -125,7 +163,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
       <div className={styles.gridRow}>
         <div className={styles.field}>
           <label htmlFor="form-phone" className={styles.label}>
-            Phone Number (UK or US)
+            Phone Number
           </label>
           <input
             id="form-phone"
@@ -140,7 +178,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
 
         <div className={styles.field}>
           <label htmlFor="form-genre" className={styles.label}>
-            Manuscript Genre <span className={styles.req}>*</span>
+            Book Genre <span className={styles.req}>*</span>
           </label>
           <select
             id="form-genre"
@@ -151,10 +189,10 @@ export const ContactForm: React.FC<ContactFormProps> = ({
             className={styles.select}
           >
             <option value="" disabled>Select your genre</option>
-            <option value="Fiction">Fiction (Literary / Historical / Contemporary)</option>
+            <option value="Fiction">Fiction</option>
             <option value="Romance">Romance</option>
-            <option value="Thriller / Mystery">Thriller / Mystery / Crime</option>
-            <option value="Fantasy / Sci-Fi">Fantasy & Science Fiction</option>
+            <option value="Thriller / Mystery">Thriller & Mystery</option>
+            <option value="Fantasy / Sci-Fi">Fantasy & Sci-Fi</option>
             <option value="Children's / YA">Children&apos;s & Young Adult</option>
             <option value="Memoir / Biography">Memoir & Biography</option>
             <option value="Business / Leadership">Business & Leadership</option>
@@ -168,7 +206,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
 
       <div className={styles.field}>
         <label htmlFor="form-stage" className={styles.label}>
-          Current Manuscript Stage
+          Current Manuscript Status
         </label>
         <select
           id="form-stage"
@@ -177,11 +215,11 @@ export const ContactForm: React.FC<ContactFormProps> = ({
           onChange={handleChange}
           className={styles.select}
         >
-          <option value="complete">Complete Manuscript Ready for Production</option>
-          <option value="editing-needed">Draft Complete (Seeking Developmental / Line Editing)</option>
-          <option value="partial">Partial Draft In Progress (50%+)</option>
-          <option value="ghostwriting">Concept / Outline (Seeking Ghostwriting or Co-Writing)</option>
-          <option value="republishing">Previously Published Title (Seeking New Edition / Formats)</option>
+          <option value="complete">Complete Manuscript (Ready for Production)</option>
+          <option value="partial">Partial Draft (50%+ written)</option>
+          <option value="early">Early Draft / In Progress</option>
+          <option value="concept">Concept & Outline (Needs Ghostwriting)</option>
+          <option value="republishing">Previously Published Title</option>
         </select>
       </div>
 
@@ -194,7 +232,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
           name="aboutBook"
           required
           rows={4}
-          placeholder="Describe your book's premise, target readers, estimated word count, or specific publishing goals..."
+          placeholder="Tell us about the premise, target readers, estimated word count, or specific publishing goals..."
           value={formData.aboutBook}
           onChange={handleChange}
           className={styles.textarea}
@@ -202,13 +240,10 @@ export const ContactForm: React.FC<ContactFormProps> = ({
       </div>
 
       <div className={styles.termsNote}>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#012258" strokeWidth="2">
           <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-          <path d="M9 12l2 2 4-4" stroke="#D21625" />
         </svg>
-        <span>
-          Royal Quill Publishers is a collaborative publishing partner. <strong>You retain 100% ownership, copyright, and royalties.</strong>
-        </span>
+        <span>You retain 100% of your book rights, copyright, and royalties. Guaranteed.</span>
       </div>
 
       <button
@@ -216,7 +251,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
         disabled={loading}
         className={styles.submitButton}
       >
-        {loading ? 'Submitting Inquiry...' : 'Start My Publishing Journey'}
+        {loading ? 'Preparing Your Consultation...' : 'Start My Publishing Journey'}
       </button>
     </form>
   );

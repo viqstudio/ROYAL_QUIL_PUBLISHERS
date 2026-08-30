@@ -10,44 +10,46 @@ export const HeroBookVisual: React.FC = () => {
 
       {/* STACKED PHYSICAL HARDCOVER BOOKS COMPOSITION */}
       <div className={styles.bookComposition}>
-        {/* SUPPORTING BOOK 2 (BACKGROUND ANGLE) */}
-        <div className={`${styles.bookItem} ${styles.bookBack}`}>
+        {/* LEFT BOOK: THE RAT RACE */}
+        <div className={`${styles.bookItem} ${styles.bookLeft}`}>
           <div className={styles.bookCover}>
             <Image
-              src="/images/book-the-silent-calculus.jpg"
-              alt="The Silent Calculus by Professor James Whitmore"
-              width={260}
-              height={390}
+              src="/images/hero-book-rat-race.jpg"
+              alt="The Rat Race by William Murphy"
+              width={250}
+              height={375}
               className={styles.coverImage}
               priority
             />
             <div className={styles.spineEffect} />
             <div className={styles.pageThickness} />
+            <div className={styles.bookSheen} />
           </div>
         </div>
 
-        {/* SUPPORTING BOOK 3 (SIDE ANGLE) */}
-        <div className={`${styles.bookItem} ${styles.bookSide}`}>
+        {/* RIGHT BOOK: WE LOVE JESUS */}
+        <div className={`${styles.bookItem} ${styles.bookRight}`}>
           <div className={styles.bookCover}>
             <Image
-              src="/images/book-letters-to-no-one.jpg"
-              alt="Letters to No One by Isabella Marchetti"
-              width={240}
-              height={360}
+              src="/images/hero-book-we-love-jesus.jpg"
+              alt="We Love Jesus by David Addington"
+              width={250}
+              height={375}
               className={styles.coverImage}
               priority
             />
             <div className={styles.spineEffect} />
             <div className={styles.pageThickness} />
+            <div className={styles.bookSheen} />
           </div>
         </div>
 
-        {/* PRIMARY FEATURED HARDCOVER BOOK (FOREGROUND HERO) */}
-        <div className={`${styles.bookItem} ${styles.bookFront}`}>
+        {/* CENTER PRIMARY FEATURED BOOK: EMPIRE BORDERS WITHIN */}
+        <div className={`${styles.bookItem} ${styles.bookCenter}`}>
           <div className={styles.bookCover}>
             <Image
-              src="/images/book-echoes-of-empire.jpg"
-              alt="Echoes of Empire by Dr. Amara Osei — Hardcover Edition"
+              src="/images/hero-book-empire.jpg"
+              alt="Empire: Borders Within by John Payne — Featured Hardcover Edition"
               width={300}
               height={450}
               className={styles.coverImage}
@@ -57,15 +59,6 @@ export const HeroBookVisual: React.FC = () => {
             <div className={styles.goldEmbossFoil} />
             <div className={styles.pageThickness} />
             <div className={styles.bookSheen} />
-          </div>
-
-          {/* EDITORIAL SPECIFICATION TAG */}
-          <div className={styles.specBadge}>
-            <div className={styles.specPip} />
-            <div className={styles.specInfo}>
-              <span className={styles.specTitle}>Hardcover Case Laminate</span>
-              <span className={styles.specSub}>100% Author Owned • Distributed Globally</span>
-            </div>
           </div>
         </div>
       </div>

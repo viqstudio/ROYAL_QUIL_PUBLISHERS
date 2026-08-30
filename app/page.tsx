@@ -719,7 +719,7 @@ export default function HomePage() {
                 <p className={styles.formCardSub}>
                   Share details about your manuscript for a complimentary consultation.
                 </p>
-                <ContactForm theme="dark" sourceContext="Homepage Final CTA" />
+                <ContactForm theme="light" sourceContext="Homepage Final CTA" />
               </div>
             </div>
           </div>

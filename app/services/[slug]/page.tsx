@@ -15,18 +15,18 @@ interface Props {
 }
 
 const serviceImageMap: Record<string, string> = {
-  ghostwriting: '/images/Illustration 8.jpg',
-  'book-writing': '/images/Illustration 9.jpg',
-  editing: '/images/Illustration 10.jpg',
-  proofreading: '/images/Illustration 11.jpg',
-  'cover-design': '/images/Illustration 12.jpg',
-  formatting: '/images/Page.jpg',
-  publishing: '/images/Illustration 13.jpg',
-  'book-marketing': '/images/Illustration 14.jpg',
-  'author-website': '/images/hero-bg.jpg',
-  'book-trailer': '/images/Illustration 8.jpg',
-  audiobook: '/images/Illustration 9.jpg',
-  printing: '/images/Illustration 10.jpg',
+  ghostwriting: '/images/service-ghostwriting.jpg',
+  'book-writing': '/images/service-book-writing.jpg',
+  editing: '/images/service-editing.png',
+  proofreading: '/images/service-proofreading.jpg',
+  'cover-design': '/images/service-cover-design.jpg',
+  formatting: '/images/service-formatting.jpg',
+  publishing: '/images/service-publishing.png',
+  'book-marketing': '/images/service-book-marketing.jpg',
+  'author-website': '/images/service-author-website.jpg',
+  'book-trailer': '/images/service-book-trailer.jpg',
+  audiobook: '/images/service-audiobook.jpg',
+  printing: '/images/service-printing.jpg',
 };
 
 export async function generateStaticParams() {
