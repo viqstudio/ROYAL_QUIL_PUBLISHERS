@@ -87,7 +87,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
         </div>
         <h3 className={styles.successHeading}>Enquiry Received</h3>
         <p className={styles.successMessage}>
-          Thank you. We'll review your details and get back to you within 24 hours.
+          Thank you. We&apos;ll review your details and get back to you within 24 hours.
         </p>
         <button
           type="button"
