@@ -36,9 +36,7 @@ export const BookInspectorModal: React.FC<BookInspectorModalProps> = ({
             />
             <div className={styles.spineGlow} />
           </div>
-          <span className={styles.rightsPledge}>
-            Published by Royal Quill • Author Retains 100% Rights
-          </span>
+          <span className={styles.rightsPledge}>Produced with Royal Quill Publishers</span>
         </div>
 
         <div className={styles.detailsSide}>
@@ -52,13 +50,6 @@ export const BookInspectorModal: React.FC<BookInspectorModalProps> = ({
 
           <p className={styles.tagline}>&ldquo;{book.tagline}&rdquo;</p>
           <p className={styles.description}>{book.description}</p>
-
-          {book.reviewQuote && (
-            <div className={styles.reviewBox}>
-              <p className={styles.quoteText}>&ldquo;{book.reviewQuote}&rdquo;</p>
-              <span className={styles.quoteSource}>— {book.reviewSource}</span>
-            </div>
-          )}
 
           {book.specs && (
             <div className={styles.specsGrid}>
@@ -90,7 +81,7 @@ export const BookInspectorModal: React.FC<BookInspectorModalProps> = ({
                 openConsultation({ genre: book.genre });
               }}
             >
-              Publish a Book Like This →
+              Discuss Your Book →
             </button>
           </div>
         </div>

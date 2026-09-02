@@ -24,9 +24,9 @@ export const serviceCategories: ServiceCategory[] = [
   {
     number: '01',
     id: 'write',
-    name: 'WRITE',
-    tagline: 'Translating vision and expertise into immaculate manuscript prose.',
-    summary: 'Whether you bring a rough outline, spoken voice recordings, or a half-finished draft, our dedicated writers develop complete, compelling manuscripts true to your voice.',
+    name: 'Writing & Development',
+    tagline: 'Professional writing support for ideas, outlines, and partial drafts.',
+    summary: 'Our writers can develop a complete manuscript from interviews and notes, or work alongside you to finish an existing draft.',
     colorHighlight: '#012258',
     subServices: [
       {
@@ -34,13 +34,13 @@ export const serviceCategories: ServiceCategory[] = [
         slug: 'ghostwriting',
         title: 'Ghostwriting',
         shortDescription: 'Collaborative, confidential manuscript creation from your ideas, notes, or interviews.',
-        fullDescription: 'Our ghostwriting service pairs you with an accomplished author who immerses themselves in your tone, subject matter, and goals. Through structured recorded interviews, detailed outlining, and iterative chapter drafting, we craft a complete, publication-ready book while you maintain 100% intellectual authorship and copyright.',
+        fullDescription: 'Our ghostwriting service pairs you with a writer who learns your subject, voice, and goals. Through interviews, outlining, and chapter reviews, we develop a complete manuscript while the rights to the commissioned work remain with you as agreed in the contract.',
         deliverables: [
-          'Comprehensive concept & narrative blueprint',
+          'Agreed concept, structure, and chapter outline',
           'In-depth interview sessions & voice transcription',
           'Full-length book manuscript (40,000–80,000+ words)',
           'Two full revision cycles',
-          'Complete NDA & 100% copyright assignment to author'
+          'Confidentiality and copyright terms confirmed in the agreement'
         ],
         idealFor: 'Busy executives, thought leaders, memoirists, and individuals with profound stories who lack the time to draft full manuscripts.',
         timeline: '12–24 Weeks',
@@ -81,9 +81,9 @@ export const serviceCategories: ServiceCategory[] = [
   {
     number: '02',
     id: 'refine',
-    name: 'REFINE',
-    tagline: 'Meticulous editorial elevation to industry-leading literary standards.',
-    summary: 'Every great book is forged in the editorial forge. We evaluate structure, rhythm, syntax, and voice with surgical precision to make your manuscript unputdownable.',
+    name: 'Editing & Proofreading',
+    tagline: 'Structural editing, line editing, and final proofreading.',
+    summary: 'We review structure, pacing, clarity, consistency, grammar, and presentation while preserving the author’s voice.',
     colorHighlight: '#012258',
     subServices: [
       {
@@ -91,9 +91,9 @@ export const serviceCategories: ServiceCategory[] = [
         slug: 'editing',
         title: 'Developmental & Line Editing',
         shortDescription: 'Deep structural critique, pacing refinement, narrative coherence, and sentence-level mastery.',
-        fullDescription: 'Our senior editors examine every layer of your manuscript. Developmental editing evaluates macro elements — character arcs, plot progression, tonal consistency, and thematic resonance. Line editing polishes micro elements — prose cadence, word choice, rhythm, and clarity without stripping your personal voice.',
+        fullDescription: 'Developmental editing reviews the structure, argument, plot, character development, pacing, and consistency of the manuscript. Line editing then improves clarity, wording, rhythm, and flow without rewriting the author’s voice.',
         deliverables: [
-          'Comprehensive 10–15 page Editorial Appraisal Report',
+          'Editorial appraisal and recommended priorities',
           'Line-by-line Track Changes markup across the entire manuscript',
           'Two 60-minute 1-on-1 editorial review consultations',
           'Clean revised manuscript file ready for typesetting'
@@ -133,9 +133,9 @@ export const serviceCategories: ServiceCategory[] = [
   {
     number: '03',
     id: 'design',
-    name: 'DESIGN',
-    tagline: 'Award-caliber book aesthetics, bespoke typography, and flawless interior layouts.',
-    summary: 'Readers judge books by their covers and experience them through their interior typesetting. We craft museum-grade cover art and interior typography designed for physical and digital beauty.',
+    name: 'Design & Formatting',
+    tagline: 'Cover design and readable interiors for print and digital editions.',
+    summary: 'We design covers suited to the book’s genre and prepare clear, professional interiors for paperback, hardcover, and eBook formats.',
     colorHighlight: '#012258',
     subServices: [
       {
@@ -143,7 +143,7 @@ export const serviceCategories: ServiceCategory[] = [
         slug: 'cover-design',
         title: 'Book Cover Design',
         shortDescription: 'Bespoke custom typography, physical dust jacket/case laminate & digital cover art.',
-        fullDescription: 'Our book designers create original, genre-defining covers that command immediate attention on physical bookstore shelves and high-density digital marketplaces. We design full jacket wraps with spine calculations, embossing/foil stamping specifications, and digital thumbnail optimization.',
+        fullDescription: 'Our designers develop cover concepts based on the manuscript, readership, genre, and selected formats. Final artwork can include the front cover, spine, back cover, print specifications, and a digital retail version.',
         deliverables: [
           '3 distinct creative concept directions',
           'Full print wrap (Front, Spine, Back cover with barcode placement)',
@@ -151,7 +151,7 @@ export const serviceCategories: ServiceCategory[] = [
           '3D photorealistic mockups for promotional use',
           'Print-ready CMYK PDF with bleed and crop marks'
         ],
-        idealFor: 'Authors who understand that a world-class cover is the single most crucial commercial asset for a book.',
+        idealFor: 'Authors who need a professionally designed cover for print, digital retail, or both.',
         timeline: '2–3 Weeks',
         faqs: [
           {
@@ -165,7 +165,7 @@ export const serviceCategories: ServiceCategory[] = [
         slug: 'formatting',
         title: 'eBook, Paperback & Hardcover Formatting',
         shortDescription: 'Interior typesetting, reflowable EPUBs, custom drop caps, and print-ready PDF masters.',
-        fullDescription: 'Immaculate interior typesetting tailored to industry standard trim sizes. We craft custom chapter headings, running headers, ornamental section breaks, drop caps, and table formatting. Our digital team produces clean, validated EPUB 3 files that adapt seamlessly across Kindle, iPad, Kobo, and smartphones.',
+        fullDescription: 'We typeset print interiors to the required trim size and prepare reflowable EPUB files for supported eBook retailers. The work includes front matter, chapter styling, running heads, page numbering, tables, images, and other book-specific elements.',
         deliverables: [
           'Print-ready interior PDF matching precise press trim specifications',
           'Validated reflowable EPUB 3 and Kindle-compliant files',
@@ -186,25 +186,25 @@ export const serviceCategories: ServiceCategory[] = [
   {
     number: '04',
     id: 'publish',
-    name: 'PUBLISH',
-    tagline: 'Global distribution to the world\'s largest book retailers while retaining 100% rights.',
-    summary: 'We connect your book directly into global publishing infrastructure — Amazon KDP, Apple Books, Kobo, Barnes & Noble, and Ingram Content Group — with all official ISBN registrations and metadata optimization.',
+    name: 'Publishing & Distribution',
+    tagline: 'Professional publishing setup and distribution across major book retailers.',
+    summary: 'We prepare your book for retail distribution, including platform setup, metadata, print-on-demand configuration, and ISBN support where required.',
     colorHighlight: '#012258',
     subServices: [
       {
         id: 'publishing',
         slug: 'publishing',
-        title: 'Global Publishing & ISBN Management',
-        shortDescription: 'Worldwide distribution to Amazon, Apple, Barnes & Noble, Kobo, and 40,000+ bookstores.',
-        fullDescription: 'We configure and deploy your title across the premier retail ecosystems. We assign official ISBNs (registered to you), configure BIC/BISAC genre taxonomies, optimize search keywords, and establish print-on-demand and digital distribution so your title is purchasable globally.',
+        title: 'Publishing & Distribution',
+        shortDescription: 'Retail setup for Amazon, Apple Books, Barnes & Noble, Kobo, and Ingram.',
+        fullDescription: 'We prepare and configure your title for the selected retail platforms. This can include ISBN support, BIC/BISAC categories, bibliographic metadata, keywords, print-on-demand, and digital distribution.',
         deliverables: [
-          'Official ISBN assignment (UK Nielsen / US Bowker registered to author)',
+          'ISBN assignment and barcode support where required',
           'Direct platform onboarding: Amazon KDP, Apple Books, Kobo, Barnes & Noble',
-          'Global catalogue distribution via Ingram Content Group to 40,000+ libraries & retailers',
-          'Direct royalty account setup — 100% royalties paid directly to your bank account',
+          'Ingram catalogue and wholesale distribution setup',
+          'Retail account and payment configuration support',
           'Barcodes, metadata, and Library of Congress / British Library deposit assistance'
         ],
-        idealFor: 'Independent authors who want the commercial reach of a major publishing house while keeping 100% ownership and royalties.',
+        idealFor: 'Independent authors who need professional retail and distribution setup without giving Royal Quill ownership of their manuscript.',
         timeline: '2–4 Weeks',
         faqs: [
           {
@@ -212,8 +212,8 @@ export const serviceCategories: ServiceCategory[] = [
             answer: 'You do — 100% of them. Royal Quill Publishers never takes a percentage of your ongoing royalties. All platform sales deposit directly into your personal author accounts.'
           },
           {
-            question: 'Who owns the ISBN and copyright?',
-            answer: 'You retain 100% legal ownership of your ISBN, manuscript copyright, and publishing rights. We act purely as your production and enablement partner.'
+            question: 'Do I retain the copyright to my manuscript?',
+            answer: 'Yes. Royal Quill does not take ownership of your manuscript or creative work. The publishing and ISBN arrangements for your edition are set out clearly in your project scope.'
           }
         ]
       }
@@ -222,9 +222,9 @@ export const serviceCategories: ServiceCategory[] = [
   {
     number: '05',
     id: 'grow',
-    name: 'GROW',
-    tagline: 'Strategic marketing, cinematic book trailers, and bespoke author digital platforms.',
-    summary: 'A masterpiece deserves readers. We equip independent authors with sophisticated digital presence, Amazon optimization, cinematic video trailers, and launch promotional campaigns.',
+    name: 'Marketing & Author Services',
+    tagline: 'Practical marketing and author materials for book launches.',
+    summary: 'Services include retail page content, advance-copy campaigns, press materials, author websites, and short promotional videos.',
     colorHighlight: '#012258',
     subServices: [
       {
@@ -232,7 +232,7 @@ export const serviceCategories: ServiceCategory[] = [
         slug: 'book-marketing',
         title: 'Book Marketing & Launch Campaigns',
         shortDescription: 'Amazon A+ content, ARC review distribution, press releases, and targeted digital promotion.',
-        fullDescription: 'Our marketing team designs bespoke launch strategies to build algorithmic momentum on Amazon and literary credibility in the press. We craft high-converting Amazon A+ enhanced marketing modules, distribute Advance Review Copies (ARCs) to verified book bloggers, and draft press releases for media outreach.',
+        fullDescription: 'We prepare launch materials suited to the book and its intended readers. Work can include Amazon page content, advance reader copy coordination, keywords and categories, press releases, and a practical post-launch plan.',
         deliverables: [
           'Amazon A+ Enhanced Brand Content modules',
           'ARC (Advance Review Copy) campaign deployment',
@@ -254,7 +254,7 @@ export const serviceCategories: ServiceCategory[] = [
         slug: 'author-website',
         title: 'Author Website Design',
         shortDescription: 'Custom, fast, and editorial author web portfolios designed to capture readers and build email lists.',
-        fullDescription: 'Your digital headquarters. We design and build high-performance, mobile-optimized author websites featuring book showcases, reader sample downloads, newsletter integration (Substack/Mailchimp), media kits, and direct retailer purchase links.',
+        fullDescription: 'We design responsive author websites with book pages, sample downloads, mailing-list integration, media information, and links to the relevant retailers.',
         deliverables: [
           'Bespoke multi-page author website',
           'Book showcase pages with universal retailer buy buttons',
@@ -276,7 +276,7 @@ export const serviceCategories: ServiceCategory[] = [
         slug: 'book-trailer',
         title: 'Cinematic Book Trailers',
         shortDescription: 'High-impact video teasers for social media, YouTube, and digital advertising campaigns.',
-        fullDescription: 'Engage modern readers through cinematic video storytelling. We produce 30–60 second narrative trailers with professional motion typography, atmospheric sound design, orchestral scoring, and high-definition visual assets tailored for Instagram, TikTok, and YouTube.',
+        fullDescription: 'We produce short promotional book videos using approved artwork, typography, music, and platform-appropriate edits for YouTube and social channels.',
         deliverables: [
           '30–60 second cinematic video trailer (16:9 widescreen)',
           'Vertical 9:16 cuts optimized for TikTok, Instagram Reels, and YouTube Shorts',
@@ -297,9 +297,9 @@ export const serviceCategories: ServiceCategory[] = [
   {
     number: '06',
     id: 'extend',
-    name: 'EXTEND',
-    tagline: 'Premium physical offset printing and studio-grade audiobook production.',
-    summary: 'Extend your manuscript into high-end physical formats and immersive audio editions distributed to Audible, Apple Books, and Spotify.',
+    name: 'Audiobook & Printing',
+    tagline: 'Printed editions and professionally produced audiobooks.',
+    summary: 'We support print production for standard and specialist editions, as well as narration, recording, mastering, and audiobook distribution.',
     colorHighlight: '#012258',
     subServices: [
       {
@@ -307,7 +307,7 @@ export const serviceCategories: ServiceCategory[] = [
         slug: 'audiobook',
         title: 'Audiobook Production',
         shortDescription: 'Voice talent casting, professional studio recording, mastering, and Audible/ACX distribution.',
-        fullDescription: 'The fastest-growing segment in modern publishing. We handle auditioning and casting from a roster of seasoned British and American voice actors, manage professional studio recording sessions, master audio to strict ACX/Audible specifications, and distribute to Audible, Apple, Google, and Spotify.',
+        fullDescription: 'We coordinate narrator auditions, recording, editing, and mastering to the specifications required by the selected audiobook platforms.',
         deliverables: [
           'Voice actor auditioning and casting curation',
           'Professional studio recording and chapter-by-chapter editing',
@@ -329,7 +329,7 @@ export const serviceCategories: ServiceCategory[] = [
         slug: 'printing',
         title: 'Custom Book Printing',
         shortDescription: 'Short-run offset, luxury hardcover bindings, foil stamping, edge spraying, and POD.',
-        fullDescription: 'For authors who demand uncompromising tactile luxury. We manage short-run and large-scale offset print manufacturing with custom paper stocks (cream 80gsm woodfree), cloth-bound hardcovers, custom dust jackets, gold/silver foil debossing, ribbon bookmarks, and sprayed edges.',
+        fullDescription: 'We manage print production for paperback, hardcover, short-run, and specialist editions. Available options can include custom paper, cloth binding, dust jackets, foil, spot finishes, ribbons, and sprayed edges.',
         deliverables: [
           'Print production management and press-check quality assurance',
           'Hardcover (Cloth, Case Laminate, Dust Jacket) or Luxury Paperback options',

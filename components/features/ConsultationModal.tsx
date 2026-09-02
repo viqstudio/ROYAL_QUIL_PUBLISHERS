@@ -13,8 +13,8 @@ export const ConsultationModal: React.FC = () => {
       isOpen={isModalOpen}
       onClose={closeConsultation}
       maxWidth="md"
-      title="Start Your Publishing Journey"
-      subtitle="Complimentary manuscript evaluation and publishing consultation with a senior Royal Quill editor."
+      title="Discuss Your Book"
+      subtitle="Tell us about your manuscript and we'll arrange a free consultation."
     >
       <ContactForm
         theme="light"

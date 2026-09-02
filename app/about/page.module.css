@@ -5,49 +5,14 @@
 .container {
   max-width: var(--max-width-site);
   margin: 0 auto;
-  padding: 0 clamp(1.25rem, 4vw, 3rem);
-}
-
-.hero {
-  background: linear-gradient(175deg, #001538 0%, #012258 100%);
-  color: #FFFFFF;
-  padding: clamp(4rem, 7vw, 6.5rem) 0;
-  border-bottom: 1px solid var(--color-navy-border);
-}
-
-.heroContent {
-  max-width: 860px;
-}
-
-.eyebrow {
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  color: var(--color-royal-blue);
-  display: block;
-  margin-bottom: 1rem;
-}
-
-.title {
-  font-family: var(--font-serif);
-  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
-  color: #FFFFFF;
-  line-height: 1.15;
-  margin-bottom: 1.25rem;
-}
-
-.lead {
-  font-size: 1.15rem;
-  color: var(--color-royal-blue);
-  line-height: 1.7;
-  opacity: 0.9;
+  padding: 0 clamp(1.25rem, 4vw, 2.5rem);
 }
 
 /* PHILOSOPHY */
 .philosophySection {
   background-color: #FFFFFF;
-  padding: clamp(4.5rem, 7vw, 6.5rem) 0;
-  border-bottom: 1px solid var(--color-light-border);
+  padding: 4.5rem 0;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .philosophyGrid {
@@ -60,30 +25,31 @@
 .sectionTag {
   font-size: 0.75rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
-  color: var(--color-crimson);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-primary-navy);
   display: block;
   margin-bottom: 0.5rem;
 }
 
 .sectionHeading {
   font-family: var(--font-serif);
-  font-size: 2.25rem;
-  color: var(--color-primary-navy);
+  font-size: 2rem;
+  color: var(--color-text-primary);
   margin-bottom: 1.25rem;
 }
 
 .bodyText {
   font-size: 1rem;
-  color: var(--color-text-secondary-dark);
+  color: var(--color-text-secondary);
   line-height: 1.7;
   margin-bottom: 1.25rem;
 }
 
 .pillarsBox {
-  background-color: var(--color-light-bg);
-  border: 1px solid var(--color-light-border);
-  padding: 2.5rem 2rem;
+  background-color: var(--color-warm-white);
+  border: 1px solid var(--color-border);
+  padding: 2.25rem 2rem;
   border-radius: var(--radius-sm);
   display: flex;
   flex-direction: column;
@@ -93,7 +59,7 @@
 .pillarsBoxTitle {
   font-family: var(--font-serif);
   font-size: 1.35rem;
-  color: var(--color-primary-navy);
+  color: var(--color-text-primary);
   margin-bottom: 0.5rem;
 }
 
@@ -104,78 +70,79 @@
 }
 
 .pillarNum {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 700;
-  color: var(--color-crimson);
+  color: var(--color-primary-navy);
   letter-spacing: 0.05em;
   margin-top: 2px;
 }
 
 .pillarHead {
-  font-family: var(--font-serif);
-  font-size: 1.1rem;
-  color: var(--color-primary-navy);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
   margin-bottom: 0.2rem;
 }
 
 .pillarDesc {
   font-size: 0.88rem;
-  color: var(--color-text-secondary-dark);
+  color: var(--color-text-secondary);
   line-height: 1.55;
   margin: 0;
 }
 
 /* STANDARDS */
 .standardsSection {
-  background-color: var(--color-light-bg);
-  padding: clamp(4.5rem, 7vw, 6.5rem) 0;
-  border-bottom: 1px solid var(--color-light-border);
+  background-color: var(--color-warm-white);
+  padding: 4.5rem 0;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .standardsGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .standardCard {
   background-color: #FFFFFF;
-  border: 1px solid var(--color-light-border);
-  padding: 2.25rem 2rem;
+  border: 1px solid var(--color-border);
+  padding: 2rem 1.75rem;
   border-radius: var(--radius-sm);
 }
 
 .cardHeader {
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .cardNum {
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   font-weight: 700;
-  color: var(--color-crimson);
+  color: var(--color-primary-navy);
   display: block;
   margin-bottom: 0.35rem;
 }
 
 .cardTitle {
   font-family: var(--font-serif);
-  font-size: 1.35rem;
-  color: var(--color-primary-navy);
+  font-size: 1.25rem;
+  color: var(--color-text-primary);
   margin: 0;
 }
 
 .cardText {
-  font-size: 0.95rem;
-  color: var(--color-text-secondary-dark);
+  font-size: 0.92rem;
+  color: var(--color-text-secondary);
   line-height: 1.65;
   margin: 0;
 }
 
 /* CTA BANNER */
 .ctaBanner {
-  background: linear-gradient(175deg, #001538 0%, #012258 100%);
+  background-color: var(--color-navy-deep);
   color: #FFFFFF;
-  padding: clamp(4.5rem, 7vw, 6rem) 0;
+  padding: 4.5rem 0;
 }
 
 .ctaBox {
@@ -193,17 +160,16 @@
 
 .ctaTitle {
   font-family: var(--font-serif);
-  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
   color: #FFFFFF;
   line-height: 1.2;
   margin-bottom: 1rem;
 }
 
 .ctaText {
-  font-size: 1.05rem;
-  color: var(--color-royal-blue);
+  font-size: 1rem;
+  color: var(--color-text-on-dark-muted);
   line-height: 1.7;
-  opacity: 0.9;
   margin-bottom: 2rem;
 }
 

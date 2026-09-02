@@ -3,7 +3,7 @@ import Link from 'next/link';
 import styles from './Button.module.css';
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'outline' | 'outline-light' | 'text';
+  variant?: 'primary' | 'crimson' | 'secondary' | 'outline' | 'outline-light' | 'text';
   size?: 'sm' | 'md' | 'lg';
   href?: string;
   isExternal?: boolean;

@@ -6,27 +6,27 @@ import { Button } from '@/components/ui/Button';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'Our 4-Stage Publishing Process | Royal Quill Publishers',
-  description: 'Learn how Royal Quill Publishers takes your manuscript from initial discovery to global publication through our structured 4-stage process: Discover, Create, Refine, and Publish.',
+  title: 'Our Publishing Process | Royal Quill Publishers',
+  description: 'Learn how Royal Quill reviews, edits, designs, prepares, and publishes books through a clear five-stage process.',
 };
 
 export default function ProcessPage() {
   return (
     <div className={styles.processPage}>
-      {/* CINEMATIC PAGE HEADER */}
+      {/* PAGE HEADER */}
       <PageHeader
-        eyebrow="PUBLISHING METHODOLOGY"
-        title="A Structured Journey from Manuscript to Shelf"
-        subtitle="Our 4-stage process provides complete milestone clarity, predictable schedules, and rigorous editorial control at every phase."
+        eyebrow="HOW IT WORKS"
+        title="Our Publishing Process"
+        subtitle="Five practical stages from manuscript review and editing to design, publication, and author support."
         imageSrc="/images/header-process.jpg"
-        imageAlt="Editorial evaluation desk with laptop manuscript, red-inked proofing, and submissions review book"
+        imageAlt="Editorial evaluation desk with laptop, proofing annotations, and review book"
         breadcrumbs={[
           { label: 'Home', href: '/' },
-          { label: '4-Stage Publishing Process' },
+          { label: 'Process' },
         ]}
       />
 
-      {/* DETAILED 4-STAGE BREAKDOWN */}
+      {/* DETAILED 5-STAGE BREAKDOWN */}
       <section className={styles.stagesSection}>
         <div className={styles.container}>
           <div className={styles.stagesList}>
@@ -48,7 +48,7 @@ export default function ProcessPage() {
 
                   <div className={styles.stageRightCol}>
                     <div className={styles.actionsCard}>
-                      <h4 className={styles.cardHeader}>Key Strategic Actions:</h4>
+                      <h4 className={styles.cardHeader}>Key Actions:</h4>
                       <ul className={styles.actionList}>
                         {stage.keyActions.map((act, i) => (
                           <li key={i}>
@@ -60,19 +60,6 @@ export default function ProcessPage() {
                         ))}
                       </ul>
 
-                      <div className={styles.deliverablesSubBox}>
-                        <h4 className={styles.delivSubHead}>Milestone Deliverables:</h4>
-                        <ul className={styles.delivSubList}>
-                          {stage.deliverables.map((deliv, i) => (
-                            <li key={i}>
-                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D21625" strokeWidth="2.5">
-                                <polyline points="20 6 9 17 4 12" />
-                              </svg>
-                              <span>{deliv}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -86,30 +73,30 @@ export default function ProcessPage() {
       <section className={styles.commitmentsSection}>
         <div className={styles.container}>
           <SectionHeading
-            eyebrow="OUR CADENCE"
-            title="The Royal Quill Quality Pledge"
-            subtitle="How we ensure seamless collaboration throughout your publishing journey."
+            eyebrow="OUR PRINCIPLES"
+            title="What You Can Expect"
+            subtitle="Clear communication and dedicated support throughout your publishing project."
           />
 
           <div className={styles.commitmentsGrid}>
             <div className={styles.commitCard}>
-              <h3 className={styles.commitTitle}>Dedicated Publishing Strategist</h3>
+              <h3 className={styles.commitTitle}>Dedicated Point of Contact</h3>
               <p className={styles.commitDesc}>
-                You work with a single dedicated point of contact who coordinates all writers, editors, cover designers, and distribution specialists on your behalf.
+                You work with a dedicated specialist who coordinates all editors, designers, typesetters, and distribution tasks.
               </p>
             </div>
 
             <div className={styles.commitCard}>
-              <h3 className={styles.commitTitle}>Iterative Feedback Cycles</h3>
+              <h3 className={styles.commitTitle}>Author Sign-Off</h3>
               <p className={styles.commitDesc}>
-                We do not proceed to manufacturing or platform release without your explicit sign-off on editorial text, jacket wraps, and galley layouts.
+                We do not proceed to printing or digital distribution without your explicit approval on all text, cover design, and interior layouts.
               </p>
             </div>
 
             <div className={styles.commitCard}>
-              <h3 className={styles.commitTitle}>Full File Custody</h3>
+              <h3 className={styles.commitTitle}>Complete File Delivery</h3>
               <p className={styles.commitDesc}>
-                Upon publication, you receive an archive of all print-ready press PDFs, high-res cover art (CMYK & RGB), and validated EPUB 3 masters.
+                Upon publication, you receive all print-ready press PDFs, high-resolution cover files, and validated EPUB masters.
               </p>
             </div>
           </div>
@@ -120,12 +107,12 @@ export default function ProcessPage() {
       <section className={styles.ctaBanner}>
         <div className={styles.container}>
           <div className={styles.ctaBox}>
-            <h2 className={styles.ctaHeading}>Ready to Begin Stage 01?</h2>
+            <h2 className={styles.ctaHeading}>Ready to Begin?</h2>
             <p className={styles.ctaText}>
-              Schedule your complimentary discovery session with our senior editorial team.
+              Schedule a free consultation with our team to discuss your manuscript.
             </p>
             <Button variant="primary" size="lg" href="/contact">
-              Start Your Publishing Journey
+              Discuss Your Book
             </Button>
           </div>
         </div>

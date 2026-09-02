@@ -89,9 +89,9 @@ export const PlatformLogo: React.FC<PlatformLogoProps> = ({ id, className = '' }
 
     case 'isbn-agencies':
       return (
-        <div className={`${styles.logoCard} ${className}`} title="Official ISBN Support">
+        <div className={`${styles.logoCard} ${className}`} title="Publishing administration support">
           <div className={styles.isbnGroup}>
-            <span className={styles.isbnTag}>OFFICIAL REGISTRATION</span>
+            <span className={styles.isbnTag}>ISBN &amp; METADATA</span>
             <span className={styles.isbnTitle}>Nielsen (UK) • Bowker (US)</span>
           </div>
         </div>

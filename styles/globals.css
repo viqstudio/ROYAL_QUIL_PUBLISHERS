@@ -1,69 +1,90 @@
 /* 
-  ROYAL QUILL PUBLISHERS — DESIGN SYSTEM TOKENS & GLOBAL STYLES
-  Crafted for British & International Literary Sophistication
+  ROYAL QUILL PUBLISHERS — DESIGN SYSTEM
+  Vibrant. Warm. Editorial. Literary.
 */
 
 :root {
-  /* Brand Palette (Exact Specifications) */
+  /* Brand Palette */
   --color-primary-navy: #012258;
   --color-navy-deep: #001538;
   --color-navy-dark: #072a66;
   --color-navy-surface: #0e3477;
-  --color-navy-border: rgba(192, 223, 253, 0.18);
   
-  --color-light-bg: #F3F3F3;
-  --color-light-surface: #FFFFFF;
-  --color-light-card: #FFFFFF;
-  --color-light-border: #E2E6EC;
-  --color-light-border-subtle: #ECEEF2;
-  
-  --color-royal-blue: #C0DFFD;
-  --color-royal-blue-subtle: rgba(192, 223, 253, 0.12);
-  --color-royal-blue-border: rgba(192, 223, 253, 0.35);
-  
+  --color-royal-blue: #1765B0;
+  --color-royal-blue-light: #2A7FD4;
+  --color-royal-blue-soft: #C0DFFD;
+  --color-royal-blue-subtle: rgba(23, 101, 176, 0.08);
+
   --color-crimson: #D21625;
   --color-crimson-hover: #b8121f;
   --color-crimson-active: #9e0e1a;
   --color-crimson-subtle: rgba(210, 22, 37, 0.08);
 
-  /* Editorial Text Colors */
-  --color-text-primary-dark: #0A192F;
-  --color-text-secondary-dark: #3E4D61;
-  --color-text-muted-dark: #64748B;
+  /* Warm Atmospheric Backgrounds */
+  --color-cream-bg: #FAF7F0;
+  --color-cream-light: #FCFBF7;
+  --color-warm-white: #FCFBF7;
+  --color-paper-warm: #F4EFE6;
+  --color-paper-card: #FFFFFF;
+  --color-pale-blue: #F0F6FC;
+  --color-light-bg: #F5F4F0;
+  --color-light-surface: #FFFFFF;
+
+  --color-border: #E5DFD5;
+  --color-border-light: #EFECE6;
+  --color-border-subtle: #F0EDE6;
+  --color-navy-border: rgba(192, 223, 253, 0.2);
+
+  /* Text Colors */
+  --color-text-primary: #0A192F;
+  --color-text-secondary: #2C3E55;
+  --color-text-muted: #5A6E85;
   
-  --color-text-primary-light: #F8FAFC;
-  --color-text-secondary-light: #C0DFFD;
-  --color-text-muted-light: #94A3B8;
+  --color-text-on-dark: #FFFFFF;
+  --color-text-on-dark-secondary: #C0DFFD;
+  --color-text-on-dark-muted: #94A3B8;
+
+  /* Aliases for backwards compatibility */
+  --color-text-primary-dark: var(--color-text-primary);
+  --color-text-secondary-dark: var(--color-text-secondary);
+  --color-text-muted-dark: var(--color-text-muted);
+  --color-text-primary-light: var(--color-text-on-dark);
+  --color-text-secondary-light: var(--color-text-on-dark-secondary);
+  --color-text-muted-light: var(--color-text-on-dark-muted);
+  --color-light-border: var(--color-border);
+  --color-light-border-subtle: var(--color-border-subtle);
+  --color-light-card: #FFFFFF;
+  --color-royal-blue-border: rgba(192, 223, 253, 0.35);
 
   /* Typography */
-  --font-serif: "Playfair Display", "Cormorant Garamond", Georgia, Cambria, "Times New Roman", serif;
+  --font-serif: "Playfair Display", Georgia, Cambria, "Times New Roman", serif;
   --font-sans: "Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   
-  /* Spatial System */
-  --max-width-site: 1320px;
-  --max-width-narrow: 920px;
-  --max-width-reading: 720px;
+  /* Layout */
+  --max-width-site: 1240px;
+  --max-width-narrow: 940px;
+  --max-width-reading: 700px;
   
-  /* Radii (Subtle & Editorial — Never bubbly) */
-  --radius-xs: 2px;
-  --radius-sm: 4px;
-  --radius-md: 6px;
-  --radius-lg: 8px;
+  /* Radii */
+  --radius-xs: 3px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
   
-  /* Editorial Shadows */
-  --shadow-subtle: 0 1px 3px rgba(1, 34, 88, 0.05);
-  --shadow-card: 0 4px 20px -2px rgba(1, 34, 88, 0.06);
-  --shadow-elevated: 0 12px 32px -4px rgba(1, 34, 88, 0.12);
-  --shadow-book: 0 15px 35px -5px rgba(0, 21, 56, 0.35), 0 5px 15px rgba(0, 0, 0, 0.15);
-  --shadow-book-hover: 0 25px 45px -8px rgba(0, 21, 56, 0.45), 0 10px 20px rgba(0, 0, 0, 0.2);
+  /* Physical Book Shadows & Depth */
+  --shadow-subtle: 0 2px 6px rgba(1, 34, 88, 0.05);
+  --shadow-card: 0 4px 16px rgba(1, 34, 88, 0.07);
+  --shadow-elevated: 0 12px 32px rgba(1, 34, 88, 0.12);
+  --shadow-book: 0 15px 35px -5px rgba(0, 21, 56, 0.35), 0 5px 15px rgba(0, 0, 0, 0.12);
+  --shadow-book-hover: 0 22px 45px -8px rgba(0, 21, 56, 0.45), 0 8px 20px rgba(0, 0, 0, 0.18);
 
   /* Transitions */
-  --transition-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
-  --transition-normal: 300ms cubic-bezier(0.16, 1, 0.3, 1);
-  --transition-editorial: 500ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-editorial: 350ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Reset & Box Sizing */
+/* Reset */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -71,53 +92,63 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: 18px;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  background-color: var(--color-light-bg);
-  color: var(--color-text-primary-dark);
+  background-color: var(--color-cream-bg);
+  color: var(--color-text-primary);
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
 }
 
 body {
   font-family: var(--font-sans);
-  line-height: 1.65;
-  color: var(--color-text-secondary-dark);
-  background-color: var(--color-light-bg);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  background-color: var(--color-cream-bg);
   overflow-x: hidden;
 }
 
-/* Typography Hierarchy */
+/* Bold Expressive Typography */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif);
-  color: var(--color-text-primary-dark);
+  color: var(--color-text-primary);
   line-height: 1.2;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: -0.015em;
 }
 
 h1 {
-  font-size: clamp(2.5rem, 5vw, 4.25rem);
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-size: clamp(2.4rem, 4.8vw, 3.8rem);
+  letter-spacing: -0.025em;
+  font-weight: 800;
 }
 
 h2 {
-  font-size: clamp(2rem, 3.5vw, 3rem);
-  letter-spacing: -0.015em;
+  font-size: clamp(1.85rem, 3.4vw, 2.75rem);
+  letter-spacing: -0.018em;
+  font-weight: 700;
 }
 
 h3 {
-  font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+  font-size: clamp(1.3rem, 2.2vw, 1.8rem);
+  font-weight: 700;
 }
 
 h4 {
-  font-size: 1.25rem;
+  font-size: 1.18rem;
+  font-weight: 700;
 }
 
 p {
-  margin-bottom: 1rem;
+  margin-bottom: 1.15rem;
 }
 
 p:last-child {
@@ -144,24 +175,24 @@ img {
 
 /* Selection */
 ::selection {
-  background-color: var(--color-royal-blue);
-  color: var(--color-primary-navy);
+  background-color: var(--color-primary-navy);
+  color: #FFFFFF;
 }
 
-/* Focus States for Accessibility */
+/* Focus States */
 :focus-visible {
   outline: 2px solid var(--color-crimson);
   outline-offset: 3px;
 }
 
-/* Editorial Container Utility */
+/* Layout Containers */
 .site-container {
   width: 100%;
   max-width: var(--max-width-site);
   margin-left: auto;
   margin-right: auto;
-  padding-left: clamp(1.25rem, 4vw, 3rem);
-  padding-right: clamp(1.25rem, 4vw, 3rem);
+  padding-left: clamp(1.25rem, 4vw, 2.5rem);
+  padding-right: clamp(1.25rem, 4vw, 2.5rem);
 }
 
 .site-container-narrow {
@@ -169,44 +200,19 @@ img {
   max-width: var(--max-width-narrow);
   margin-left: auto;
   margin-right: auto;
-  padding-left: clamp(1.25rem, 4vw, 3rem);
-  padding-right: clamp(1.25rem, 4vw, 3rem);
+  padding-left: clamp(1.25rem, 4vw, 2.5rem);
+  padding-right: clamp(1.25rem, 4vw, 2.5rem);
 }
 
-/* Editorial Dividers & Micro Details */
-.editorial-rule {
-  height: 1px;
-  background: linear-gradient(90deg, var(--color-light-border) 0%, transparent 100%);
-  border: none;
-  margin: 2rem 0;
-}
-
-.editorial-rule-navy {
-  height: 1px;
-  background: linear-gradient(90deg, var(--color-navy-border) 0%, transparent 100%);
-  border: none;
-  margin: 2rem 0;
-}
-
-/* Subtle Crimson Accent Line */
-.accent-pip {
+/* Subtle Editorial Bookmark Accent */
+.bookmark-ribbon {
   display: inline-block;
-  width: 24px;
-  height: 2px;
+  width: 14px;
+  height: 28px;
   background-color: var(--color-crimson);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%);
+  margin-right: 0.65rem;
   vertical-align: middle;
-  margin-right: 0.75rem;
-}
-
-/* Print/Physical Book Embellishments */
-.book-shadow {
-  box-shadow: var(--shadow-book);
-  transition: transform var(--transition-editorial), box-shadow var(--transition-editorial);
-}
-
-.book-shadow:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-book-hover);
 }
 
 /* Reduced Motion */

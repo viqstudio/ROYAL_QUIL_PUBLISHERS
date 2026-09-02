@@ -10,19 +10,19 @@ export const faqs: FAQItem[] = [
     id: 'faq-1',
     category: 'Rights & Royalties',
     question: 'Do I retain 100% of my intellectual property, copyright, and royalties?',
-    answer: 'Yes, unequivocally. You retain 100% ownership, 100% copyright, and 100% of all ongoing royalties generated from your book across all sales channels. Royal Quill Publishers operates as your professional production and publishing partner. We charge transparent project fees and never claim any share of your earnings, rights, or intellectual property.'
+    answer: 'Yes. You retain the copyright and intellectual property rights to your manuscript. Royal Quill provides publishing services and does not take ownership of your creative work. Retail royalties are paid through the distribution accounts agreed for your project.'
   },
   {
     id: 'faq-2',
     category: 'Rights & Royalties',
-    question: 'Who owns the ISBN assigned to my book?',
-    answer: 'The ISBN is officially registered in your name or your designated imprint through official national agencies (Nielsen BookData in the UK, Bowker in the US). You hold full legal control and can transfer or use your files anywhere at any time.'
+    question: 'Do you provide ISBN and publishing setup support?',
+    answer: 'Yes. Where required, we can support ISBN assignment, bibliographic metadata, barcode preparation, and retailer setup as part of the publishing service. The exact arrangement is confirmed in your project scope.'
   },
   {
     id: 'faq-3',
     category: 'Publishing & Distribution',
     question: 'Where will my book be available for purchase?',
-    answer: 'Your book will be distributed across the world\'s largest digital and physical retail channels, including Amazon KDP, Apple Books, Kobo, Barnes & Noble, Google Play, and 40,000+ bookstores, libraries, and universities globally via the Ingram Content Group distribution network.'
+    answer: 'Distribution options can include Amazon KDP, Apple Books, Kobo, Barnes & Noble, and Ingram. Availability depends on the formats, territories, and distribution route chosen for your book.'
   },
   {
     id: 'faq-4',

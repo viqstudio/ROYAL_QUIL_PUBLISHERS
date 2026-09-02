@@ -6,23 +6,23 @@ import { BrandLogo } from '@/components/ui/BrandLogo';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'About Royal Quill Publishers | Our Heritage, Philosophy & Standards',
-  description: 'Royal Quill Publishers is a premier self-publishing and book production house. We provide end-to-end publishing support to independent authors across the UK and US while ensuring authors retain 100% ownership and royalties.',
+  title: 'About Royal Quill Publishers | Independent Book Publishing',
+  description: 'Royal Quill Publishers provides professional writing, editing, design, production, and distribution support for independent authors.',
 };
 
 export default function AboutPage() {
   return (
     <div className={styles.aboutPage}>
-      {/* CINEMATIC PAGE HEADER */}
+      {/* PAGE HEADER */}
       <PageHeader
-        eyebrow="ESTABLISHED PUBLISHING HOUSE"
-        title="Publishing Built on Craftsmanship, Transparency & Author Autonomy"
-        subtitle="Bridging the gap between traditional publishing prestige and modern author sovereignty. 100% rights, 100% royalties, 100% ownership."
+        eyebrow="ABOUT ROYAL QUILL"
+        title="Professional Publishing Support for Independent Authors"
+        subtitle="Experienced editorial, design, production, and distribution support with clear author approval at every stage."
         imageSrc="/images/header-about.jpg"
         imageAlt="Classic warm library study desk and fine literature volumes"
         breadcrumbs={[
           { label: 'Home', href: '/' },
-          { label: 'About Imprint' },
+          { label: 'About' },
         ]}
       />
 
@@ -31,27 +31,27 @@ export default function AboutPage() {
         <div className={styles.container}>
           <div className={styles.philosophyGrid}>
             <div className={styles.philosophyCol}>
-              <span className={styles.sectionTag}>OUR ORIGIN & PURPOSE</span>
-              <h2 className={styles.sectionHeading}>Why Royal Quill Publishers Was Founded</h2>
+              <span className={styles.sectionTag}>OUR APPROACH</span>
+              <h2 className={styles.sectionHeading}>Why Royal Quill Publishers Exists</h2>
               <p className={styles.bodyText}>
-                For decades, independent authors faced an impossible trade-off: surrender the majority of their royalties and intellectual rights to a corporate publishing conglomerate, or settle for automated, template-based self-publishing agencies.
+                Publishing a book requires several specialist disciplines. A strong manuscript still needs careful editing, appropriate design, accurate production files, and a well-managed route to market.
               </p>
               <p className={styles.bodyText}>
-                Royal Quill Publishers was established to eliminate that compromise. Over 5+ years of dedicated practice, we have assembled senior developmental editors, award-winning book designers, master typesetters, and publishing strategists.
+                Royal Quill brings those disciplines together. Our editors, designers, typesetters, and publishing team work to an agreed scope and keep authors involved in the decisions that shape their book.
               </p>
               <p className={styles.bodyText}>
-                Our mission is straightforward: we provide the full production infrastructure of an established publishing house, while you retain 100% legal ownership of your manuscript, rights, and earnings.
+                Our purpose is straightforward: help authors prepare and publish books professionally without taking ownership of their manuscripts or creative work.
               </p>
             </div>
 
             <div className={styles.pillarsBox}>
-              <h3 className={styles.pillarsBoxTitle}>The Four Pillars of Our Imprint</h3>
+              <h3 className={styles.pillarsBoxTitle}>Our Core Principles</h3>
               <div className={styles.pillarItem}>
                 <span className={styles.pillarNum}>01</span>
                 <div>
-                  <h4 className={styles.pillarHead}>Uncompromising Literary Craft</h4>
+                  <h4 className={styles.pillarHead}>Professional Quality</h4>
                   <p className={styles.pillarDesc}>
-                    Every manuscript is edited, designed, and typeset by seasoned publishing professionals.
+                    Every manuscript is edited, designed, and typeset by experienced specialists.
                   </p>
                 </div>
               </div>
@@ -59,9 +59,9 @@ export default function AboutPage() {
               <div className={styles.pillarItem}>
                 <span className={styles.pillarNum}>02</span>
                 <div>
-                  <h4 className={styles.pillarHead}>100% Author Autonomy</h4>
+                  <h4 className={styles.pillarHead}>Author Rights</h4>
                   <p className={styles.pillarDesc}>
-                    You maintain complete copyright, 100% royalties, and final creative approval.
+                    You retain the rights to your creative work and approve the manuscript, cover, and interior.
                   </p>
                 </div>
               </div>
@@ -69,9 +69,9 @@ export default function AboutPage() {
               <div className={styles.pillarItem}>
                 <span className={styles.pillarNum}>03</span>
                 <div>
-                  <h4 className={styles.pillarHead}>Global Distribution Reach</h4>
+                  <h4 className={styles.pillarHead}>Worldwide Distribution</h4>
                   <p className={styles.pillarDesc}>
-                    Your book is placed directly onto Amazon, Apple Books, Kobo, Barnes & Noble, and 40,000+ bookstores worldwide.
+                    Your book is distributed to Amazon, Apple Books, Kobo, Barnes & Noble, and international bookstores.
                   </p>
                 </div>
               </div>
@@ -79,9 +79,9 @@ export default function AboutPage() {
               <div className={styles.pillarItem}>
                 <span className={styles.pillarNum}>04</span>
                 <div>
-                  <h4 className={styles.pillarHead}>Publishing Without Mystery</h4>
+                  <h4 className={styles.pillarHead}>Clear Communication</h4>
                   <p className={styles.pillarDesc}>
-                    Transparent milestone schedules, clear scopes, and regular direct communication.
+                    Transparent milestone schedules, clear scopes, and direct access to your team.
                   </p>
                 </div>
               </div>
@@ -94,39 +94,39 @@ export default function AboutPage() {
       <section className={styles.standardsSection}>
         <div className={styles.container}>
           <SectionHeading
-            eyebrow="PUBLISHING STANDARDS"
-            title="How We Treat Every Manuscript"
-            subtitle="Our standard operating cadence reflects the rigor of a prestigious literary press."
+            eyebrow="OUR STANDARDS"
+            title="How We Work With Every Author"
+            subtitle="Care, precision, and respect for your voice at every step."
           />
 
           <div className={styles.standardsGrid}>
             <div className={styles.standardCard}>
               <div className={styles.cardHeader}>
                 <span className={styles.cardNum}>01</span>
-                <h3 className={styles.cardTitle}>Rigorous Editorial Integrity</h3>
+                <h3 className={styles.cardTitle}>Human Editorial Review</h3>
               </div>
               <p className={styles.cardText}>
-                We do not employ automated software or generic spellcheckers. Every developmental review, line edit, and proofreading pass is executed by seasoned human editors who respect your creative voice.
+                Developmental reviews, line edits, and proofreading passes are completed by publishing professionals who work with your voice and subject matter.
               </p>
             </div>
 
             <div className={styles.standardCard}>
               <div className={styles.cardHeader}>
                 <span className={styles.cardNum}>02</span>
-                <h3 className={styles.cardTitle}>Bespoke Visual Typography</h3>
+                <h3 className={styles.cardTitle}>Custom Design</h3>
               </div>
               <p className={styles.cardText}>
-                We never use recycled cover templates. Our book covers and interior layouts are conceived from scratch to capture the spirit of your story and command shelf presence.
+                Cover designs and interior layouts are developed for the book, its genre, and the formats in which it will be published.
               </p>
             </div>
 
             <div className={styles.standardCard}>
               <div className={styles.cardHeader}>
                 <span className={styles.cardNum}>03</span>
-                <h3 className={styles.cardTitle}>Legal & Financial Transparency</h3>
+                <h3 className={styles.cardTitle}>Full Transparency</h3>
               </div>
               <p className={styles.cardText}>
-                All ISBNs are registered to you. Royalties are paid directly by retailers into your own bank account. We operate with zero hidden charges and zero claims on future rights.
+                The scope, schedule, review stages, publishing setup, and file handover are agreed before production begins.
               </p>
             </div>
           </div>
@@ -140,16 +140,16 @@ export default function AboutPage() {
             <div className={styles.ctaLogoWrap}>
               <BrandLogo variant="dark" size="md" href="/" />
             </div>
-            <h2 className={styles.ctaTitle}>Ready to Publish with Royal Quill?</h2>
+            <h2 className={styles.ctaTitle}>Ready to Publish Your Book?</h2>
             <p className={styles.ctaText}>
-              Share your manuscript details with our senior editorial team for a confidential, no-obligation evaluation.
+              Share your manuscript details with our editorial team for a confidential evaluation.
             </p>
             <div className={styles.ctaBtns}>
               <Button variant="primary" size="lg" href="/contact">
-                Schedule a Manuscript Consultation
+                Discuss Your Book
               </Button>
               <Button variant="outline-light" size="lg" href="/services">
-                Explore Publishing Services
+                Explore Services
               </Button>
             </div>
           </div>

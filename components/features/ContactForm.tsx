@@ -61,7 +61,6 @@ export const ContactForm: React.FC<ContactFormProps> = ({
   };
 
   if (!mounted) {
-    // Render initial consistent server skeleton
     return (
       <div className={`${styles.form} ${styles[`theme_${theme}`]} ${className}`}>
         <div className={styles.gridRow}>
@@ -82,18 +81,14 @@ export const ContactForm: React.FC<ContactFormProps> = ({
     return (
       <div className={`${styles.successCard} ${styles[`theme_${theme}`]} ${className}`}>
         <div className={styles.successIcon}>
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-            <polyline points="22 4 12 14.01 9 11.01" stroke="#D21625" />
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+            <polyline points="20 6 9 17 4 12" />
           </svg>
         </div>
-        <h3 className={styles.successHeading}>Manuscript Inquiry Received</h3>
+        <h3 className={styles.successHeading}>Enquiry Received</h3>
         <p className={styles.successMessage}>
-          Thank you, <strong>{formData.fullName}</strong>. A senior Royal Quill publishing strategist will review your book details and reach out to <strong>{formData.email}</strong> within 1 business day.
+          Thank you. We'll review your details and get back to you within 24 hours.
         </p>
-        <div className={styles.ownershipPledge}>
-          <span>100% Author Copyright & Rights Protection Guaranteed.</span>
-        </div>
         <button
           type="button"
           className={styles.resetButton}
@@ -109,7 +104,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
             });
           }}
         >
-          Submit Another Inquiry
+          Submit Another Enquiry
         </button>
       </div>
     );
@@ -240,10 +235,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
       </div>
 
       <div className={styles.termsNote}>
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#012258" strokeWidth="2">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-        </svg>
-        <span>You retain 100% of your book rights, copyright, and royalties. Guaranteed.</span>
+        <span>Your details are kept confidential.</span>
       </div>
 
       <button
@@ -251,7 +243,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
         disabled={loading}
         className={styles.submitButton}
       >
-        {loading ? 'Preparing Your Consultation...' : 'Start My Publishing Journey'}
+        {loading ? 'Sending...' : 'Send My Enquiry'}
       </button>
     </form>
   );

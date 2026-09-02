@@ -22,16 +22,16 @@ export default function FAQPage() {
 
   return (
     <div className={styles.faqPage}>
-      {/* CINEMATIC PAGE HEADER */}
+      {/* PAGE HEADER */}
       <PageHeader
-        eyebrow="TRANSPARENT ADVISORY"
-        title="Frequently Asked Author Questions"
-        subtitle="Direct, transparent answers regarding 100% rights ownership, royalty structures, editorial workflows, and global distribution."
-        imageSrc="/images/header-about.jpg"
-        imageAlt="Classic warm library study desk and fine literature volumes"
+        eyebrow="COMMON QUESTIONS"
+        title="Frequently Asked Questions"
+        subtitle="Clear answers about editorial work, author rights, production, publishing, and distribution."
+        imageSrc="/images/FAQ.jpg"
+        imageAlt="Warm publishing house study and manuscript library"
         breadcrumbs={[
           { label: 'Home', href: '/' },
-          { label: 'Author FAQs' },
+          { label: 'FAQ' },
         ]}
       />
 
@@ -47,7 +47,7 @@ export default function FAQPage() {
               </svg>
               <input
                 type="text"
-                placeholder="Search topics (e.g. royalties, copyright, ISBN, timelines)..."
+                placeholder="Search topics such as editing, rights, publishing, or timelines..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className={styles.searchInput}
@@ -87,10 +87,10 @@ export default function FAQPage() {
               <div className={styles.emptyState}>
                 <h3 className={styles.emptyTitle}>No matching questions found</h3>
                 <p className={styles.emptyDesc}>
-                  Try clearing your search or contact our senior publishing desk directly for a personalized answer.
+                  Try clearing your search or contact our team directly for a personalized answer.
                 </p>
                 <Button variant="primary" size="md" href="/contact">
-                  Ask an Editorial Strategist
+                  Ask a Question
                 </Button>
               </div>
             )}
@@ -102,12 +102,12 @@ export default function FAQPage() {
       <section className={styles.ctaBanner}>
         <div className={styles.container}>
           <div className={styles.ctaBox}>
-            <h2 className={styles.ctaHeading}>Have a Specific Question About Your Manuscript?</h2>
+            <h2 className={styles.ctaHeading}>Have a Question About Your Book?</h2>
             <p className={styles.ctaText}>
-              Our publishing strategists are available for confidential consultations to review your project needs.
+              Our publishing team is available to discuss your manuscript and answer any specific questions.
             </p>
             <Button variant="primary" size="lg" href="/contact">
-              Contact Our Editorial Desk
+              Discuss Your Book
             </Button>
           </div>
         </div>

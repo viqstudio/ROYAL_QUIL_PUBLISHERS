@@ -51,7 +51,7 @@ export default function TermsPage() {
 
             <h2>5. Inquiries & Contact</h2>
             <p>
-              For legal inquiries or questions regarding our service agreements, please contact our publishing desk at [EMAIL ADDRESS].
+              For questions about these terms or a service agreement, contact info@royalquillpublishers.com.
             </p>
           </div>
         </div>

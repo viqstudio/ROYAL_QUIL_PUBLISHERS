@@ -29,13 +29,11 @@ export const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close mobile menu on route change
   useEffect(() => {
     setIsMobileMenuOpen(false);
     setServicesDropdownOpen(false);
   }, [pathname]);
 
-  // Lock body scroll when mobile menu is open
   useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.style.overflow = 'hidden';
@@ -50,10 +48,8 @@ export const Header: React.FC = () => {
   return (
     <header className={`${styles.header} ${isScrolled ? styles.headerScrolled : ''}`}>
       <div className={styles.container}>
-        {/* LIGHT BACKGROUND BRAND LOGO */}
         <BrandLogo variant="light" size="md" href="/" />
 
-        {/* DESKTOP NAVIGATION */}
         <nav className={styles.desktopNav} aria-label="Main Navigation">
           <ul className={styles.navList}>
             {mainNavigation.map((item) => {
@@ -78,12 +74,7 @@ export const Header: React.FC = () => {
                       </svg>
                     </Link>
 
-                    {/* EDITORIAL SERVICES MEGA-DROPDOWN */}
                     <div className={`${styles.dropdownMenu} ${servicesDropdownOpen ? styles.dropdownVisible : ''}`}>
-                      <div className={styles.dropdownHeader}>
-                        <span className={styles.dropdownEyebrow}>PUBLISHING ARCHITECTURE</span>
-                        <h4 className={styles.dropdownHeading}>End-to-End Book Production</h4>
-                      </div>
                       <div className={styles.dropdownGrid}>
                         {item.children.map((sub) => (
                           <Link key={sub.href} href={sub.href} className={styles.dropdownItem}>
@@ -93,12 +84,6 @@ export const Header: React.FC = () => {
                             )}
                           </Link>
                         ))}
-                      </div>
-                      <div className={styles.dropdownFooter}>
-                        <span className={styles.dropdownPromise}>100% Rights & Royalties Retained by Author</span>
-                        <Link href="/services" className={styles.dropdownAllLink}>
-                          View Full Services Architecture →
-                        </Link>
                       </div>
                     </div>
                   </li>
@@ -119,26 +104,17 @@ export const Header: React.FC = () => {
           </ul>
         </nav>
 
-        {/* CTA ACTIONS */}
         <div className={styles.ctaGroup}>
-          <button
-            type="button"
-            className={styles.consultationBtn}
-            onClick={() => openConsultation()}
-          >
-            Free Consultation
-          </button>
           <Button
             variant="primary"
             size="sm"
             onClick={() => openConsultation()}
             className={styles.primaryCta}
           >
-            Start Your Journey
+            Discuss Your Book
           </Button>
         </div>
 
-        {/* MOBILE MENU TOGGLE */}
         <button
           type="button"
           className={styles.mobileToggle}
@@ -152,7 +128,6 @@ export const Header: React.FC = () => {
         </button>
       </div>
 
-      {/* MOBILE FULL-SCREEN DRAWER */}
       <div className={`${styles.mobileDrawer} ${isMobileMenuOpen ? styles.drawerOpen : ''}`}>
         <div className={styles.mobileDrawerContent}>
           <div className={styles.mobileBrandHeader}>
@@ -178,18 +153,6 @@ export const Header: React.FC = () => {
             </ul>
           </nav>
 
-          <div className={styles.mobileServicesSection}>
-            <span className={styles.mobileServicesTitle}>Featured Publishing Pillars</span>
-            <div className={styles.mobileServicesList}>
-              <Link href="/services/ghostwriting" onClick={() => setIsMobileMenuOpen(false)}>01 Ghostwriting</Link>
-              <Link href="/services/editing" onClick={() => setIsMobileMenuOpen(false)}>02 Editing</Link>
-              <Link href="/services/cover-design" onClick={() => setIsMobileMenuOpen(false)}>03 Cover Design</Link>
-              <Link href="/services/formatting" onClick={() => setIsMobileMenuOpen(false)}>04 Formatting</Link>
-              <Link href="/services/publishing" onClick={() => setIsMobileMenuOpen(false)}>05 Global Publishing</Link>
-              <Link href="/services/book-marketing" onClick={() => setIsMobileMenuOpen(false)}>06 Marketing</Link>
-            </div>
-          </div>
-
           <div className={styles.mobileCtaWrapper}>
             <Button
               variant="primary"
@@ -199,9 +162,8 @@ export const Header: React.FC = () => {
                 openConsultation();
               }}
             >
-              Start Your Publishing Journey
+              Discuss Your Book
             </Button>
-            <p className={styles.mobileGuarantee}>You retain 100% ownership & royalties.</p>
           </div>
         </div>
       </div>

@@ -5,53 +5,18 @@
 .container {
   max-width: var(--max-width-site);
   margin: 0 auto;
-  padding: 0 clamp(1.25rem, 4vw, 3rem);
-}
-
-.hero {
-  background: linear-gradient(175deg, #001538 0%, #012258 100%);
-  color: #FFFFFF;
-  padding: clamp(4rem, 7vw, 6.5rem) 0;
-  border-bottom: 1px solid var(--color-navy-border);
-}
-
-.heroContent {
-  max-width: 860px;
-}
-
-.eyebrow {
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  color: var(--color-royal-blue);
-  display: block;
-  margin-bottom: 1rem;
-}
-
-.title {
-  font-family: var(--font-serif);
-  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
-  color: #FFFFFF;
-  line-height: 1.15;
-  margin-bottom: 1.25rem;
-}
-
-.lead {
-  font-size: 1.15rem;
-  color: var(--color-royal-blue);
-  line-height: 1.7;
-  opacity: 0.9;
+  padding: 0 clamp(1.25rem, 4vw, 2.5rem);
 }
 
 /* FAQ BODY */
 .faqBodySection {
-  background-color: var(--color-light-bg);
-  padding: clamp(3.5rem, 6vw, 5.5rem) 0;
-  border-bottom: 1px solid var(--color-light-border);
+  background-color: var(--color-warm-white);
+  padding: 4.5rem 0;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .filterControls {
-  max-width: 880px;
+  max-width: 800px;
   margin: 0 auto 3rem auto;
   display: flex;
   flex-direction: column;
@@ -68,27 +33,25 @@
   left: 1.25rem;
   top: 50%;
   transform: translateY(-50%);
-  color: var(--color-text-muted-dark);
+  color: var(--color-text-muted);
   pointer-events: none;
 }
 
 .searchInput {
   width: 100%;
-  padding: 0.95rem 3rem 0.95rem 3.25rem;
+  padding: 0.85rem 3rem 0.85rem 3.25rem;
   font-family: var(--font-sans);
-  font-size: 1rem;
-  border: 1px solid var(--color-light-border);
+  font-size: 0.95rem;
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
   background-color: #FFFFFF;
-  color: var(--color-text-primary-dark);
-  box-shadow: var(--shadow-subtle);
+  color: var(--color-text-primary);
   transition: all var(--transition-fast);
 }
 
 .searchInput:focus {
   outline: none;
   border-color: var(--color-primary-navy);
-  box-shadow: 0 0 0 3px rgba(1, 34, 88, 0.08);
 }
 
 .clearBtn {
@@ -96,7 +59,7 @@
   right: 1.25rem;
   top: 50%;
   transform: translateY(-50%);
-  color: var(--color-text-muted-dark);
+  color: var(--color-text-muted);
   font-size: 0.9rem;
   cursor: pointer;
   background: none;
@@ -115,11 +78,11 @@
   font-family: var(--font-sans);
   font-size: 0.85rem;
   font-weight: 600;
-  padding: 0.5rem 1rem;
-  border-radius: var(--radius-xs);
-  border: 1px solid var(--color-light-border);
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
   background-color: #FFFFFF;
-  color: var(--color-text-secondary-dark);
+  color: var(--color-text-secondary);
   cursor: pointer;
   transition: all var(--transition-fast);
 }
@@ -136,14 +99,14 @@
 }
 
 .accordionContainer {
-  max-width: 880px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
 .emptyState {
   background-color: #FFFFFF;
-  border: 1px solid var(--color-light-border);
-  padding: 3.5rem 2rem;
+  border: 1px solid var(--color-border);
+  padding: 3rem 2rem;
   border-radius: var(--radius-sm);
   text-align: center;
   display: flex;
@@ -153,23 +116,23 @@
 
 .emptyTitle {
   font-family: var(--font-serif);
-  font-size: 1.5rem;
-  color: var(--color-primary-navy);
+  font-size: 1.35rem;
+  color: var(--color-text-primary);
   margin-bottom: 0.5rem;
 }
 
 .emptyDesc {
   font-size: 0.95rem;
-  color: var(--color-text-secondary-dark);
+  color: var(--color-text-secondary);
   max-width: 480px;
   margin-bottom: 1.5rem;
 }
 
 /* CTA */
 .ctaBanner {
-  background: linear-gradient(175deg, #001538 0%, #012258 100%);
+  background-color: var(--color-navy-deep);
   color: #FFFFFF;
-  padding: clamp(4.5rem, 7vw, 6rem) 0;
+  padding: 4.5rem 0;
   text-align: center;
 }
 
@@ -180,15 +143,14 @@
 
 .ctaHeading {
   font-family: var(--font-serif);
-  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
   color: #FFFFFF;
   margin-bottom: 1rem;
 }
 
 .ctaText {
-  font-size: 1.05rem;
-  color: var(--color-royal-blue);
+  font-size: 1rem;
+  color: var(--color-text-on-dark-muted);
   line-height: 1.7;
-  opacity: 0.9;
   margin-bottom: 2rem;
 }

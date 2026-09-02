@@ -22,9 +22,7 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
     <div className={`${styles.container} ${styles[`align_${align}`]} ${styles[`theme_${theme}`]} ${className}`}>
       {eyebrow && (
         <div className={styles.eyebrowWrapper}>
-          <span className={styles.accentLine} />
           <span className={styles.eyebrow}>{eyebrow}</span>
-          {align === 'center' && <span className={styles.accentLine} />}
         </div>
       )}
       <h2 className={styles.title}>{title}</h2>

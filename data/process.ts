@@ -11,79 +11,43 @@ export interface ProcessStage {
 
 export const publishingRoadmap: ProcessStage[] = [
   {
-    step: '01',
-    number: '01',
-    name: 'DISCOVER',
-    subtitle: 'Vision, Scope & Manuscript Evaluation',
-    description: 'We learn about your book, goals, genre, and publishing ambitions. Every engagement begins with a complimentary consultation and a detailed assessment of your manuscript\'s current state.',
-    keyActions: [
-      'Manuscript read-through & structural appraisal',
-      'Author vision & commercial objective alignment',
-      'Target reader & genre market positioning analysis',
-      'Custom publishing roadmap & transparent scope agreement'
-    ],
-    deliverables: [
-      'Comprehensive Publishing Blueprint',
-      'Detailed Production Timeline',
-      'NDA & 100% Author Ownership Guarantee Contract'
-    ],
+    step: '01', number: '01', name: 'SUBMIT YOUR MANUSCRIPT',
+    subtitle: 'Initial Review and Project Scope',
+    description: 'We review the material you have, discuss the help you need, and agree a clear scope before work begins.',
+    keyActions: ['Review the manuscript, outline, or project notes', 'Discuss genre, readership, formats, and objectives', 'Identify the editorial and production work required', 'Confirm costs, responsibilities, and timing'],
+    deliverables: ['Written project scope', 'Production schedule', 'Agreed service requirements'],
     duration: '1–2 Weeks'
   },
   {
-    step: '02',
-    number: '02',
-    name: 'CREATE',
-    subtitle: 'Writing, Editorial & Bespoke Visual Craft',
-    description: 'Our writers, editors, and designers work on the project according to the services you choose. Every element is crafted bespoke around your manuscript rather than through rigid templates.',
-    keyActions: [
-      'Developmental editing or ghostwriting writing sprints',
-      'Sentence-level line editing & prose calibration',
-      'Cover design concept ideation (3 distinct creative directions)',
-      'Interior typesetting & typography design'
-    ],
-    deliverables: [
-      'Edited Manuscript with Track Changes & Editorial Report',
-      'Initial Cover Concepts & Moodboards',
-      'Interior Typeset Sample Pages'
-    ],
-    duration: '4–12 Weeks'
+    step: '02', number: '02', name: 'EDITING & PREPARATION',
+    subtitle: 'Develop, Edit, and Proofread the Text',
+    description: 'The manuscript is developed and edited according to its needs. You review the work and approve changes before production.',
+    keyActions: ['Developmental or structural editing where required', 'Line editing and copy editing', 'Author review and revision rounds', 'Final proofreading before typesetting'],
+    deliverables: ['Edited manuscript', 'Editorial notes and tracked changes', 'Approved final text'],
+    duration: '3–10 Weeks'
   },
   {
-    step: '03',
-    number: '03',
-    name: 'REFINE',
-    subtitle: 'Author Review, Revisions & Final Galley Proofing',
-    description: 'You review the work and provide direct feedback while we refine the project. We collaborate closely across multiple review cycles until every sentence, margin, and visual nuance is perfected.',
-    keyActions: [
-      'Author review & editorial consultation sessions',
-      'Cover design fine-tuning & spine/jacket adjustments',
-      'Final proofreading pass for typographical perfection',
-      'Digital e-reader rendering & print proof inspection'
-    ],
-    deliverables: [
-      'Final Master Proof (PDF & EPUB)',
-      'Approved Wrap Cover Art (Print CMYK & Digital RGB)',
-      'Quality Assurance Sign-Off Checklist'
-    ],
+    step: '03', number: '03', name: 'DESIGN & FORMATTING',
+    subtitle: 'Cover Design and Interior Typesetting',
+    description: 'We design the cover and prepare the interior for the print and digital formats selected for your book.',
+    keyActions: ['Cover concept and design development', 'Paperback or hardcover cover preparation', 'Interior typesetting and page layout', 'EPUB preparation for digital editions'],
+    deliverables: ['Approved cover artwork', 'Print-ready interior file', 'EPUB file where required'],
     duration: '2–4 Weeks'
   },
   {
-    step: '04',
-    number: '04',
-    name: 'PUBLISH',
-    subtitle: 'Global Distribution, ISBN Filing & Launch',
-    description: 'Your final book is prepared for publication and worldwide distribution. We manage platform integrations, official ISBN assignments, and retailer metadata so your book appears on major shelves globally.',
-    keyActions: [
-      'Official ISBN & copyright filing (100% registered to author)',
-      'Deployment to Amazon KDP, Apple Books, Kobo, Barnes & Noble, and Ingram',
-      'Direct royalty bank connection (100% royalties directly to you)',
-      'Promotional launch materials & marketing kit handoff'
-    ],
-    deliverables: [
-      'Live Global Retailer Listings in 150+ Countries',
-      'Master High-Resolution Asset Archive',
-      'Author Dashboard Access & Marketing Guide'
-    ],
+    step: '04', number: '04', name: 'PUBLISHING',
+    subtitle: 'Final Checks, Metadata, and Retail Setup',
+    description: 'Once you approve the files, we prepare the book for the agreed publishing and distribution channels.',
+    keyActions: ['Final print and digital file checks', 'ISBN and barcode support where required', 'Book description, categories, and metadata setup', 'Retail and distribution platform configuration'],
+    deliverables: ['Approved publication files', 'Retail metadata record', 'Configured distribution listings'],
     duration: '2–3 Weeks'
+  },
+  {
+    step: '05', number: '05', name: 'LAUNCH & AUTHOR SUPPORT',
+    subtitle: 'Publication, Copies, and Ongoing Guidance',
+    description: 'We confirm the live listings, arrange proof or author copies where applicable, and support the agreed launch activity.',
+    keyActions: ['Check live retailer listings', 'Arrange proof and author copies where required', 'Deliver final production files', 'Complete agreed marketing or launch support'],
+    deliverables: ['Live book listings', 'Final file handover', 'Launch materials included in the project'],
+    duration: '1–3 Weeks'
   }
 ];

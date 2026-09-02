@@ -18,16 +18,16 @@ export default function PortfolioPage() {
 
   return (
     <div className={styles.portfolioPage}>
-      {/* CINEMATIC PAGE HEADER */}
+      {/* PAGE HEADER */}
       <PageHeader
-        eyebrow="THE LITERARY CATALOGUE"
-        title="Books We're Proud to Put Our Name Behind"
-        subtitle="A curated showcase of recent titles across fiction, non-fiction, memoir, business, and poetry. Every author retains 100% rights."
+        eyebrow="OUR WORK"
+        title="Books We've Published"
+        subtitle="A selection of books prepared across fiction, non-fiction, memoir, self-help, and children’s publishing."
         imageSrc="/images/header-portfolio.jpg"
-        imageAlt="Luxury library bookshelf featuring Royal Quill published titles"
+        imageAlt="Luxury library bookshelf featuring Royal Quill published books"
         breadcrumbs={[
           { label: 'Home', href: '/' },
-          { label: 'Portfolio Catalogue' },
+          { label: 'Our Work' },
         ]}
       />
 
@@ -67,9 +67,8 @@ export default function PortfolioPage() {
                     height={480}
                     className={styles.coverImg}
                   />
-                  <div className={styles.spineEffect} />
                   <div className={styles.hoverOverlay}>
-                    <span className={styles.inspectText}>Inspect Title & Specs →</span>
+                    <span className={styles.inspectText}>View Details →</span>
                   </div>
                 </div>
 
@@ -97,12 +96,12 @@ export default function PortfolioPage() {
       <section className={styles.ctaBanner}>
         <div className={styles.container}>
           <div className={styles.ctaBox}>
-            <h2 className={styles.ctaHeading}>Your Book Deserves a Place on This Shelf</h2>
+            <h2 className={styles.ctaHeading}>Ready to Publish Your Book?</h2>
             <p className={styles.ctaText}>
-              Speak with our senior team to transform your raw manuscript into an award-caliber published book.
+              Speak with our team to discuss your manuscript, target audience, and publishing schedule.
             </p>
             <Button variant="primary" size="lg" href="/contact">
-              Start Your Publishing Journey
+              Discuss Your Book
             </Button>
           </div>
         </div>

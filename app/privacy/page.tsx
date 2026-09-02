@@ -41,7 +41,7 @@ export default function PrivacyPage() {
               We use your information exclusively to:
             </p>
             <ul>
-              <li>Evaluate your manuscript and provide a customized publishing blueprint.</li>
+              <li>Review your enquiry and identify relevant publishing services.</li>
               <li>Communicate directly with you regarding your publishing inquiries.</li>
               <li>Coordinate editorial, design, typesetting, and distribution milestones if you commission our services.</li>
             </ul>
@@ -58,7 +58,7 @@ export default function PrivacyPage() {
 
             <h2>5. Contact Us</h2>
             <p>
-              If you have questions regarding this Privacy Policy or our data protection practices, please contact our administrative desk at [EMAIL ADDRESS].
+              If you have questions about this Privacy Policy or our data practices, contact info@royalquillpublishers.com.
             </p>
           </div>
         </div>

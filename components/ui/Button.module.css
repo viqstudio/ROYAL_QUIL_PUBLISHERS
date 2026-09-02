@@ -1,138 +1,135 @@
+/* Button.module.css */
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   font-family: var(--font-sans);
-  font-weight: 600;
-  border-radius: var(--radius-sm);
-  transition: all var(--transition-normal);
+  font-weight: 700;
+  border-radius: var(--radius-sm, 6px);
+  transition: all var(--transition-editorial);
   text-decoration: none;
   cursor: pointer;
   white-space: nowrap;
   letter-spacing: 0.01em;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 2px 6px rgba(1, 34, 88, 0.08);
 }
 
-/* SIZES */
+/* SIZES (Ensuring 48px+ for comfortable author readability & touch) */
 .size_sm {
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1.35rem;
   font-size: 0.85rem;
-  gap: 0.4rem;
+  min-height: 44px;
+  gap: 0.45rem;
 }
 
 .size_md {
-  padding: 0.75rem 1.6rem;
+  padding: 0.85rem 1.85rem;
   font-size: 0.95rem;
-  gap: 0.5rem;
+  min-height: 50px;
+  gap: 0.55rem;
 }
 
 .size_lg {
-  padding: 1rem 2.25rem;
+  padding: 1rem 2.4rem;
   font-size: 1.05rem;
-  gap: 0.6rem;
+  min-height: 54px;
+  gap: 0.65rem;
 }
 
 /* VARIANTS */
 
-/* Primary Crimson: High-intent, restrained accent */
+/* Primary Navy */
 .variant_primary {
-  background-color: var(--color-crimson);
+  background-color: var(--color-primary-navy);
   color: #FFFFFF;
-  border: 1px solid var(--color-crimson);
-  box-shadow: 0 2px 8px rgba(210, 22, 37, 0.25);
+  border: 1.5px solid var(--color-primary-navy);
 }
 
 .variant_primary:hover {
-  background-color: var(--color-crimson-hover);
-  border-color: var(--color-crimson-hover);
-  box-shadow: 0 4px 14px rgba(210, 22, 37, 0.35);
-  transform: translateY(-1px);
+  background-color: var(--color-royal-blue);
+  border-color: var(--color-royal-blue);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(1, 34, 88, 0.2);
 }
 
 .variant_primary:active {
-  background-color: var(--color-crimson-active);
   transform: translateY(0);
 }
 
-/* Secondary Navy: Institutional authority */
-.variant_secondary {
-  background-color: var(--color-primary-navy);
+/* Crimson Accent */
+.variant_crimson {
+  background-color: var(--color-crimson);
   color: #FFFFFF;
-  border: 1px solid var(--color-primary-navy);
-  box-shadow: 0 2px 8px rgba(1, 34, 88, 0.2);
+  border: 1.5px solid var(--color-crimson);
 }
 
-.variant_secondary:hover {
-  background-color: #001A45;
-  border-color: #001A45;
-  box-shadow: 0 4px 14px rgba(1, 34, 88, 0.3);
-  transform: translateY(-1px);
+.variant_crimson:hover {
+  background-color: var(--color-crimson-hover);
+  border-color: var(--color-crimson-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(210, 22, 37, 0.28);
 }
 
-/* Outline: Subtle light backgrounds */
-.variant_outline {
-  background-color: transparent;
+/* Secondary */
+.variant_secondary {
+  background-color: #FFFFFF;
   color: var(--color-primary-navy);
   border: 1.5px solid var(--color-primary-navy);
 }
 
-.variant_outline:hover {
+.variant_secondary:hover {
   background-color: var(--color-primary-navy);
   color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(1, 34, 88, 0.15);
+}
+
+/* Outline */
+.variant_outline {
+  background-color: transparent;
+  color: var(--color-primary-navy);
+  border: 1.5px solid var(--color-border);
+}
+
+.variant_outline:hover {
+  border-color: var(--color-primary-navy);
+  background-color: #FFFFFF;
   transform: translateY(-1px);
 }
 
-/* Outline Light: For dark navy backgrounds */
+/* Outline Light */
 .variant_outline-light {
   background-color: transparent;
-  color: var(--color-royal-blue);
-  border: 1.5px solid rgba(192, 223, 253, 0.4);
+  color: #FFFFFF;
+  border: 1.5px solid rgba(255, 255, 255, 0.6);
 }
 
 .variant_outline-light:hover {
-  background-color: rgba(192, 223, 253, 0.1);
-  border-color: var(--color-royal-blue);
-  color: #FFFFFF;
-  transform: translateY(-1px);
+  background-color: #FFFFFF;
+  color: var(--color-primary-navy);
+  border-color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Text link with subtle hover effect */
+/* Text link */
 .variant_text {
   background: transparent;
   color: var(--color-primary-navy);
   padding: 0;
   border: none;
-  font-weight: 600;
-  position: relative;
+  font-weight: 700;
+  box-shadow: none;
 }
 
-.variant_text::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 100%;
-  height: 1.5px;
-  background-color: currentColor;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform var(--transition-normal);
-}
-
-.variant_text:hover::after {
-  transform: scaleX(1);
-  transform-origin: left;
+.variant_text:hover {
+  color: var(--color-crimson);
 }
 
 .iconLeft, .iconRight {
   display: inline-flex;
   align-items: center;
   font-size: 1.1em;
-  transition: transform var(--transition-fast);
-}
-
-.variant_primary:hover .iconRight,
-.variant_secondary:hover .iconRight {
-  transform: translateX(3px);
 }

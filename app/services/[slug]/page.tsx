@@ -14,21 +14,6 @@ interface Props {
   };
 }
 
-const serviceImageMap: Record<string, string> = {
-  ghostwriting: '/images/service-ghostwriting.jpg',
-  'book-writing': '/images/service-book-writing.jpg',
-  editing: '/images/service-editing.png',
-  proofreading: '/images/service-proofreading.jpg',
-  'cover-design': '/images/service-cover-design.jpg',
-  formatting: '/images/service-formatting.jpg',
-  publishing: '/images/service-publishing.png',
-  'book-marketing': '/images/service-book-marketing.jpg',
-  'author-website': '/images/service-author-website.jpg',
-  'book-trailer': '/images/service-book-trailer.jpg',
-  audiobook: '/images/service-audiobook.jpg',
-  printing: '/images/service-printing.jpg',
-};
-
 export async function generateStaticParams() {
   return allSubServices.map((sub) => ({
     slug: sub.slug,
@@ -47,6 +32,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+const serviceImageMap: Record<string, string> = {
+  ghostwriting: '/images/service-ghostwriting.jpg',
+  'book-writing': '/images/service-book-writing.jpg',
+  editing: '/images/service-editing.png',
+  proofreading: '/images/service-proofreading.jpg',
+  'cover-design': '/images/service-cover-design.jpg',
+  formatting: '/images/service-formatting.jpg',
+  publishing: '/images/service-publishing.png',
+  'book-marketing': '/images/service-book-marketing.jpg',
+  'author-website': '/images/service-author-website.jpg',
+  'book-trailer': '/images/service-book-trailer.jpg',
+  audiobook: '/images/service-audiobook.jpg',
+  printing: '/images/service-printing.jpg',
+};
+
 export default function SubServiceDetailPage({ params }: Props) {
   const service = allSubServices.find((s) => s.slug === params.slug);
 
@@ -59,11 +59,11 @@ export default function SubServiceDetailPage({ params }: Props) {
     c.subServices.some((s) => s.slug === service.slug)
   );
 
-  const headerImage = serviceImageMap[service.slug] || '/images/Illustration 2.jpg';
+  const headerImage = serviceImageMap[service.slug] || '/images/header-services.jpg';
 
   return (
     <div className={styles.detailPage}>
-      {/* CINEMATIC PAGE HEADER */}
+      {/* PAGE HEADER */}
       <PageHeader
         eyebrow={parentCategory ? `CATEGORY ${parentCategory.number} • ${parentCategory.name}` : 'PUBLISHING SERVICE'}
         title={service.title}
@@ -85,7 +85,7 @@ export default function SubServiceDetailPage({ params }: Props) {
             Inquire About {service.title}
           </Button>
           <div className={styles.timelinePill}>
-            <span className={styles.pillLabel}>Estimated Cadence:</span>
+            <span className={styles.pillLabel}>Estimated Timeline:</span>
             <span className={styles.pillVal}>{service.timeline}</span>
           </div>
         </div>
@@ -100,13 +100,13 @@ export default function SubServiceDetailPage({ params }: Props) {
                 <ServiceIcon name={service.slug} size="lg" variant="navy" />
                 <div>
                   <span className={styles.sectionEyebrow}>SERVICE OVERVIEW</span>
-                  <h2 className={styles.sectionHeading}>The Royal Quill Approach</h2>
+                  <h2 className={styles.sectionHeading}>How We Approach {service.title}</h2>
                 </div>
               </div>
               <p className={styles.fullDesc}>{service.fullDescription}</p>
 
               <div className={styles.idealBox}>
-                <h4 className={styles.idealTitle}>Ideal Candidate Profile:</h4>
+                <h4 className={styles.idealTitle}>Ideal For:</h4>
                 <p className={styles.idealText}>{service.idealFor}</p>
               </div>
             </div>
@@ -114,7 +114,7 @@ export default function SubServiceDetailPage({ params }: Props) {
             <div className={styles.deliverablesCol}>
               <div className={styles.deliverablesCard}>
                 <span className={styles.delivEyebrow}>WHAT YOU RECEIVE</span>
-                <h3 className={styles.delivHeading}>Master Deliverables</h3>
+                <h3 className={styles.delivHeading}>Key Deliverables</h3>
                 <ul className={styles.delivList}>
                   {service.deliverables.map((item, idx) => (
                     <li key={idx}>
@@ -130,7 +130,7 @@ export default function SubServiceDetailPage({ params }: Props) {
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#012258" strokeWidth="2">
                     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                   </svg>
-                  <span>100% Rights & Royalties Retained by You</span>
+                  <span>Royal Quill does not take ownership of your manuscript</span>
                 </div>
               </div>
             </div>
@@ -143,9 +143,9 @@ export default function SubServiceDetailPage({ params }: Props) {
         <section className={styles.faqSection}>
           <div className={styles.container}>
             <SectionHeading
-              eyebrow="SPECIFIC QUESTIONS"
-              title={`Frequently Asked About ${service.title}`}
-              subtitle="Clear answers on our methodology, author rights, and revision cycles."
+              eyebrow="FREQUENTLY ASKED"
+              title={`Questions About ${service.title}`}
+              subtitle="Clear answers on our methodology, author rights, and timelines."
             />
             <div className={styles.faqWrapper}>
               <Accordion
@@ -164,16 +164,16 @@ export default function SubServiceDetailPage({ params }: Props) {
       <section className={styles.ctaBanner}>
         <div className={styles.container}>
           <div className={styles.ctaBox}>
-            <h2 className={styles.ctaHeading}>Ready to Begin with {service.title}?</h2>
+            <h2 className={styles.ctaHeading}>Ready to Discuss {service.title}?</h2>
             <p className={styles.ctaText}>
-              Schedule a complimentary manuscript evaluation with our senior publishing team to discuss your project scope and timelines.
+              Contact our editorial team to discuss your manuscript requirements and timeline.
             </p>
             <Button
               variant="primary"
               size="lg"
               href={`/contact?service=${encodeURIComponent(service.title)}`}
             >
-              Start Your Publishing Journey
+              Discuss Your Book
             </Button>
           </div>
         </div>

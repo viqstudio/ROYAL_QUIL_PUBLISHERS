@@ -1,13 +1,13 @@
 import React from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './PageHeader.module.css';
 
 export interface PageHeaderProps {
   eyebrow: string;
   title: string;
   subtitle: string;
-  imageSrc: string;
+  imageSrc?: string;
   imageAlt?: string;
   breadcrumbs?: { label: string; href?: string }[];
   children?: React.ReactNode;
@@ -18,27 +18,25 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
   title,
   subtitle,
   imageSrc,
-  imageAlt,
+  imageAlt = 'Royal Quill Publishing Header',
   breadcrumbs,
   children,
 }) => {
   return (
-    <div className={styles.headerWrapper}>
-      {/* BACKGROUND PRINT TEXTURE */}
-      <div className={styles.texturePattern} />
-
-      {/* BACKGROUND IMAGE WITH CINEMATIC FADE OVERLAY */}
-      <div className={styles.imageBackdrop}>
-        <Image
-          src={imageSrc}
-          alt={imageAlt || title}
-          fill
-          priority
-          sizes="100vw"
-          className={styles.headerImg}
-        />
-        <div className={styles.fadeGradient} />
-      </div>
+    <div className={`${styles.headerWrapper} ${imageSrc ? styles.hasImage : ''}`}>
+      {imageSrc && (
+        <div className={styles.bgImageWrap}>
+          <Image
+            src={imageSrc}
+            alt={imageAlt}
+            fill
+            priority
+            sizes="100vw"
+            className={styles.bgImage}
+          />
+          <div className={styles.imageOverlay} />
+        </div>
+      )}
 
       <div className={styles.container}>
         {breadcrumbs && breadcrumbs.length > 0 && (
@@ -60,7 +58,7 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
 
         <div className={styles.content}>
           <div className={styles.eyebrowWrapper}>
-            <span className={styles.accentPip} />
+            <span className={styles.bookmarkRibbon} />
             <span className={styles.eyebrow}>{eyebrow}</span>
           </div>
           <h1 className={styles.title}>{title}</h1>
