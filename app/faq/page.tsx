@@ -87,7 +87,7 @@ export default function FAQPage() {
               <div className={styles.emptyState}>
                 <h3 className={styles.emptyTitle}>No matching questions found</h3>
                 <p className={styles.emptyDesc}>
-                  Try clearing your search or contact our team directly for a personalized answer.
+                  Try clearing your search or contact our team directly for a personal answer.
                 </p>
                 <Button variant="primary" size="md" href="/contact">
                   Ask a Question

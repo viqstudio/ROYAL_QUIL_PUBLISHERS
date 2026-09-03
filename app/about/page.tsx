@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 import { PageHeader } from '@/components/layout/PageHeader';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Button } from '@/components/ui/Button';
-import { BrandLogo } from '@/components/ui/BrandLogo';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
   title: 'About Royal Quill Publishers | Independent Book Publishing',
   description: 'Royal Quill Publishers provides professional writing, editing, design, production, and distribution support for independent authors.',
+  keywords: ['independent publishing company', 'author-first publishing team', 'book publishing services company'],
 };
 
 export default function AboutPage() {
@@ -16,8 +16,8 @@ export default function AboutPage() {
       {/* PAGE HEADER */}
       <PageHeader
         eyebrow="ABOUT ROYAL QUILL"
-        title="Professional Publishing Support for Independent Authors"
-        subtitle="Experienced editorial, design, production, and distribution support with clear author approval at every stage."
+        title="An Independent Publishing Company for Authors"
+        subtitle="Professional editorial and production support from first draft to finished, published edition."
         imageSrc="/images/header-about.jpg"
         imageAlt="Classic warm library study desk and fine literature volumes"
         breadcrumbs={[
@@ -31,58 +31,51 @@ export default function AboutPage() {
         <div className={styles.container}>
           <div className={styles.philosophyGrid}>
             <div className={styles.philosophyCol}>
-              <span className={styles.sectionTag}>OUR APPROACH</span>
-              <h2 className={styles.sectionHeading}>Why Royal Quill Publishers Exists</h2>
+              <span className={styles.sectionTag}>ROYAL QUILL PUBLISHERS</span>
+              <h2 className={styles.sectionHeading}>Who We Are</h2>
               <p className={styles.bodyText}>
-                Publishing a book requires several specialist disciplines. A strong manuscript still needs careful editing, appropriate design, accurate production files, and a well-managed route to market.
+                Royal Quill Publishers is an independent publishing services company supporting authors through every stage of bringing a book to market, from the first draft to a finished, published edition. Our editorial and production team works across fiction, nonfiction, poetry, memoir and children&apos;s books.
               </p>
+              <span className={styles.sectionTag}>HOW WE WORK</span>
+              <h2 className={styles.sectionHeading}>Our Approach</h2>
               <p className={styles.bodyText}>
-                Royal Quill brings those disciplines together. Our editors, designers, typesetters, and publishing team work to an agreed scope and keep authors involved in the decisions that shape their book.
-              </p>
-              <p className={styles.bodyText}>
-                Our purpose is straightforward: help authors prepare and publish books professionally without taking ownership of their manuscripts or creative work.
+                We believe independent authors deserve the same standard of editorial care and production quality as traditionally published books, without having to give up ownership of their work to get it. Every project begins with a clear conversation about what your manuscript needs, followed by a written scope you approve before any work starts.
               </p>
             </div>
 
             <div className={styles.pillarsBox}>
-              <h3 className={styles.pillarsBoxTitle}>Our Core Principles</h3>
+              <h3 className={styles.pillarsBoxTitle}>What Sets Us Apart</h3>
               <div className={styles.pillarItem}>
                 <span className={styles.pillarNum}>01</span>
                 <div>
-                  <h4 className={styles.pillarHead}>Professional Quality</h4>
-                  <p className={styles.pillarDesc}>
-                    Every manuscript is edited, designed, and typeset by experienced specialists.
-                  </p>
+                  <p className={styles.pillarDesc}>You retain full copyright and creative control over your manuscript at every stage.</p>
                 </div>
               </div>
 
               <div className={styles.pillarItem}>
                 <span className={styles.pillarNum}>02</span>
                 <div>
-                  <h4 className={styles.pillarHead}>Author Rights</h4>
-                  <p className={styles.pillarDesc}>
-                    You retain the rights to your creative work and approve the manuscript, cover, and interior.
-                  </p>
+                  <p className={styles.pillarDesc}>You approve the text, cover and interior before anything is published.</p>
                 </div>
               </div>
 
               <div className={styles.pillarItem}>
                 <span className={styles.pillarNum}>03</span>
                 <div>
-                  <h4 className={styles.pillarHead}>Worldwide Distribution</h4>
-                  <p className={styles.pillarDesc}>
-                    Your book is distributed to Amazon, Apple Books, Kobo, Barnes & Noble, and international bookstores.
-                  </p>
+                  <p className={styles.pillarDesc}>Services can be booked individually or combined into a complete publishing package.</p>
                 </div>
               </div>
 
               <div className={styles.pillarItem}>
                 <span className={styles.pillarNum}>04</span>
                 <div>
-                  <h4 className={styles.pillarHead}>Clear Communication</h4>
-                  <p className={styles.pillarDesc}>
-                    Transparent milestone schedules, clear scopes, and direct access to your team.
-                  </p>
+                  <p className={styles.pillarDesc}>Clear, staged communication so you always know what is happening with your project.</p>
+                </div>
+              </div>
+              <div className={styles.pillarItem}>
+                <span className={styles.pillarNum}>05</span>
+                <div>
+                  <p className={styles.pillarDesc}>Experience across a wide range of genres, from thrillers and poetry to children&apos;s books and nonfiction.</p>
                 </div>
               </div>
             </div>
@@ -90,45 +83,15 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* EDITORIAL COMMITMENT */}
+      {/* OUR TEAM */}
       <section className={styles.standardsSection}>
         <div className={styles.container}>
           <SectionHeading
-            eyebrow="OUR STANDARDS"
-            title="How We Work With Every Author"
-            subtitle="Care, precision, and respect for your voice at every step."
+            eyebrow="OUR TEAM"
+            title="Our Team"
           />
-
-          <div className={styles.standardsGrid}>
-            <div className={styles.standardCard}>
-              <div className={styles.cardHeader}>
-                <span className={styles.cardNum}>01</span>
-                <h3 className={styles.cardTitle}>Human Editorial Review</h3>
-              </div>
-              <p className={styles.cardText}>
-                Developmental reviews, line edits, and proofreading passes are completed by publishing professionals who work with your voice and subject matter.
-              </p>
-            </div>
-
-            <div className={styles.standardCard}>
-              <div className={styles.cardHeader}>
-                <span className={styles.cardNum}>02</span>
-                <h3 className={styles.cardTitle}>Custom Design</h3>
-              </div>
-              <p className={styles.cardText}>
-                Cover designs and interior layouts are developed for the book, its genre, and the formats in which it will be published.
-              </p>
-            </div>
-
-            <div className={styles.standardCard}>
-              <div className={styles.cardHeader}>
-                <span className={styles.cardNum}>03</span>
-                <h3 className={styles.cardTitle}>Full Transparency</h3>
-              </div>
-              <p className={styles.cardText}>
-                The scope, schedule, review stages, publishing setup, and file handover are agreed before production begins.
-              </p>
-            </div>
+          <div className={styles.teamCard}>
+            <p>Our editors, designers and production specialists work directly with authors throughout their project, rather than passing work between disconnected departments. This keeps communication consistent and ensures your manuscript is handled by people who understand it from the first edit through to publication.</p>
           </div>
         </div>
       </section>
@@ -137,9 +100,6 @@ export default function AboutPage() {
       <section className={styles.ctaBanner}>
         <div className={styles.container}>
           <div className={styles.ctaBox}>
-            <div className={styles.ctaLogoWrap}>
-              <BrandLogo variant="dark" size="md" href="/" />
-            </div>
             <h2 className={styles.ctaTitle}>Ready to Publish Your Book?</h2>
             <p className={styles.ctaText}>
               Share your manuscript details with our editorial team for a confidential evaluation.

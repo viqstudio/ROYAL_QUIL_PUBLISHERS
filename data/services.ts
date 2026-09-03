@@ -6,347 +6,235 @@ export interface SubService {
   fullDescription: string;
   deliverables: string[];
   idealFor: string;
-  timeline: string;
-  faqs?: { question: string; answer: string }[];
+  nextStep: string;
+  seoKeywords: string[];
 }
 
 export interface ServiceCategory {
   number: string;
   id: string;
   name: string;
-  tagline: string;
   summary: string;
-  colorHighlight: string;
   subServices: SubService[];
 }
 
 export const serviceCategories: ServiceCategory[] = [
   {
-    number: '01',
-    id: 'write',
-    name: 'Writing & Development',
-    tagline: 'Professional writing support for ideas, outlines, and partial drafts.',
-    summary: 'Our writers can develop a complete manuscript from interviews and notes, or work alongside you to finish an existing draft.',
-    colorHighlight: '#012258',
+    number: '01', id: 'writing-development', name: 'Writing & Development',
+    summary: 'Professional writing and collaborative manuscript development for authors starting with an idea, notes or a partial draft.',
     subServices: [
       {
-        id: 'ghostwriting',
-        slug: 'ghostwriting',
-        title: 'Ghostwriting',
-        shortDescription: 'Collaborative, confidential manuscript creation from your ideas, notes, or interviews.',
-        fullDescription: 'Our ghostwriting service pairs you with a writer who learns your subject, voice, and goals. Through interviews, outlining, and chapter reviews, we develop a complete manuscript while the rights to the commissioned work remain with you as agreed in the contract.',
+        id: 'ghostwriting', slug: 'ghostwriting', title: 'Ghostwriting',
+        shortDescription: 'Turn your ideas into a complete manuscript.',
+        fullDescription: 'Royal Quill Publishers offers professional ghostwriting services for authors who have a story, an idea or years of expertise but not the time or writing experience to turn it into a finished manuscript. Our ghostwriters work closely with you through structured interviews and outline reviews, then draft your book in your voice, so the finished manuscript reads as though you wrote every page yourself.',
         deliverables: [
-          'Agreed concept, structure, and chapter outline',
-          'In-depth interview sessions & voice transcription',
-          'Full-length book manuscript (40,000–80,000+ words)',
-          'Two full revision cycles',
-          'Confidentiality and copyright terms confirmed in the agreement'
+          'In-depth author interviews to capture your voice, tone and message.',
+          'A detailed chapter outline agreed with you before drafting begins.',
+          'Full manuscript drafting across memoir, nonfiction, business and self-help genres.',
+          'Chapter-by-chapter delivery for your review and feedback.',
+          'Full confidentiality, with authorship and copyright remaining entirely yours.',
         ],
-        idealFor: 'Busy executives, thought leaders, memoirists, and individuals with profound stories who lack the time to draft full manuscripts.',
-        timeline: '12–24 Weeks',
-        faqs: [
-          {
-            question: 'Will anyone know I used a ghostwriter?',
-            answer: 'Never, unless you choose to credit them. All Royal Quill ghostwriting engagements are protected by strict Non-Disclosure Agreements. You are the sole named author and legal rights holder.'
-          },
-          {
-            question: 'How do you capture my personal voice?',
-            answer: 'We conduct structured voice-calibration interviews and produce a sample chapter first. We analyze your pacing, vocabulary, and cadence until the prose feels unmistakably yours.'
-          }
-        ]
+        idealFor: 'This service suits busy professionals, first-time authors, memoirists and subject-matter experts who want a publish-ready manuscript without writing it word for word themselves.',
+        nextStep: 'Share your idea, outline or notes and we will explain how a ghostwriting project would be scoped and priced for your book.',
+        seoKeywords: ['ghostwriting services', 'hire a ghostwriter', 'professional book ghostwriter', 'ghostwriting for authors'],
       },
       {
-        id: 'book-writing',
-        slug: 'book-writing',
-        title: 'Book Writing & Co-Authoring',
-        shortDescription: 'Hands-on manuscript drafting, chapter-by-chapter co-writing, and narrative coaching.',
-        fullDescription: 'For authors who wish to write alongside an experienced literary partner. We provide chapter structural frameworks, co-drafting sessions, research support, and rigorous developmental milestones to bring your manuscript from initial concept to completion.',
+        id: 'book-writing', slug: 'book-writing', title: 'Book Writing & Co-Authoring',
+        shortDescription: 'Manuscript development with a collaborative writer.',
+        fullDescription: 'Our book writing and co-authoring service is designed for authors who want to write their own book but need a collaborative partner to help develop the material, maintain momentum and shape a partial draft into a complete manuscript. Unlike full ghostwriting, this service keeps you closely involved in the drafting process while our writers provide structure, pacing and consistency support.',
         deliverables: [
-          'Detailed chapter-by-chapter outline and narrative beats',
-          'Collaborative writing sprints and regular milestone reviews',
-          'Primary source research and factual verification',
-          'Final manuscript polish and structural harmonization'
+          'Manuscript development from a partial draft, notes or a detailed idea.',
+          'Collaborative drafting sessions and chapter planning.',
+          'Consistency checks for plot, timeline, character and voice across the manuscript.',
+          'Support turning research or interviews into readable, well-structured chapters.',
+          'Flexible involvement, from light co-writing support to substantial drafting assistance.',
         ],
-        idealFor: 'First-time authors, novelists seeking structural discipline, and non-fiction specialists seeking co-authoring support.',
-        timeline: '10–20 Weeks',
-        faqs: [
-          {
-            question: 'How does collaborative co-writing differ from ghostwriting?',
-            answer: 'In co-writing, you are actively writing segments and working directly with an editor/co-writer who provides real-time prose enhancement, structural filling, and coaching rather than writing the entire draft on your behalf.'
-          }
-        ]
-      }
-    ]
+        idealFor: 'This service suits authors partway through a manuscript, co-authors writing together for the first time, and subject experts who want an active role in writing their own book.',
+        nextStep: 'Send us your existing draft or notes and we will recommend how a co-authoring arrangement could move your manuscript towards completion.',
+        seoKeywords: ['book writing services', 'co-authoring services', 'manuscript development', 'collaborative book writing'],
+      },
+    ],
   },
   {
-    number: '02',
-    id: 'refine',
-    name: 'Editing & Proofreading',
-    tagline: 'Structural editing, line editing, and final proofreading.',
-    summary: 'We review structure, pacing, clarity, consistency, grammar, and presentation while preserving the author’s voice.',
-    colorHighlight: '#012258',
+    number: '02', id: 'editing-proofreading', name: 'Editing & Proofreading',
+    summary: 'Developmental editing, line editing and final proofreading for manuscripts at every stage.',
     subServices: [
       {
-        id: 'editing',
-        slug: 'editing',
-        title: 'Developmental & Line Editing',
-        shortDescription: 'Deep structural critique, pacing refinement, narrative coherence, and sentence-level mastery.',
-        fullDescription: 'Developmental editing reviews the structure, argument, plot, character development, pacing, and consistency of the manuscript. Line editing then improves clarity, wording, rhythm, and flow without rewriting the author’s voice.',
+        id: 'editing', slug: 'editing', title: 'Developmental & Line Editing',
+        shortDescription: 'Structural, line and copy editing for manuscripts at every stage.',
+        fullDescription: 'Royal Quill Publishers provides developmental and line editing for manuscripts at any stage of completion. Developmental editing addresses the big-picture elements of your book, including structure, pacing, plot and argument, while line editing works at the sentence level to improve clarity, flow and voice without flattening your writing style.',
         deliverables: [
-          'Editorial appraisal and recommended priorities',
-          'Line-by-line Track Changes markup across the entire manuscript',
-          'Two 60-minute 1-on-1 editorial review consultations',
-          'Clean revised manuscript file ready for typesetting'
+          'A full manuscript assessment covering structure, pacing and consistency.',
+          'Detailed editorial notes explaining the reasoning behind suggested changes.',
+          'Line-by-line editing for clarity, rhythm and voice.',
+          'Genre-specific attention for fiction, nonfiction, memoir and poetry manuscripts.',
+          'A collaborative revision process, with the author retaining full control over final decisions.',
         ],
-        idealFor: 'Authors with completed drafts seeking the rigorous polish of an established publishing house editor.',
-        timeline: '3–6 Weeks',
-        faqs: [
-          {
-            question: 'Will editing change my creative voice?',
-            answer: 'No. Our editorial philosophy is restorative and elevating, not homogenizing. We sharpen your distinctive voice, eliminate unintentional ambiguities, and enhance narrative momentum.'
-          }
-        ]
+        idealFor: 'This service suits authors with a complete first draft who want an experienced editor to identify what is working, what needs strengthening, and how to bring the manuscript to a publish-ready standard.',
+        nextStep: 'Send your manuscript for review and we will provide a sample edit and a clear quote before any full edit begins.',
+        seoKeywords: ['developmental editing services', 'line editing for authors', 'book editing services', 'manuscript editing'],
       },
       {
-        id: 'proofreading',
-        slug: 'proofreading',
-        title: 'Proofreading',
-        shortDescription: 'Final typographical, grammatical, punctuation, and typesetting verification.',
-        fullDescription: 'The final, essential quality barrier before publication. Our eagle-eyed proofreaders catch grammatical anomalies, punctuation inconsistencies, hyphenation errors, widows, orphans, and formatting discrepancies across both digital and print galleys.',
+        id: 'proofreading', slug: 'proofreading', title: 'Proofreading',
+        shortDescription: 'A final review and error correction pass before publication.',
+        fullDescription: 'Proofreading is the final quality check before your manuscript goes to print or publication. Our proofreaders review spelling, grammar, punctuation and formatting consistency, and check the manuscript against the agreed style sheet so that typos and layout errors do not make it into the finished book.',
         deliverables: [
-          'Full-pass grammatical and typographical correction',
-          'Consistency check for capitalization, hyphenation, and styling',
-          'Galley layout review for orphan lines and page breaks',
-          'Final verified publication-ready manuscript'
+          'A full proofread of the final manuscript, after editing and formatting are complete.',
+          'Consistency checks for spelling, punctuation, hyphenation and capitalisation.',
+          'Style sheet creation and adherence for names, terms and formatting choices.',
+          'A final pass on the formatted interior file to catch layout and pagination errors.',
+          'Clear, trackable corrections so you can review every change before approval.',
         ],
-        idealFor: 'Manuscripts that have completed developmental editing and require a final quality audit before manufacturing.',
-        timeline: '1–2 Weeks',
-        faqs: [
-          {
-            question: 'Is proofreading sufficient on its own?',
-            answer: 'Proofreading is designed for mechanically sound manuscripts that already have solid structure and style. If your book needs plot, pacing, or line-level refinement, we recommend our combined Editing + Proofreading pathway.'
-          }
-        ]
-      }
-    ]
+        idealFor: 'This service suits authors with a fully edited manuscript who want a final, thorough check before publication, as well as authors who only need proofreading rather than a full edit.',
+        nextStep: 'Send your near-final manuscript and we will confirm turnaround time and cost for a full proofreading pass.',
+        seoKeywords: ['book proofreading services', 'manuscript proofreading', 'final proofread before publishing'],
+      },
+    ],
   },
   {
-    number: '03',
-    id: 'design',
-    name: 'Design & Formatting',
-    tagline: 'Cover design and readable interiors for print and digital editions.',
-    summary: 'We design covers suited to the book’s genre and prepare clear, professional interiors for paperback, hardcover, and eBook formats.',
-    colorHighlight: '#012258',
+    number: '03', id: 'design-formatting', name: 'Design & Formatting',
+    summary: 'Custom cover design and professional interior formatting for digital and printed editions.',
     subServices: [
       {
-        id: 'cover-design',
-        slug: 'cover-design',
-        title: 'Book Cover Design',
-        shortDescription: 'Bespoke custom typography, physical dust jacket/case laminate & digital cover art.',
-        fullDescription: 'Our designers develop cover concepts based on the manuscript, readership, genre, and selected formats. Final artwork can include the front cover, spine, back cover, print specifications, and a digital retail version.',
+        id: 'cover-design', slug: 'cover-design', title: 'Book Cover Design',
+        shortDescription: 'Custom cover design and typography for print and digital editions.',
+        fullDescription: 'Your cover is the first impression your book makes on a potential reader, and Royal Quill Publishers designs custom covers built around your genre, audience and story. Our designers create cover concepts for eBook, paperback and hardcover formats, with full technical specifications for Amazon KDP, IngramSpark and other major print and digital platforms.',
         deliverables: [
-          '3 distinct creative concept directions',
-          'Full print wrap (Front, Spine, Back cover with barcode placement)',
-          'High-resolution eBook cover optimized for Amazon, Apple & Kobo',
-          '3D photorealistic mockups for promotional use',
-          'Print-ready CMYK PDF with bleed and crop marks'
+          'Custom cover concepts based on your manuscript, genre and target readers.',
+          'Front cover, full wraparound paperback cover and spine design.',
+          'Typography and title treatment suited to your book\'s tone and category.',
+          'Print-ready files built to the exact trim size and spine width for your chosen printer.',
+          'Revision rounds until the cover is approved by you.',
         ],
-        idealFor: 'Authors who need a professionally designed cover for print, digital retail, or both.',
-        timeline: '2–3 Weeks',
-        faqs: [
-          {
-            question: 'Do I get to give feedback during the design process?',
-            answer: 'Absolutely. We begin with 3 unique creative directions. You choose your preferred path and we provide iterative refinements until the cover is flawless.'
-          }
-        ]
+        idealFor: 'This service suits authors preparing to publish who want a professional, genre-appropriate cover that stands out in online retail thumbnails as well as in print.',
+        nextStep: 'Tell us your book\'s genre, trim size and any visual references you like, and we will put together cover concepts for your review.',
+        seoKeywords: ['book cover design services', 'custom book covers', 'Kindle cover design', 'paperback cover design'],
       },
       {
-        id: 'formatting',
-        slug: 'formatting',
-        title: 'eBook, Paperback & Hardcover Formatting',
-        shortDescription: 'Interior typesetting, reflowable EPUBs, custom drop caps, and print-ready PDF masters.',
-        fullDescription: 'We typeset print interiors to the required trim size and prepare reflowable EPUB files for supported eBook retailers. The work includes front matter, chapter styling, running heads, page numbering, tables, images, and other book-specific elements.',
+        id: 'formatting', slug: 'formatting', title: 'eBook, Paperback & Hardcover Formatting',
+        shortDescription: 'Typesetting for print, Kindle and EPUB.',
+        fullDescription: 'Royal Quill Publishers formats manuscripts for eBook, paperback and hardcover publication, preparing clean, professional interiors that meet the technical requirements of Amazon KDP, Apple Books, IngramSpark and other distribution platforms. Our formatting covers everything from typesetting and chapter styling to front matter, back matter and print-ready page layout.',
         deliverables: [
-          'Print-ready interior PDF matching precise press trim specifications',
-          'Validated reflowable EPUB 3 and Kindle-compliant files',
-          'Custom typography matching cover styling and genre traditions',
-          'Front matter, copyright page, dedication, and back matter integration'
+          'Interior formatting for Kindle, EPUB and print-ready PDF files.',
+          'Typesetting with consistent chapter headings, drop caps, section breaks and page numbering.',
+          'Front matter and back matter, including title pages, copyright pages and tables of contents.',
+          'Image and illustration placement for children\'s books, memoirs and illustrated nonfiction.',
+          'Platform-compliant files for Amazon KDP, Apple Books, Barnes & Noble, Kobo and IngramSpark.',
         ],
-        idealFor: 'Authors requiring flawless reading ergonomics across physical print and all digital e-reader platforms.',
-        timeline: '1–2 Weeks',
-        faqs: [
-          {
-            question: 'What trim sizes do you support for physical books?',
-            answer: 'We support all standard UK and US publishing trim sizes, including 5×8 in, 5.5×8.5 in (Digest), 6×9 in (Trade), 7×10 in, and bespoke hardcover dimensions.'
-          }
-        ]
-      }
-    ]
+        idealFor: 'This service suits authors with an edited, proofread manuscript who need it converted into publish-ready files for one or more retail and print platforms.',
+        nextStep: 'Send your final manuscript along with your intended formats and trim size and we will confirm formatting turnaround and pricing.',
+        seoKeywords: ['book formatting services', 'KDP formatting', 'eBook and paperback formatting', 'EPUB conversion'],
+      },
+    ],
   },
   {
-    number: '04',
-    id: 'publish',
-    name: 'Publishing & Distribution',
-    tagline: 'Professional publishing setup and distribution across major book retailers.',
-    summary: 'We prepare your book for retail distribution, including platform setup, metadata, print-on-demand configuration, and ISBN support where required.',
-    colorHighlight: '#012258',
+    number: '04', id: 'publishing-distribution', name: 'Publishing & Distribution',
+    summary: 'Retail setup, metadata and distribution across the major platforms selected for your project.',
     subServices: [
       {
-        id: 'publishing',
-        slug: 'publishing',
-        title: 'Publishing & Distribution',
-        shortDescription: 'Retail setup for Amazon, Apple Books, Barnes & Noble, Kobo, and Ingram.',
-        fullDescription: 'We prepare and configure your title for the selected retail platforms. This can include ISBN support, BIC/BISAC categories, bibliographic metadata, keywords, print-on-demand, and digital distribution.',
+        id: 'publishing', slug: 'publishing', title: 'Publishing & Distribution',
+        shortDescription: 'Retail setup, metadata and distribution across major platforms.',
+        fullDescription: 'Our publishing and distribution service prepares your finished book for release across the retail and distribution channels selected for your project. We handle account setup, metadata, pricing and territory settings, and manage the technical upload process for platforms including Amazon KDP, Apple Books, Barnes & Noble, Rakuten Kobo and IngramSpark.',
         deliverables: [
-          'ISBN assignment and barcode support where required',
-          'Direct platform onboarding: Amazon KDP, Apple Books, Kobo, Barnes & Noble',
-          'Ingram catalogue and wholesale distribution setup',
-          'Retail account and payment configuration support',
-          'Barcodes, metadata, and Library of Congress / British Library deposit assistance'
+          'Retailer account setup and guidance for Amazon KDP and other platforms.',
+          'Metadata optimisation, including title, description, categories and keywords, to support discoverability.',
+          'Pricing and territory strategy for eBook, paperback and hardcover editions.',
+          'Coordinated publication dates across all selected retail and distribution channels.',
+          'Post-publication support for listing corrections and updates.',
         ],
-        idealFor: 'Independent authors who need professional retail and distribution setup without giving Royal Quill ownership of their manuscript.',
-        timeline: '2–4 Weeks',
-        faqs: [
-          {
-            question: 'Who receives the royalties from book sales?',
-            answer: 'You do — 100% of them. Royal Quill Publishers never takes a percentage of your ongoing royalties. All platform sales deposit directly into your personal author accounts.'
-          },
-          {
-            question: 'Do I retain the copyright to my manuscript?',
-            answer: 'Yes. Royal Quill does not take ownership of your manuscript or creative work. The publishing and ISBN arrangements for your edition are set out clearly in your project scope.'
-          }
-        ]
-      }
-    ]
+        idealFor: 'This service suits authors with a finished, formatted manuscript and cover who are ready to publish and want the retail setup handled correctly the first time.',
+        nextStep: 'Let us know which formats and platforms you want to publish on and we will prepare a distribution plan for your book.',
+        seoKeywords: ['self-publishing services', 'Amazon KDP publishing', 'book distribution services', 'eBook and print distribution'],
+      },
+    ],
   },
   {
-    number: '05',
-    id: 'grow',
-    name: 'Marketing & Author Services',
-    tagline: 'Practical marketing and author materials for book launches.',
-    summary: 'Services include retail page content, advance-copy campaigns, press materials, author websites, and short promotional videos.',
-    colorHighlight: '#012258',
+    number: '05', id: 'marketing-author-services', name: 'Marketing & Author Services',
+    summary: 'Practical launch, visibility and author-platform support designed around your book and readers.',
     subServices: [
       {
-        id: 'book-marketing',
-        slug: 'book-marketing',
-        title: 'Book Marketing & Launch Campaigns',
-        shortDescription: 'Amazon A+ content, ARC review distribution, press releases, and targeted digital promotion.',
-        fullDescription: 'We prepare launch materials suited to the book and its intended readers. Work can include Amazon page content, advance reader copy coordination, keywords and categories, press releases, and a practical post-launch plan.',
+        id: 'book-marketing', slug: 'book-marketing', title: 'Book Marketing & Launch Campaigns',
+        shortDescription: 'Amazon A+ content, reviews and PR support.',
+        fullDescription: 'Publishing a book is only the first step. Royal Quill Publishers supports authors with book marketing and launch campaigns designed to build visibility around release, including Amazon A+ content, review outreach and PR support aimed at reaching the right readers for your genre.',
         deliverables: [
-          'Amazon A+ Enhanced Brand Content modules',
-          'ARC (Advance Review Copy) campaign deployment',
-          'Targeted Amazon keyword & category algorithmic optimization',
-          'Press release creation and distribution',
-          '90-day post-launch promotional roadmap'
+          'Amazon A+ content design to strengthen your book\'s retail listing.',
+          'Launch campaign planning across the weeks before and after publication.',
+          'Review outreach strategy to build early reader feedback and ratings.',
+          'PR support to help place your book with relevant media, bloggers and podcasts.',
+          'Marketing copy for retail listings, social media and author communications.',
         ],
-        idealFor: 'Authors launching a new title who want maximum discoverability, early verified reviews, and sustained commercial momentum.',
-        timeline: '3–6 Weeks',
-        faqs: [
-          {
-            question: 'How do Advance Review Copies (ARCs) help my book?',
-            answer: 'ARCs generate genuine, honest reader reviews prior to or immediately upon launch day, building the social proof and algorithmic signals necessary for Amazon to recommend your book to organic shoppers.'
-          }
-        ]
+        idealFor: 'This service suits authors preparing for launch or already published who want a structured plan for reaching readers, rather than relying on the retail listing alone.',
+        nextStep: 'Tell us your publication date and target audience and we will outline a launch campaign suited to your book and budget.',
+        seoKeywords: ['book marketing services', 'Amazon A+ content', 'book launch campaign', 'author PR and reviews'],
       },
       {
-        id: 'author-website',
-        slug: 'author-website',
-        title: 'Author Website Design',
-        shortDescription: 'Custom, fast, and editorial author web portfolios designed to capture readers and build email lists.',
-        fullDescription: 'We design responsive author websites with book pages, sample downloads, mailing-list integration, media information, and links to the relevant retailers.',
+        id: 'author-website', slug: 'author-website', title: 'Author Website Design',
+        shortDescription: 'A professional web presence for your author brand.',
+        fullDescription: 'A professional author website gives readers, media and event organisers a place to learn about you and your books beyond the retail listing. We design and build author websites that showcase your book, biography, events and contact details, with a clean layout suited to your genre and brand.',
         deliverables: [
-          'Bespoke multi-page author website',
-          'Book showcase pages with universal retailer buy buttons',
-          'Newsletter & reader-magnet lead capture integration',
-          'Press / Media kit download section',
-          'Fast hosting, SSL security, and custom domain configuration'
+          'Custom website design reflecting your author brand and book genre.',
+          'Book landing pages with retailer links, cover artwork and synopsis.',
+          'Author biography, media and events pages.',
+          'Mobile-friendly layout and straightforward content management.',
+          'Ongoing update support after launch, if required.',
         ],
-        idealFor: 'Authors establishing a long-term literary career and seeking direct relationship with their readership.',
-        timeline: '2–4 Weeks',
-        faqs: [
-          {
-            question: 'Can I easily update my website after launch?',
-            answer: 'Yes. We build author websites with clean, intuitive content management systems so you can announce new books, post news, or update events effortlessly.'
-          }
-        ]
+        idealFor: 'This service suits debut and established authors who want a dedicated online presence to support their book launch, media outreach and long-term author brand.',
+        nextStep: 'Share any reference sites you like and the pages you need, and we will put together a website plan for your approval.',
+        seoKeywords: ['author website design', 'author websites for books', 'book landing page design'],
       },
       {
-        id: 'book-trailer',
-        slug: 'book-trailer',
-        title: 'Cinematic Book Trailers',
-        shortDescription: 'High-impact video teasers for social media, YouTube, and digital advertising campaigns.',
-        fullDescription: 'We produce short promotional book videos using approved artwork, typography, music, and platform-appropriate edits for YouTube and social channels.',
+        id: 'book-trailer', slug: 'book-trailer', title: 'Cinematic Book Trailers',
+        shortDescription: 'Video trailers for promotion and launch.',
+        fullDescription: 'A well-made book trailer gives readers a taste of your story\'s tone and stakes before they open the first page. Royal Quill Publishers produces cinematic book trailers using licensed footage, motion graphics and voiceover, tailored to your book\'s genre and mood, for use on social media, retail listings and launch campaigns.',
         deliverables: [
-          '30–60 second cinematic video trailer (16:9 widescreen)',
-          'Vertical 9:16 cuts optimized for TikTok, Instagram Reels, and YouTube Shorts',
-          'Custom motion graphics, audio scoring, and professional sound mixing',
-          'Thumbnail pack and promotional video ad copy'
+          'Script and storyboard development based on your book\'s key themes.',
+          'Cinematic visuals using licensed stock footage and motion graphics.',
+          'Professional voiceover or on-screen text options.',
+          'Formats optimised for social media, YouTube and website use.',
+          'Revision rounds until the trailer is approved.',
         ],
-        idealFor: 'Fiction, fantasy, thriller, and memoir authors who want dynamic video creative to drive viral reader discovery and ad conversions.',
-        timeline: '2–3 Weeks',
-        faqs: [
-          {
-            question: 'What format will the video be delivered in?',
-            answer: 'We provide 4K and 1080p MP4 master files in both landscape (16:9) for desktop/YouTube and vertical (9:16) for social video platforms.'
-          }
-        ]
-      }
-    ]
+        idealFor: 'This service suits authors launching fiction, memoir or narrative nonfiction who want an engaging video asset to support their marketing and social media presence.',
+        nextStep: 'Tell us about your book\'s tone and any trailers you admire, and we will propose a concept for your review.',
+        seoKeywords: ['book trailer production', 'cinematic book trailers', 'video marketing for authors'],
+      },
+    ],
   },
   {
-    number: '06',
-    id: 'extend',
-    name: 'Audiobook & Printing',
-    tagline: 'Printed editions and professionally produced audiobooks.',
-    summary: 'We support print production for standard and specialist editions, as well as narration, recording, mastering, and audiobook distribution.',
-    colorHighlight: '#012258',
+    number: '06', id: 'audiobook-printing', name: 'Audiobook & Printing',
+    summary: 'Professional audiobook production and flexible printing for digital, retail and direct author use.',
     subServices: [
       {
-        id: 'audiobook',
-        slug: 'audiobook',
-        title: 'Audiobook Production',
-        shortDescription: 'Voice talent casting, professional studio recording, mastering, and Audible/ACX distribution.',
-        fullDescription: 'We coordinate narrator auditions, recording, editing, and mastering to the specifications required by the selected audiobook platforms.',
+        id: 'audiobook', slug: 'audiobook', title: 'Audiobook Production',
+        shortDescription: 'Voice narration and audio production.',
+        fullDescription: 'Audiobooks open your book to an entirely new group of readers. Royal Quill Publishers manages audiobook production from narrator selection through to final mastering, preparing files ready for distribution on Audible, Apple Books and other major audiobook platforms.',
         deliverables: [
-          'Voice actor auditioning and casting curation',
-          'Professional studio recording and chapter-by-chapter editing',
-          'Mastering to strict ACX, Audible, and AES broadcast standards',
-          'Audiobook retail cover adaptation',
-          'Distribution to Audible, iTunes, Spotify, and 40+ global audio retailers'
+          'Narrator selection and audition samples matched to your book\'s voice and genre.',
+          'Professional recording and studio-quality audio production.',
+          'Editing, levelling and mastering to retailer technical specifications.',
+          'Chapter breaks and metadata prepared for audiobook distribution platforms.',
+          'Distribution setup guidance for Audible, Apple Books and other audiobook retailers.',
         ],
-        idealFor: 'Authors seeking to tap into the high-margin, rapidly expanding global audiobook listener market.',
-        timeline: '4–8 Weeks',
-        faqs: [
-          {
-            question: 'Can I choose the narrator\'s accent and style?',
-            answer: 'Yes. We provide curated sample auditions based on your preferred tone, gender, accent (British RP, Scottish, American General, etc.), and genre suitability.'
-          }
-        ]
+        idealFor: 'This service suits authors with a published or soon-to-be-published book who want to extend their reach into the growing audiobook market.',
+        nextStep: 'Let us know your book\'s genre and preferred narrator style and we will share sample options to choose from.',
+        seoKeywords: ['audiobook production services', 'audiobook narration', 'self-publish an audiobook'],
       },
       {
-        id: 'printing',
-        slug: 'printing',
-        title: 'Custom Book Printing',
-        shortDescription: 'Short-run offset, luxury hardcover bindings, foil stamping, edge spraying, and POD.',
-        fullDescription: 'We manage print production for paperback, hardcover, short-run, and specialist editions. Available options can include custom paper, cloth binding, dust jackets, foil, spot finishes, ribbons, and sprayed edges.',
+        id: 'printing', slug: 'printing', title: 'Custom Book Printing',
+        shortDescription: 'Hardcover, paperback and print-on-demand editions.',
+        fullDescription: 'Whether you need author copies, event stock or full print-on-demand distribution, Royal Quill Publishers arranges custom book printing in hardcover, paperback and specialty editions. We prepare print-ready files and coordinate with trusted print partners to match the paper, binding and finish your book deserves.',
         deliverables: [
-          'Print production management and press-check quality assurance',
-          'Hardcover (Cloth, Case Laminate, Dust Jacket) or Luxury Paperback options',
-          'Specialty finishes: Foil debossing, spot UV, sprayed edges, ribbon markers',
-          'Direct freight shipping to your residence, warehouse, or launch event venue'
+          'Print-ready file preparation for hardcover, paperback and specialty editions.',
+          'Paper stock, binding and cover finish recommendations suited to your genre and budget.',
+          'Short-run printing for author copies and events.',
+          'Print-on-demand setup for ongoing global availability without upfront stock.',
+          'Print proof review before any full print run is approved.',
         ],
-        idealFor: 'Special collector editions, corporate gifts, bookstore stock, author signings, and luxury physical showcases.',
-        timeline: '3–6 Weeks',
-        faqs: [
-          {
-            question: 'What is the minimum print order for custom offset runs?',
-            answer: 'We can produce short custom runs from 100 copies up to tens of thousands of copies, as well as zero-inventory Print-on-Demand (POD).'
-          }
-        ]
-      }
-    ]
-  }
+        idealFor: 'This service suits authors who want physical copies of their book, whether for personal use, events, gifting or ongoing retail availability through print-on-demand.',
+        nextStep: 'Tell us the quantity, format and intended use for your printed books and we will recommend the right printing route.',
+        seoKeywords: ['book printing services', 'print on demand books', 'hardcover and paperback printing'],
+      },
+    ],
+  },
 ];
 
-export const allSubServices: SubService[] = serviceCategories.flatMap(c => c.subServices);
+export const allSubServices: SubService[] = serviceCategories.flatMap((category) => category.subServices);

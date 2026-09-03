@@ -23,8 +23,11 @@ export const metadata: Metadata = {
   description: 'Royal Quill Publishers provides professional writing, editing, design, publishing, and marketing support for independent authors.',
   keywords: [
     'book publishing',
-    'self publishing UK',
     'book publishing services',
+    'self publishing UK',
+    'self-publishing support',
+    'independent authors',
+    'publishing services UK',
     'ghostwriting',
     'book editing',
     'book cover design',

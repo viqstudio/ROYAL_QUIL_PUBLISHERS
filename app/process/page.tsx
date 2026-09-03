@@ -8,6 +8,7 @@ import styles from './page.module.css';
 export const metadata: Metadata = {
   title: 'Our Publishing Process | Royal Quill Publishers',
   description: 'Learn how Royal Quill reviews, edits, designs, prepares, and publishes books through a clear five-stage process.',
+  keywords: ['book publishing process', 'how self-publishing works', 'self-publishing steps for authors'],
 };
 
 export default function ProcessPage() {
@@ -17,7 +18,7 @@ export default function ProcessPage() {
       <PageHeader
         eyebrow="HOW IT WORKS"
         title="Our Publishing Process"
-        subtitle="Five practical stages from manuscript review and editing to design, publication, and author support."
+        subtitle="Each publishing project is scoped individually around the author's manuscript and goals, but every book follows the same clear stages from submission to launch."
         imageSrc="/images/header-process.jpg"
         imageAlt="Editorial evaluation desk with laptop, proofing annotations, and review book"
         breadcrumbs={[
@@ -33,34 +34,13 @@ export default function ProcessPage() {
             {publishingRoadmap.map((stage) => (
               <div key={stage.step} className={styles.stageBlock}>
                 <div className={styles.stageTopRow}>
-                  <div className={styles.stageNumBadge}>
-                    <span>STAGE {stage.step}</span>
-                  </div>
-                  <span className={styles.durationPill}>Estimated Duration: {stage.duration}</span>
+                  <div className={styles.stageNumBadge}><span>STAGE {stage.step}</span></div>
                 </div>
 
                 <div className={styles.stageMainGrid}>
                   <div className={styles.stageLeftCol}>
                     <h2 className={styles.stageName}>{stage.name}</h2>
-                    <span className={styles.stageSubtitle}>{stage.subtitle}</span>
                     <p className={styles.stageDesc}>{stage.description}</p>
-                  </div>
-
-                  <div className={styles.stageRightCol}>
-                    <div className={styles.actionsCard}>
-                      <h4 className={styles.cardHeader}>Key Actions:</h4>
-                      <ul className={styles.actionList}>
-                        {stage.keyActions.map((act, i) => (
-                          <li key={i}>
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#012258" strokeWidth="2.5">
-                              <polyline points="20 6 9 17 4 12" />
-                            </svg>
-                            <span>{act}</span>
-                          </li>
-                        ))}
-                      </ul>
-
-                    </div>
                   </div>
                 </div>
               </div>
@@ -69,36 +49,16 @@ export default function ProcessPage() {
         </div>
       </section>
 
-      {/* COMMITMENTS STRIP */}
+      {/* PROJECT TIMELINE */}
       <section className={styles.commitmentsSection}>
         <div className={styles.container}>
           <SectionHeading
-            eyebrow="OUR PRINCIPLES"
-            title="What You Can Expect"
-            subtitle="Clear communication and dedicated support throughout your publishing project."
+            eyebrow="TIMELINE"
+            title="A Schedule Built Around Your Manuscript"
           />
 
-          <div className={styles.commitmentsGrid}>
-            <div className={styles.commitCard}>
-              <h3 className={styles.commitTitle}>Dedicated Point of Contact</h3>
-              <p className={styles.commitDesc}>
-                You work with a dedicated specialist who coordinates all editors, designers, typesetters, and distribution tasks.
-              </p>
-            </div>
-
-            <div className={styles.commitCard}>
-              <h3 className={styles.commitTitle}>Author Sign-Off</h3>
-              <p className={styles.commitDesc}>
-                We do not proceed to printing or digital distribution without your explicit approval on all text, cover design, and interior layouts.
-              </p>
-            </div>
-
-            <div className={styles.commitCard}>
-              <h3 className={styles.commitTitle}>Complete File Delivery</h3>
-              <p className={styles.commitDesc}>
-                Upon publication, you receive all print-ready press PDFs, high-resolution cover files, and validated EPUB masters.
-              </p>
-            </div>
+          <div className={styles.timelineNote}>
+            <p>Project timelines depend on manuscript length, the services commissioned and the number of revision rounds required. We provide an estimated timeline as part of your project scope, so you know what to expect before work begins.</p>
           </div>
         </div>
       </section>

@@ -73,6 +73,12 @@
   margin-bottom: 1.5rem;
 }
 
+.deskTitle {
+  margin-bottom: 0.65rem;
+  color: #FFFFFF;
+  font-size: 1.45rem;
+}
+
 .contactDetailsList {
   display: flex;
   flex-direction: column;

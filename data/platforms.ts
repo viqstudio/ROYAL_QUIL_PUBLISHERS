@@ -38,7 +38,7 @@ export const publishingPlatforms: Platform[] = [
   },
   {
     id: 'kobo',
-    name: 'Kobo by Rakuten',
+    name: 'Rakuten Kobo',
     category: 'Major Retailer',
     description: 'International eBook and audiobook distribution with a strong presence in Canada, Europe, and other markets.',
     reach: 'International digital storefront availability.',
@@ -47,7 +47,7 @@ export const publishingPlatforms: Platform[] = [
   },
   {
     id: 'ingram',
-    name: 'Ingram Content Group',
+    name: 'IngramSpark',
     category: 'Global Distributor',
     description: 'Wholesale catalogue and print distribution used by booksellers, libraries, and online retailers.',
     reach: 'International wholesale and library ordering networks.',

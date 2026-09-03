@@ -7,7 +7,8 @@ import styles from './page.module.css';
 
 export const metadata: Metadata = {
   title: 'Publishing Services | Royal Quill Publishers',
-  description: 'Explore Royal Quill writing, editing, cover design, formatting, publishing, distribution, marketing, audiobook, and printing services.',
+  description: 'Book publishing services for authors, including book editing and formatting services and flexible self-publishing packages.',
+  keywords: ['book publishing services for authors', 'book editing and formatting services', 'self-publishing packages'],
 };
 
 export default function ServicesPage() {
@@ -17,7 +18,7 @@ export default function ServicesPage() {
       <PageHeader
         eyebrow="OUR SERVICES"
         title="Publishing Services for Independent Authors"
-        subtitle="Choose individual services or combine writing, editorial, design, production, and distribution support in one project."
+        subtitle="Royal Quill Publishers offers a complete range of publishing services for independent authors, covering writing and development, editing and proofreading, design and formatting, and publishing, distribution and marketing. Every service can be commissioned on its own or combined into a full self-publishing package built around your manuscript."
         imageSrc="/images/header-services.jpg"
         imageAlt="Publishing reference volumes, fountain pen, and manuscript desk"
         breadcrumbs={[
@@ -45,7 +46,6 @@ export default function ServicesPage() {
                     <div key={sub.id} className={styles.subServiceCard}>
                       <div className={styles.subHeader}>
                         <h3 className={styles.subTitle}>{sub.title}</h3>
-                        <span className={styles.subTimeline}>{sub.timeline}</span>
                       </div>
 
                       <p className={styles.subDesc}>{sub.shortDescription}</p>
@@ -55,7 +55,7 @@ export default function ServicesPage() {
                           View Service Details →
                         </Link>
                         <Button variant="primary" size="sm" href={`/contact?service=${encodeURIComponent(sub.title)}`}>
-                          Inquire
+                          Enquire
                         </Button>
                       </div>
                     </div>
@@ -67,45 +67,13 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* COMPARISON MATRIX */}
-      <section className={styles.reassuranceSection}>
-        <div className={styles.container}>
-          <div className={styles.reassuranceBox}>
-            <span className={styles.reassuranceEyebrow}>HOW WE WORK</span>
-            <h2 className={styles.reassuranceTitle}>Clear, Professional Publishing Support</h2>
-            <div className={styles.matrixGrid}>
-              <div className={styles.matrixCard}>
-                <h4 className={styles.matrixHead}>Clear Project Scope</h4>
-                <ul className={styles.matrixList}>
-                  <li>Services, responsibilities, costs, and review stages are agreed before work begins.</li>
-                </ul>
-              </div>
-
-              <div className={styles.matrixCard}>
-                <h4 className={styles.matrixHead}>Specialist Production</h4>
-                <ul className={styles.matrixList}>
-                  <li>Editors, designers, typesetters, and publishing specialists handle each part of the book.</li>
-                </ul>
-              </div>
-
-              <div className={styles.matrixCard}>
-                <h4 className={styles.matrixHead}>Author Approval</h4>
-                <ul className={styles.matrixList}>
-                  <li>You review and approve the manuscript, cover, and interior before publication.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* FINAL CTA */}
       <section className={styles.ctaBanner}>
         <div className={styles.container}>
           <div className={styles.ctaContent}>
-            <h2 className={styles.ctaTitle}>Ready to Discuss Your Book?</h2>
+            <h2 className={styles.ctaTitle}>Not Sure Where to Start?</h2>
             <p className={styles.ctaSub}>
-              Tell us about your manuscript and we will provide a clear scope, schedule, and estimate.
+              Share the stage your manuscript is at and we will recommend the services that fit your book and your budget.
             </p>
             <Button variant="primary" size="lg" href="/contact">
               Discuss Your Book

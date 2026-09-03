@@ -3,9 +3,7 @@ import { notFound } from 'next/navigation';
 import { allSubServices, serviceCategories } from '@/data/services';
 import { PageHeader } from '@/components/layout/PageHeader';
 import { ServiceIcon } from '@/components/ui/ServiceIcon';
-import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Button } from '@/components/ui/Button';
-import { Accordion } from '@/components/ui/Accordion';
 import styles from './page.module.css';
 
 interface Props {
@@ -29,6 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${service.title} | Royal Quill Publishers`,
     description: service.shortDescription,
+    keywords: service.seoKeywords,
   };
 }
 
@@ -65,7 +64,7 @@ export default function SubServiceDetailPage({ params }: Props) {
     <div className={styles.detailPage}>
       {/* PAGE HEADER */}
       <PageHeader
-        eyebrow={parentCategory ? `CATEGORY ${parentCategory.number} • ${parentCategory.name}` : 'PUBLISHING SERVICE'}
+        eyebrow={parentCategory ? `${parentCategory.name.toUpperCase()} • PUBLISHING SERVICE` : 'PUBLISHING SERVICE'}
         title={service.title}
         subtitle={service.shortDescription}
         imageSrc={headerImage}
@@ -82,12 +81,8 @@ export default function SubServiceDetailPage({ params }: Props) {
             size="md"
             href={`/contact?service=${encodeURIComponent(service.title)}`}
           >
-            Inquire About {service.title}
+            Discuss This Service
           </Button>
-          <div className={styles.timelinePill}>
-            <span className={styles.pillLabel}>Estimated Timeline:</span>
-            <span className={styles.pillVal}>{service.timeline}</span>
-          </div>
         </div>
       </PageHeader>
 
@@ -99,22 +94,22 @@ export default function SubServiceDetailPage({ params }: Props) {
               <div className={styles.serviceIconHeader}>
                 <ServiceIcon name={service.slug} size="lg" variant="navy" />
                 <div>
-                  <span className={styles.sectionEyebrow}>SERVICE OVERVIEW</span>
-                  <h2 className={styles.sectionHeading}>How We Approach {service.title}</h2>
+                  <span className={styles.sectionEyebrow}>OVERVIEW</span>
+                  <h2 className={styles.sectionHeading}>How {service.title} Works</h2>
                 </div>
               </div>
               <p className={styles.fullDesc}>{service.fullDescription}</p>
 
               <div className={styles.idealBox}>
-                <h4 className={styles.idealTitle}>Ideal For:</h4>
+                <h3 className={styles.idealTitle}>Who It&apos;s For</h3>
                 <p className={styles.idealText}>{service.idealFor}</p>
               </div>
             </div>
 
             <div className={styles.deliverablesCol}>
               <div className={styles.deliverablesCard}>
-                <span className={styles.delivEyebrow}>WHAT YOU RECEIVE</span>
-                <h3 className={styles.delivHeading}>Key Deliverables</h3>
+                <span className={styles.delivEyebrow}>WHAT&apos;S INCLUDED</span>
+                <h3 className={styles.delivHeading}>Support Included in This Service</h3>
                 <ul className={styles.delivList}>
                   {service.deliverables.map((item, idx) => (
                     <li key={idx}>
@@ -138,36 +133,13 @@ export default function SubServiceDetailPage({ params }: Props) {
         </div>
       </section>
 
-      {/* FAQS IF PRESENT */}
-      {service.faqs && service.faqs.length > 0 && (
-        <section className={styles.faqSection}>
-          <div className={styles.container}>
-            <SectionHeading
-              eyebrow="FREQUENTLY ASKED"
-              title={`Questions About ${service.title}`}
-              subtitle="Clear answers on our methodology, author rights, and timelines."
-            />
-            <div className={styles.faqWrapper}>
-              <Accordion
-                items={service.faqs.map((f, i) => ({
-                  id: `service-faq-${i}`,
-                  question: f.question,
-                  answer: f.answer,
-                }))}
-              />
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* CTA FOOTER */}
+      {/* APPROVED NEXT STEP */}
       <section className={styles.ctaBanner}>
         <div className={styles.container}>
           <div className={styles.ctaBox}>
-            <h2 className={styles.ctaHeading}>Ready to Discuss {service.title}?</h2>
-            <p className={styles.ctaText}>
-              Contact our editorial team to discuss your manuscript requirements and timeline.
-            </p>
+            <span className={styles.ctaEyebrow}>NEXT STEP</span>
+            <h2 className={styles.ctaHeading}>Discuss {service.title}</h2>
+            <p className={styles.ctaText}>{service.nextStep}</p>
             <Button
               variant="primary"
               size="lg"

@@ -1,31 +1,12 @@
-export type Genre = 
-  | 'Fiction'
-  | 'Non-Fiction'
-  | 'Memoir'
-  | 'Poetry'
-  | 'Business'
-  | 'Thriller'
-  | 'Fantasy'
-  | 'Self-Help'
-  | 'Children\'s'
-  | 'Romance';
+export type Genre = 'Thriller' | 'Non-Fiction' | 'Poetry' | 'Self-Help' | "Children's";
 
 export interface Book {
   id: string;
   title: string;
   author: string;
   genre: Genre;
-  tagline: string;
   description: string;
   coverImage: string;
-  year: number;
-  featured: boolean;
-  formats: string[];
-  specs?: {
-    pages?: number;
-    trimSize?: string;
-    binding?: string;
-  };
 }
 
 export const books: Book[] = [
@@ -34,113 +15,49 @@ export const books: Book[] = [
     title: 'Empire: Borders Within',
     author: 'John Payne',
     genre: 'Thriller',
-    tagline: 'A gripping tale of global power, hidden boundaries, and unified defiance.',
-    description: 'A geopolitical thriller about surveillance, hidden borders, and resistance under pressure.',
+    description: 'A political thriller following a secret international movement of young people who challenge outdated systems of economic and political control in pursuit of a fairer world. Royal Quill Publishers provided developmental editing, cover design and full Amazon KDP publishing support.',
     coverImage: '/images/book-empire-borders-within.jpg',
-    year: 2024,
-    featured: true,
-    formats: ['Hardcover', 'Paperback', 'eBook', 'Audiobook'],
-    specs: {
-      pages: 416,
-      trimSize: '6 × 9 in / 152 × 229 mm',
-      binding: 'Case Laminate Cloth with Foil Deboss',
-    },
   },
   {
     id: 'the-rat-race',
     title: 'The Rat Race',
     author: 'William Murphy',
     genre: 'Non-Fiction',
-    tagline: 'How It All Began And How It Will End.',
-    description: 'A non-fiction examination of social and economic systems and the pressures they create.',
+    description: 'A practical, motivational nonfiction guide showing readers how to step off the conventional employment treadmill and build sustainable income through creative and AI-supported work. We supported the author with line editing, formatting and KDP publication.',
     coverImage: '/images/book-the-rat-race.jpg',
-    year: 2024,
-    featured: false,
-    formats: ['Hardcover', 'Paperback', 'eBook'],
-    specs: {
-      pages: 368,
-      trimSize: '5.5 × 8.5 in / 140 × 216 mm',
-      binding: 'Matte Hardcover with Spot UV',
-    },
   },
   {
     id: 'feel',
-    title: 'Feel',
+    title: 'Feel: What Am I Feeling Right Now?',
     author: 'Lily Mathers',
-    genre: 'Children\'s',
-    tagline: 'What Am I Feeling Right Now?',
-    description: 'An illustrated book that helps children and families talk about feelings and emotional awareness.',
+    genre: "Children's",
+    description: 'A warm, colourful picture book helping young children name and understand their emotions through everyday moments. Royal Quill Publishers handled layout, illustration placement and print-ready formatting for digital and paperback editions.',
     coverImage: '/images/book-feel.jpg',
-    year: 2024,
-    featured: false,
-    formats: ['Hardcover', 'Paperback', 'eBook'],
-    specs: {
-      pages: 48,
-      trimSize: '8 × 10 in / 203 × 254 mm',
-      binding: 'Laminated Hardcover Board',
-    },
   },
   {
     id: 'expression',
-    title: 'Expression',
+    title: 'Expression: The Different Perspectives Of Love',
     author: 'Chris Walker & Linda Walker',
-    genre: 'Memoir',
-    tagline: 'The Different Perspectives of Love.',
-    description: 'A dual-perspective memoir about love, maturity, and lifelong companionship.',
+    genre: 'Poetry',
+    description: 'A poetry collection following one couple\'s love story from their teenage years to old age, told from both partners\' perspectives. We provided editorial support, formatting and cover design suited to a dual-voice poetry collection.',
     coverImage: '/images/book-expression.jpg',
-    year: 2024,
-    featured: false,
-    formats: ['Hardcover', 'Paperback', 'eBook', 'Audiobook'],
-    specs: {
-      pages: 312,
-      trimSize: '5.25 × 8 in / 133 × 203 mm',
-      binding: 'Soft-Touch Matte with Gold Foil',
-    },
   },
   {
     id: 'would-i-could-i-should-i',
-    title: 'Would I? Could I? Should I?',
+    title: 'Would I? Can I? Should I?',
     author: 'Wallace Murray',
     genre: 'Self-Help',
-    tagline: 'A Dive Into The World Of Procrastination.',
-    description: 'A practical guide to understanding procrastination and making more deliberate decisions.',
+    description: 'A candid self-help book examining why procrastination, doomscrolling and social media distraction have become so widespread among young people, and how to overcome them. Royal Quill Publishers supported developmental editing, formatting and publishing.',
     coverImage: '/images/book-would-i-could-i-should-i.jpg',
-    year: 2024,
-    featured: false,
-    formats: ['Hardcover', 'Paperback', 'eBook'],
-    specs: {
-      pages: 280,
-      trimSize: '5.5 × 8.5 in / 140 × 216 mm',
-      binding: 'Trade Paperback with French Flaps',
-    },
   },
   {
     id: 'we-love-jesus',
     title: 'We Love Jesus',
     author: 'David Addington',
     genre: 'Non-Fiction',
-    tagline: 'An Interfaith Analysis of Jesus in Christianity and Islam.',
-    description: 'An interfaith study of the historical and theological place of Jesus in Christianity and Islam.',
+    description: 'A respectful, well-researched exploration of the shared and differing views of Jesus across Christianity and Islam. We provided editorial review, formatting and distribution support for this interfaith nonfiction title.',
     coverImage: '/images/hero-book-we-love-jesus.jpg',
-    year: 2024,
-    featured: false,
-    formats: ['Hardcover', 'Paperback', 'eBook', 'Audiobook'],
-    specs: {
-      pages: 340,
-      trimSize: '6 × 9 in / 152 × 229 mm',
-      binding: 'Hardcover Case Laminate',
-    },
   },
 ];
 
-export const portfolioGenres = [
-  'All',
-  'Fiction',
-  'Non-Fiction',
-  'Memoir',
-  'Business',
-  'Thriller',
-  'Self-Help',
-  'Children\'s',
-  'Romance'
-] as const;
+export const portfolioGenres = ['All', 'Thriller', 'Non-Fiction', 'Poetry', 'Self-Help', "Children's"] as const;

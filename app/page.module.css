@@ -194,7 +194,7 @@
 .workHeader h2 { margin-bottom: 0.75rem; color: #FFFFFF; }
 .workHeader p { margin: 0; color: var(--color-text-on-dark-secondary); }
 
-.booksGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(1rem, 2.5vw, 2rem); }
+.booksGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1rem, 2.5vw, 2rem); }
 
 .bookCard {
   display: flex;

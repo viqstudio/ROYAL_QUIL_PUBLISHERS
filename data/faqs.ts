@@ -9,69 +9,63 @@ export const faqs: FAQItem[] = [
   {
     id: 'faq-1',
     category: 'Rights & Royalties',
-    question: 'Do I retain 100% of my intellectual property, copyright, and royalties?',
-    answer: 'Yes. You retain the copyright and intellectual property rights to your manuscript. Royal Quill provides publishing services and does not take ownership of your creative work. Retail royalties are paid through the distribution accounts agreed for your project.'
+    question: 'Do I keep the rights to my book?',
+    answer: 'Yes. Royal Quill Publishers does not take ownership of your manuscript or intellectual property at any stage. Your copyright remains yours throughout the editorial, design and publishing process.',
   },
   {
     id: 'faq-2',
-    category: 'Rights & Royalties',
-    question: 'Do you provide ISBN and publishing setup support?',
-    answer: 'Yes. Where required, we can support ISBN assignment, bibliographic metadata, barcode preparation, and retailer setup as part of the publishing service. The exact arrangement is confirmed in your project scope.'
+    category: 'Process & Timelines',
+    question: 'How much does it cost to publish with Royal Quill?',
+    answer: 'Costs depend on the services your manuscript needs, such as editing, cover design, formatting and marketing. We provide a clear project scope and quote before any work begins, so there are no unexpected costs along the way.',
   },
   {
     id: 'faq-3',
-    category: 'Publishing & Distribution',
-    question: 'Where will my book be available for purchase?',
-    answer: 'Distribution options can include Amazon KDP, Apple Books, Kobo, Barnes & Noble, and Ingram. Availability depends on the formats, territories, and distribution route chosen for your book.'
+    category: 'Process & Timelines',
+    question: 'How long does the process take?',
+    answer: 'Timelines vary depending on manuscript length, the services commissioned and the number of revision rounds. We confirm an estimated timeline as part of your project scope.',
   },
   {
     id: 'faq-4',
-    category: 'Process & Timelines',
-    question: 'How long does the complete publishing process take?',
-    answer: 'A standard publishing timeline ranges from 8 to 16 weeks depending on the manuscript\'s length and the scope of editorial and design services required. Ghostwriting engagements typically span 16 to 24 weeks. We establish clear milestone schedules at the start of every project.'
+    category: 'Publishing & Distribution',
+    question: 'What formats can you prepare my book in?',
+    answer: 'We prepare eBook, paperback, hardcover and audiobook editions, formatted to the technical requirements of platforms including Amazon KDP, Apple Books, Barnes & Noble, Rakuten Kobo and IngramSpark.',
   },
   {
     id: 'faq-5',
     category: 'Editorial & Design',
-    question: 'What is the difference between developmental editing, line editing, and proofreading?',
-    answer: 'Developmental editing addresses high-level storytelling architecture — pacing, character progression, theme, and structural balance. Line editing refines prose rhythm, tone, syntax, and sentence clarity. Proofreading is the final technical verification checking grammar, spelling, punctuation, and typesetting consistency.'
+    question: 'Can I use my own cover designer or editor?',
+    answer: 'Yes. Our services can be booked individually, so you are welcome to bring your own designer, editor or other collaborators and use Royal Quill Publishers only for the services you need.',
   },
   {
     id: 'faq-6',
     category: 'Editorial & Design',
-    question: 'Can I provide input and feedback on my book cover design?',
-    answer: 'Yes. Our cover design process is highly collaborative. We present 3 distinct creative concept directions based on your brief and genre research. You select the winning direction and guide refinements until you are completely satisfied with the final artwork.'
+    question: 'Do you offer full publishing packages or only individual services?',
+    answer: 'Both. You can commission a single service, such as proofreading or cover design, or combine several services into a complete publishing package covering editing, design, formatting, publishing and marketing.',
   },
   {
     id: 'faq-7',
     category: 'Publishing & Distribution',
-    question: 'Do you offer physical book printing, hardcovers, and print-on-demand?',
-    answer: 'Yes. We configure automated Print-on-Demand (POD) through Amazon KDP and IngramSpark so readers can order paperbacks and hardcovers worldwide with zero upfront inventory costs. We also manage luxury short-run offset print runs with cloth bindings, foil debossing, and custom dust jackets for special editions.'
+    question: 'What is Amazon KDP?',
+    answer: 'Amazon Kindle Direct Publishing, or KDP, is Amazon\'s self-publishing platform for eBooks and print-on-demand paperbacks. We handle the technical setup and formatting required to publish through KDP as part of our publishing and distribution service.',
   },
   {
     id: 'faq-8',
-    category: 'Process & Timelines',
-    question: 'Can I start working with Royal Quill if my manuscript is not yet finished?',
-    answer: 'Absolutely. Many of our authors engage us during the drafting phase. Our developmental editors and writing coaches can review chapter drafts, provide structural guidance, or help you outline your project before you write the final chapters.'
+    category: 'Publishing & Distribution',
+    question: 'Do you work with authors outside the UK?',
+    answer: 'Yes. We work with independent authors internationally, and platform availability for publishing and distribution depends on the format, territory and retailers selected for your project.',
   },
   {
     id: 'faq-9',
-    category: 'Rights & Royalties',
-    question: 'How do royalty payouts work from platforms like Amazon and Apple?',
-    answer: 'During the publishing phase, we assist you in linking your official author platform accounts directly to your own bank account. Retailers deposit sales royalties directly to you monthly. Royal Quill Publishers never acts as a financial middleman.'
+    category: 'Publishing & Distribution',
+    question: 'Do you offer audiobooks?',
+    answer: 'Yes. Our audiobook production service covers narrator selection, recording, editing and mastering, with files prepared for distribution on major audiobook platforms.',
   },
   {
     id: 'faq-10',
     category: 'Process & Timelines',
-    question: 'What is the first step to get started?',
-    answer: 'The first step is a complimentary, confidential manuscript consultation. You share details about your book and publishing goals, and our senior editorial team provides an initial evaluation and a transparent scope recommendation.'
-  }
+    question: 'How do I get started?',
+    answer: 'Complete the manuscript enquiry form on our Contact page with details of your book and the support you are considering. We will review the information and explain the next step.',
+  },
 ];
 
-export const faqCategories = [
-  'All',
-  'Rights & Royalties',
-  'Editorial & Design',
-  'Publishing & Distribution',
-  'Process & Timelines'
-] as const;
+export const faqCategories = ['All', 'Rights & Royalties', 'Editorial & Design', 'Publishing & Distribution', 'Process & Timelines'] as const;

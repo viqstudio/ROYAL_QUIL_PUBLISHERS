@@ -32,6 +32,10 @@
   margin-bottom: 0.5rem;
 }
 
+.bodyText + .sectionTag {
+  margin-top: 2.25rem;
+}
+
 .sectionHeading {
   font-family: var(--font-serif);
   font-size: 2rem;
@@ -103,6 +107,22 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
+}
+
+.teamCard {
+  max-width: 900px;
+  padding: clamp(1.75rem, 3vw, 2.5rem);
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-crimson);
+  border-radius: var(--radius-sm);
+}
+
+.teamCard p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  line-height: 1.75;
 }
 
 .standardCard {

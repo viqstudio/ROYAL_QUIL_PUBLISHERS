@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { books, Book, portfolioGenres } from '@/data/books';
 import { PageHeader } from '@/components/layout/PageHeader';
 import { BookInspectorModal } from '@/components/features/BookInspectorModal';
+import { TestimonialsSection } from '@/components/features/TestimonialsSection';
 import { Button } from '@/components/ui/Button';
 import styles from './page.module.css';
 
@@ -21,8 +22,8 @@ export default function PortfolioPage() {
       {/* PAGE HEADER */}
       <PageHeader
         eyebrow="OUR WORK"
-        title="Books We've Published"
-        subtitle="A selection of books prepared across fiction, non-fiction, memoir, self-help, and children’s publishing."
+        title="Books Prepared for Publication"
+        subtitle="A selection of titles our editorial and production team has prepared for publication across fiction, nonfiction, poetry and children's books."
         imageSrc="/images/header-portfolio.jpg"
         imageAlt="Luxury library bookshelf featuring Royal Quill published books"
         breadcrumbs={[
@@ -57,7 +58,12 @@ export default function PortfolioPage() {
                 onClick={() => setSelectedBook(book)}
                 role="button"
                 tabIndex={0}
-                onKeyDown={(e) => e.key === 'Enter' && setSelectedBook(book)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    setSelectedBook(book);
+                  }
+                }}
               >
                 <div className={styles.coverWrapper}>
                   <Image
@@ -75,22 +81,18 @@ export default function PortfolioPage() {
                 <div className={styles.cardDetails}>
                   <div className={styles.metaRow}>
                     <span className={styles.genreTag}>{book.genre}</span>
-                    <span className={styles.yearText}>{book.year}</span>
                   </div>
                   <h3 className={styles.bookTitle}>{book.title}</h3>
                   <p className={styles.bookAuthor}>By {book.author}</p>
-                  <p className={styles.bookTagline}>&ldquo;{book.tagline}&rdquo;</p>
-                  <div className={styles.formatsRow}>
-                    {book.formats.map((fmt, i) => (
-                      <span key={i} className={styles.formatTag}>{fmt}</span>
-                    ))}
-                  </div>
+                  <p className={styles.bookDescription}>{book.description}</p>
                 </div>
               </div>
             ))}
           </div>
         </div>
       </section>
+
+      <TestimonialsSection />
 
       {/* CTA BANNER */}
       <section className={styles.ctaBanner}>

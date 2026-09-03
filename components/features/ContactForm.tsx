@@ -117,7 +117,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
     >
       {sourceContext && (
         <div className={styles.sourceNote}>
-          Inquiring about: <strong>{sourceContext}</strong>
+          Enquiry about: <strong>{sourceContext}</strong>
         </div>
       )}
 

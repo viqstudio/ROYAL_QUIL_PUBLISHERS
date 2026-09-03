@@ -114,10 +114,59 @@
   border-bottom: 1px solid var(--color-border);
 }
 
+.editorialCopy {
+  max-width: 900px;
+  padding-left: clamp(1.25rem, 3vw, 2rem);
+  border-left: 4px solid var(--color-crimson);
+}
+
+.editorialCopy p {
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.rightsSection {
+  padding: 4.5rem 0;
+  background-color: var(--color-pale-blue);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.rightsPanel {
+  max-width: 900px;
+}
+
+.rightsEyebrow {
+  display: block;
+  margin-bottom: 0.65rem;
+  color: var(--color-crimson);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.rightsPanel h2 {
+  margin-bottom: 0.9rem;
+  color: var(--color-primary-navy);
+}
+
+.rightsPanel p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
 .supportGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
+}
+
+.formatsTitle {
+  margin: 0 0 1.25rem;
+  color: var(--color-primary-navy);
+  font-size: 1.5rem;
 }
 
 .supportCard {

@@ -5,25 +5,25 @@
 
 :root {
   /* Brand Palette */
-  --color-primary-navy: #012258;
+  --color-primary-navy: #143264;
   --color-navy-deep: #001538;
-  --color-navy-dark: #072a66;
-  --color-navy-surface: #0e3477;
+  --color-navy-dark: #102B57;
+  --color-navy-surface: #173B70;
   
   --color-royal-blue: #1765B0;
   --color-royal-blue-light: #2A7FD4;
   --color-royal-blue-soft: #C0DFFD;
   --color-royal-blue-subtle: rgba(23, 101, 176, 0.08);
 
-  --color-crimson: #D21625;
-  --color-crimson-hover: #b8121f;
+  --color-crimson: #B8121F;
+  --color-crimson-hover: #98101A;
   --color-crimson-active: #9e0e1a;
   --color-crimson-subtle: rgba(210, 22, 37, 0.08);
 
   /* Warm Atmospheric Backgrounds */
-  --color-cream-bg: #FAF7F0;
-  --color-cream-light: #FCFBF7;
-  --color-warm-white: #FCFBF7;
+  --color-cream-bg: #FDF7F4;
+  --color-cream-light: #FFFCFA;
+  --color-warm-white: #FDF7F4;
   --color-paper-warm: #F4EFE6;
   --color-paper-card: #FFFFFF;
   --color-pale-blue: #F0F6FC;
@@ -36,9 +36,9 @@
   --color-navy-border: rgba(192, 223, 253, 0.2);
 
   /* Text Colors */
-  --color-text-primary: #0A192F;
-  --color-text-secondary: #2C3E55;
-  --color-text-muted: #5A6E85;
+  --color-text-primary: #143264;
+  --color-text-secondary: #18181B;
+  --color-text-muted: #555C68;
   
   --color-text-on-dark: #FFFFFF;
   --color-text-on-dark-secondary: #C0DFFD;

@@ -23,7 +23,7 @@ export const Footer: React.FC = () => {
 
           <div className={styles.sealBlock}>
             <div className={styles.sealText}>
-              <span className={styles.sealTitle}>Your work remains yours</span>
+              <span className={styles.sealTitle}>You retain 100% of your rights</span>
               <span className={styles.sealSub}>Royal Quill does not take ownership of your manuscript or intellectual property.</span>
             </div>
           </div>
@@ -45,7 +45,7 @@ export const Footer: React.FC = () => {
           </div>
 
           <div className={styles.linkColumn}>
-            <h4 className={styles.columnTitle}>Production & Marketing</h4>
+            <h4 className={styles.columnTitle}>Publishing & Author Services</h4>
             <ul className={styles.linkList}>
               {footerServices.slice(6).map((item) => (
                 <li key={item.href}>

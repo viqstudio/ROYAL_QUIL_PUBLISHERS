@@ -7,6 +7,7 @@ import styles from './page.module.css';
 export const metadata: Metadata = {
   title: 'Contact | Royal Quill Publishers',
   description: 'Contact Royal Quill Publishers to discuss writing, editing, design, publishing, or marketing support for your book.',
+  keywords: ['contact a book publisher', 'discuss your manuscript', 'book publishing enquiry'],
 };
 
 export default function ContactPage() {
@@ -15,8 +16,8 @@ export default function ContactPage() {
       {/* PAGE HEADER */}
       <PageHeader
         eyebrow="GET IN TOUCH"
-        title="Discuss Your Book"
-        subtitle="Share your manuscript details and tell us which publishing services you are considering."
+        title="Tell Us About Your Book"
+        subtitle="Share the stage your manuscript is at, the services you are considering, and the formats you want to publish. Our team will review the information and explain the next step."
         imageSrc="/images/header-contact.jpg"
         imageAlt="Publishing desk overlooking London city skyline"
         breadcrumbs={[
@@ -34,10 +35,10 @@ export default function ContactPage() {
               <div className={styles.formHeader}>
                 <h2 className={styles.formTitle}>Manuscript Enquiry</h2>
                 <p className={styles.formSub}>
-                  Please provide details about your manuscript, genre, and target timeline.
+                  Complete the enquiry form with your full name, email address and a short description of your manuscript and the support you are looking for. We aim to respond to all enquiries promptly.
                 </p>
               </div>
-              <ContactForm theme="light" sourceContext="Contact Page" />
+              <ContactForm theme="light" />
             </div>
 
             {/* RIGHT: DESK INFO & GUARANTEES */}
@@ -46,8 +47,9 @@ export default function ContactPage() {
                 <div className={styles.deskLogoWrap}>
                   <BrandLogo variant="dark" size="md" href="/" />
                 </div>
+                <h2 className={styles.deskTitle}>Author Editorial Desk</h2>
                 <p className={styles.deskDesc}>
-                  Contact our publishing team about writing, editorial, design, production, or distribution support.
+                  Speak with our publishing team about your manuscript and the support you are considering.
                 </p>
 
                 <div className={styles.contactDetailsList}>
@@ -60,34 +62,25 @@ export default function ContactPage() {
 
               {/* THREE REASSURANCES */}
               <div className={styles.reassurancesCard}>
-                <h4 className={styles.reassureTitle}>Our Promises to You</h4>
+                <h3 className={styles.reassureTitle}>What You Can Expect</h3>
                 <div className={styles.reassureItem}>
                   <div className={styles.reassureIcon}>01</div>
                   <div>
-                    <h5 className={styles.reassureHeading}>Confidentiality</h5>
-                    <p className={styles.reassureText}>
-                      Your ideas and manuscript excerpts are kept strictly confidential from the moment you submit.
-                    </p>
+                    <p className={styles.reassureText}>Your enquiry is treated confidentially.</p>
                   </div>
                 </div>
 
                 <div className={styles.reassureItem}>
                   <div className={styles.reassureIcon}>02</div>
                   <div>
-                    <h5 className={styles.reassureHeading}>Clear Next Steps</h5>
-                    <p className={styles.reassureText}>
-                      We review your enquiry and explain the most relevant services before a project is agreed.
-                    </p>
+                    <p className={styles.reassureText}>You receive a clear project scope before any work begins.</p>
                   </div>
                 </div>
 
                 <div className={styles.reassureItem}>
                   <div className={styles.reassureIcon}>03</div>
                   <div>
-                    <h5 className={styles.reassureHeading}>Author Rights</h5>
-                    <p className={styles.reassureText}>
-                      Royal Quill does not take ownership of your manuscript or creative work.
-                    </p>
+                    <p className={styles.reassureText}>You remain in control of editorial and design approval throughout.</p>
                   </div>
                 </div>
               </div>
