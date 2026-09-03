@@ -24,10 +24,14 @@ export const Button: React.FC<ButtonProps> = ({
   className = '',
   ...rest
 }) => {
+  const variantKey = variant.replace(/-/g, '_');
+  const variantClass = styles[`variant_${variant}`] || styles[`variant_${variantKey}`] || '';
+  const sizeClass = styles[`size_${size}`] || '';
+
   const classes = [
     styles.button,
-    styles[`variant_${variant}`],
-    styles[`size_${size}`],
+    variantClass,
+    sizeClass,
     className
   ].filter(Boolean).join(' ');
 

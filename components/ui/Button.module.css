@@ -100,18 +100,22 @@
 }
 
 /* Outline Light */
+.variant_outline_light,
 .variant_outline-light {
   background-color: transparent;
-  color: #FFFFFF;
-  border: 1.5px solid rgba(255, 255, 255, 0.6);
+  color: #FFFFFF !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.7);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
+.variant_outline_light:hover,
 .variant_outline-light:hover {
-  background-color: #FFFFFF;
-  color: var(--color-primary-navy);
-  border-color: #FFFFFF;
+  background-color: #FFFFFF !important;
+  color: var(--color-primary-navy) !important;
+  border-color: #FFFFFF !important;
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
 }
 
 /* Text link */
