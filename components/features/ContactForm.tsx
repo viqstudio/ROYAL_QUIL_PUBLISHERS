@@ -3,6 +3,9 @@
 import React, { useState, useEffect } from 'react';
 import styles from './ContactForm.module.css';
 
+export const GOOGLE_SCRIPT_WEB_APP_URL =
+  'https://script.google.com/macros/s/AKfycbwZ525U2pMgBHGRRBbPwMfbMdCfx_Q-NKVi9i-IxPNOd_80oFedN9EN7rVqyYgbyJkR/exec';
+
 export interface ContactFormProps {
   theme?: 'light' | 'dark';
   className?: string;
@@ -29,6 +32,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
   });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -47,17 +51,90 @@ export const ContactForm: React.FC<ContactFormProps> = ({
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setLoading(true);
+    if (loading) return;
 
-    setTimeout(() => {
-      setLoading(false);
-      setSubmitted(true);
-      if (onSuccess) {
-        onSuccess();
+    setLoading(true);
+    setErrorMessage(null);
+
+    // Exact fields specified for the Google Apps Script Web App
+    const payload = {
+      fullName: formData.fullName.trim(),
+      email: formData.email.trim(),
+      phone: formData.phone.trim(),
+      bookGenre: formData.genre.trim(),
+      manuscriptStatus: formData.stage.trim(),
+      bookBrief: formData.aboutBook.trim(),
+    };
+
+    try {
+      let isSuccess = false;
+      let errorMsg: string | null = null;
+
+      // 1. Primary path: Server-side route handler (handles redirects cleanly & prevents CORS issues)
+      try {
+        const res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(payload),
+        });
+
+        const result = await res.json().catch(() => null);
+
+        if (res.ok && (!result || result.success !== false)) {
+          isSuccess = true;
+        } else if (result?.message) {
+          // Explicit message from Google Apps Script (e.g. Sheet tab naming notice)
+          throw new Error(result.message);
+        } else {
+          errorMsg = 'Could not record enquiry via primary endpoint.';
+        }
+      } catch (apiErr: any) {
+        // If it's a specific message from Google Apps Script, rethrow to display directly
+        if (apiErr?.message && !apiErr.message.includes('fetch') && !apiErr.message.includes('Network')) {
+          throw apiErr;
+        }
+        errorMsg = apiErr?.message;
       }
-    }, 600);
+
+      // 2. Resilient fallback path: Direct invocation to Google Apps Script Web App
+      if (!isSuccess) {
+        try {
+          await fetch(GOOGLE_SCRIPT_WEB_APP_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(payload),
+          });
+          isSuccess = true;
+        } catch (fallbackErr: any) {
+          throw new Error(
+            errorMsg ||
+              fallbackErr?.message ||
+              'Unable to send enquiry. Please try again or email info@royalquillpublishers.com.'
+          );
+        }
+      }
+
+      if (isSuccess) {
+        setSubmitted(true);
+        if (onSuccess) {
+          onSuccess();
+        }
+      }
+    } catch (err: any) {
+      setErrorMessage(
+        err?.message ||
+          'We encountered an issue submitting your enquiry. Please verify your details and try again.'
+      );
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (!mounted) {
@@ -94,6 +171,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
           className={styles.resetButton}
           onClick={() => {
             setSubmitted(false);
+            setErrorMessage(null);
             setFormData({
               fullName: '',
               email: '',
@@ -121,6 +199,12 @@ export const ContactForm: React.FC<ContactFormProps> = ({
         </div>
       )}
 
+      {errorMessage && (
+        <div className={styles.errorBanner} role="alert">
+          {errorMessage}
+        </div>
+      )}
+
       <div className={styles.gridRow}>
         <div className={styles.field}>
           <label htmlFor="form-fullName" className={styles.label}>
@@ -135,6 +219,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
             value={formData.fullName}
             onChange={handleChange}
             className={styles.input}
+            disabled={loading}
           />
         </div>
 
@@ -151,6 +236,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
             value={formData.email}
             onChange={handleChange}
             className={styles.input}
+            disabled={loading}
           />
         </div>
       </div>
@@ -168,6 +254,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
             value={formData.phone}
             onChange={handleChange}
             className={styles.input}
+            disabled={loading}
           />
         </div>
 
@@ -182,6 +269,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
             value={formData.genre}
             onChange={handleChange}
             className={styles.select}
+            disabled={loading}
           >
             <option value="" disabled>Select your genre</option>
             <option value="Fiction">Fiction</option>
@@ -209,6 +297,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
           value={formData.stage}
           onChange={handleChange}
           className={styles.select}
+          disabled={loading}
         >
           <option value="complete">Complete Manuscript (Ready for Production)</option>
           <option value="partial">Partial Draft (50%+ written)</option>
@@ -231,6 +320,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
           value={formData.aboutBook}
           onChange={handleChange}
           className={styles.textarea}
+          disabled={loading}
         />
       </div>
 
@@ -243,7 +333,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
         disabled={loading}
         className={styles.submitButton}
       >
-        {loading ? 'Sending...' : 'Send My Enquiry'}
+        {loading ? 'Sending Enquiry...' : 'Send My Enquiry'}
       </button>
     </form>
   );
